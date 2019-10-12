@@ -15,6 +15,8 @@ struct ContentView : View {
     // SwiftUI provides property Wrappers - that allows values to be stored seperatley by SwiftUI which can be modified.
     @State private var tapCount = 0
     @State private var name = ""
+    @State private var osName = "iOS"
+    private var osNames = ["iOS", "macOS" , "watchOS", "tvOS"]
     
     // Returns some thing that conforms to view protocol
     // some: It must always be the same kind of view being returned.
@@ -48,6 +50,12 @@ struct ContentView : View {
                         //Two way binding : This tells Swift that it should read the value of the property but also write it back as any changes happen.
                         TextField($name)
                         Text("Your name is \(name)")
+                    }
+                }
+                
+                Picker(selection: $osName, label: Text("Please choose a OS")) {
+                    ForEach(0 ..< osNames.count) {
+                        Text(self.osNames[$0])
                     }
                 }
             }
