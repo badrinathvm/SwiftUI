@@ -13,7 +13,8 @@ import SwiftUI
 struct ContentView : View {
     //If we want to update the value inside the struct, we need to make property mutating - it's just not allwoed.
     // SwiftUI provides property Wrappers - that allows values to be stored seperatley by SwiftUI which can be modified.
-    @State var tapCount = 0
+    @State private var tapCount = 0
+    @State private var name = ""
     
     // Returns some thing that conforms to view protocol
     // some: It must always be the same kind of view being returned.
@@ -27,7 +28,7 @@ struct ContentView : View {
                     Text("Hello Swift")
                 }
                 
-                Group{
+                Group {
                     Text("iOS")
                     Text("macOS")
                     Text("tvOS")
@@ -39,6 +40,14 @@ struct ContentView : View {
                         Button(action: {self.tapCount = self.tapCount + 1}) {
                             Text("Tap Count \(self.tapCount)")
                         }
+                    }
+                }
+                
+                Group {
+                    Section {
+                        //Two way binding : This tells Swift that it should read the value of the property but also write it back as any changes happen.
+                        TextField($name)
+                        Text("Your name is \(name)")
                     }
                 }
             }
