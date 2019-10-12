@@ -13,6 +13,7 @@ import SwiftUI
 struct ContentView : View {
     //If we want to update the value inside the struct, we need to make property mutating - it's just not allwoed.
     // SwiftUI provides property Wrappers - that allows values to be stored seperatley by SwiftUI which can be modified.
+    // @State - Automatically watch the chnages and invoke the body property and reload the UI
     @State private var tapCount = 0
     @State private var name = ""
     @State private var osName = "iOS"
@@ -74,3 +75,6 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
+
+
+

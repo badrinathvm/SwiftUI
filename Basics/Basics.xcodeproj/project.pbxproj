@@ -15,6 +15,7 @@
 		8B2C423B235237DF00E8C68E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2C4239235237DF00E8C68E /* LaunchScreen.storyboard */; };
 		8B2C4246235237DF00E8C68E /* BasicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C4245235237DF00E8C68E /* BasicsTests.swift */; };
 		8B2C4251235237DF00E8C68E /* BasicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C4250235237DF00E8C68E /* BasicsUITests.swift */; };
+		8B2C426023524BDD00E8C68E /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C425F23524BDD00E8C68E /* TipView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8B2C424C235237DF00E8C68E /* BasicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2C4250235237DF00E8C68E /* BasicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsUITests.swift; sourceTree = "<group>"; };
 		8B2C4252235237DF00E8C68E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B2C425F23524BDD00E8C68E /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,9 @@
 		8B2C422D235237DD00E8C68E /* Basics */ = {
 			isa = PBXGroup;
 			children = (
+				8B2C425E23524BC700E8C68E /* View */,
 				8B2C422E235237DD00E8C68E /* AppDelegate.swift */,
 				8B2C4230235237DD00E8C68E /* SceneDelegate.swift */,
-				8B2C4232235237DD00E8C68E /* ContentView.swift */,
 				8B2C4234235237DF00E8C68E /* Assets.xcassets */,
 				8B2C4239235237DF00E8C68E /* LaunchScreen.storyboard */,
 				8B2C423C235237DF00E8C68E /* Info.plist */,
@@ -134,6 +136,15 @@
 				8B2C4252235237DF00E8C68E /* Info.plist */,
 			);
 			path = BasicsUITests;
+			sourceTree = "<group>";
+		};
+		8B2C425E23524BC700E8C68E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B2C4232235237DD00E8C68E /* ContentView.swift */,
+				8B2C425F23524BDD00E8C68E /* TipView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B2C426023524BDD00E8C68E /* TipView.swift in Sources */,
 				8B2C422F235237DD00E8C68E /* AppDelegate.swift in Sources */,
 				8B2C4231235237DD00E8C68E /* SceneDelegate.swift in Sources */,
 				8B2C4233235237DD00E8C68E /* ContentView.swift in Sources */,
