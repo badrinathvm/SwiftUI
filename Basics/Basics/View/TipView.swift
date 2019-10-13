@@ -48,9 +48,9 @@ struct TipView:View {
                     }
                 }
                 
-                Section {
-                    Text("$\(totalPerPerson)")
-                }
+                Section(header: Text("Amount per person"), footer: Text(""), content: {
+                     Text("$\(totalPerPerson)")
+                })
             }
             .navigationBarTitle(Text("Tip View"))
         }
