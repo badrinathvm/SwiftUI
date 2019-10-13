@@ -11,6 +11,7 @@ import SwiftUI
 
 struct TipView:View {
     @State private var checkAmount = ""
+    @State private var people = 0
     var body: some View {
         NavigationView {
             Form {
@@ -21,6 +22,14 @@ struct TipView:View {
                
                 Section {
                     Text("$\(checkAmount)")
+                }
+                
+                Section {
+                    Picker(selection: $people, label: Text("Number of People")) {
+                        ForEach(2..<100) {
+                            Text("\($0) people")
+                        }
+                    }
                 }
             }
             .navigationBarTitle(Text("Tip View"))
