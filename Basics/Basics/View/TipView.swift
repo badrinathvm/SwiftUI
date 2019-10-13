@@ -11,10 +11,21 @@ import SwiftUI
 
 struct TipView:View {
     @State private var checkAmount = ""
-    @State private var people = 0
+    @State private var numberOfPeople = 2
     @State private var tipPercentage = 0
     
-    var tipPercentages = [0,10,20,30,40,50]
+    var tipPercentages = [10,15,20,25,0]
+    var totalPerPerson:Double {
+        let peopleCount = Double(numberOfPeople)
+        let tipSelection = Double(tipPercentages[tipPercentage])
+        let orderAmount = Double(checkAmount) ?? 0
+        
+        let tipValue = orderAmount / 100 * tipSelection
+        let grandTotal = orderAmount + tipValue
+        let amountPerPerson = grandTotal / peopleCount
+        
+        return amountPerPerson
+    }
     
     var body: some View {
         NavigationView {
@@ -22,7 +33,7 @@ struct TipView:View {
                 Section {
                      TextField($checkAmount)
                     
-                    Picker(selection: $people, label: Text("Number of People")) {
+                    Picker(selection: $numberOfPeople, label: Text("Number of People")) {
                         ForEach(2..<100) {
                             Text("\($0) people")
                         }
@@ -38,7 +49,7 @@ struct TipView:View {
                 }
                 
                 Section {
-                    Text("$\(checkAmount)")
+                    Text("$\(totalPerPerson)")
                 }
             }
             .navigationBarTitle(Text("Tip View"))
