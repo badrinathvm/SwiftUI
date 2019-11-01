@@ -11,7 +11,7 @@ import SwiftUI
 struct Day26: View {
     @State private var sleepAmount = 8.0
     @State private var wakeup = defaultWakeTime
-    @State private var coffeeAmount = 1
+    @State private var coffeeAmount = 10
     var body: some View {
 //        VStack {
 //            // in - > Range,  step - Increments  %g -> removes significant zeros
@@ -34,24 +34,24 @@ struct Day26: View {
             Form {
                 VStack(alignment: .leading, spacing: 0) {
                     Text("When do you want to wake up ?")
-                    
+
                     DatePicker("Please Select Date", selection: $wakeup , displayedComponents: .hourAndMinute).labelsHidden()
                         .datePickerStyle(WheelDatePickerStyle())
                 }
-                
+
                 VStack(alignment: .leading, spacing: 0) {
                     Text("Desired Amount of Sleep")
                         .font(.headline)
-                    
+
                     Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
                         Text("\(sleepAmount, specifier: "%g") hours")
                     }
                 }
-                
+
                 VStack(alignment: .leading, spacing: 0) {
                     Text("Daily Coffee Intake")
                         .font(.headline)
-                    
+
                     Stepper(value: $coffeeAmount, in: 1...20) {
                         if coffeeAmount == 1 {
                             Text("1 cup")
@@ -60,7 +60,29 @@ struct Day26: View {
                         }
                     }
                 }
-               
+                
+                //Challenege code
+                
+//                Section(header: Text("When do you want to wake up?").font(.subheadline)) {
+//                     DatePicker("Please Select Date", selection: $wakeup , displayedComponents: .hourAndMinute).labelsHidden()
+//                                            .datePickerStyle(WheelDatePickerStyle())
+//                }
+//
+//                Section(header: Text("Desired Amount of Sleep").font(.subheadline)) {
+//                    Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
+//                        Text("\(sleepAmount, specifier: "%g") hours")
+//                    }
+//                }
+//
+//                Section(header: Text("Daily Coffee Intake").font(.subheadline)) {
+////                    Stepper(value: $coffeeAmount, in: 1...20){
+////                          Text(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups")
+////                    }
+//                    //instead of picker used Stepper
+//                    Picker("Number of Cups", selection: $coffeeAmount) {
+//                        Text(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups")
+//                    }
+//                }
             }.navigationBarTitle("Better Rest")
             .navigationBarItems(trailing:
                 Button(action: calculateBedtime) {
