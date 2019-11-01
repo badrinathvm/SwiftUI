@@ -30,23 +30,24 @@ struct TipView:View {
     var body: some View {
         NavigationView {
             Form {
-                Section {
-                     TextField($checkAmount)
-                    
-                    Picker(selection: $numberOfPeople, label: Text("Number of People")) {
-                        ForEach(2..<100) {
-                            Text("\($0) people")
-                        }
-                    }
-                }
-                
-                Section(header: Text("How much Tip you want to pay ?"), footer: Text("")) {
-                    Picker(selection: $tipPercentage, label: Text("Tip Percentage")) {
-                        ForEach(0..<tipPercentages.count) {
-                            Text("\(self.tipPercentages[$0])%")
-                        }
-                    }
-                }
+//                Section {
+//                     TextField($checkAmount)
+//                    
+//                    Picker(selection: $numberOfPeople, label: Text("Number of People")) {
+//                        ForEach(2..<100) {
+//                            Text("\($0) people")
+//                        }
+//                    }
+//                }
+//                
+//                Section(header: Text("How much Tip you want to pay ?"), footer: Text("")) {
+//                    Picker(selection: $tipPercentage, label: Text("Tip Percentage")) {
+//                        ForEach(0..<tipPercentages.count) { value in
+//                            //Text("\(self.tipPercentages[$0])%")
+//                            Text("\(self.tipPercentages[value])")
+//                        }
+//                    }
+//                }
                 
                 Section(header: Text("Amount per person"), footer: Text(""), content: {
                      Text("$\(totalPerPerson)")

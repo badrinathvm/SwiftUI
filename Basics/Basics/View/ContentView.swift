@@ -40,8 +40,8 @@ struct ContentView : View {
                 
                 Group {
                     Section {
-                        Button(action: {self.tapCount = self.tapCount + 1}) {
-                            Text("Tap Count \(self.tapCount)")
+                        Button("Tap Count \(self.tapCount)") {
+                            self.tapCount = self.tapCount + 1
                         }
                     }
                 }
@@ -49,7 +49,7 @@ struct ContentView : View {
                 Group {
                     Section {
                         //Two way binding : This tells Swift that it should read the value of the property but also write it back as any changes happen.
-                        TextField($name)
+                        TextField("Enter Name", text: $name)
                         Text("Your name is \(name)")
                     }
                 }
