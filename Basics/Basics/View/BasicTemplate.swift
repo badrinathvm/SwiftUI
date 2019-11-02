@@ -28,7 +28,14 @@ struct BasicTemplate: View {
             Image(systemName: "hand.thumbsup.fill")
                 .font(.largeTitle)
             Image("SF Symbols")
-            Spacer() // moves the content to Top
+            Image("yosemite")
+                .resizable()
+                .frame(width: 320, height: 100, alignment: .leading)
+                .opacity(0.7) // make image 70% solid
+                .background(Color.red.opacity(0.3)) // Layer behind image
+                .background(Color.yellow.opacity(0.3)) // Layer behind red
+                .background(Color.blue.opacity(0.3)) // Layer behind yellow
+                .overlay(Text("Yosemite")) //Layer on top of image
         }.font(.title)
             .edgesIgnoringSafeArea(.bottom)
     }
