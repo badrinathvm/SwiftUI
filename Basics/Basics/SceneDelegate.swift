@@ -33,7 +33,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: GReader())
              //window.rootViewController = UIHostingController(rootView: Buttons())
             //.window.rootViewController = UIHostingController(rootView: Forms())
-            window.rootViewController = UIHostingController(rootView: Lists())
+            //window.rootViewController = UIHostingController(rootView: Lists())
+             window.rootViewController = UIHostingController(rootView: ListsMove())
             self.window = window
             window.makeKeyAndVisible()
         }
