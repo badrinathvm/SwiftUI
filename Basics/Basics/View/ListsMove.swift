@@ -19,11 +19,13 @@ struct ListsMove: View  {
                     Text(value)
                         .padding()
                         .font(.body)
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Color.white)
                 }.onMove(perform: moveRow)
-            }
+                }
+            .listStyle(GroupedListStyle())
             .navigationBarTitle("To Do")
-            .navigationBarItems(trailing: EditButton()) // Edit button automatically toggles preparing rows to mobe
+            .navigationBarItems(trailing: EditButton().font(.headline)) // Edit button automatically toggles preparing rows to mobe
+            .preferredColorScheme(ColorScheme.dark)
         }.accentColor(Color.red) // change the color of the button
     }
     
