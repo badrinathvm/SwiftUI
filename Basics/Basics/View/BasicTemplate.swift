@@ -24,19 +24,34 @@ struct BasicTemplate: View {
                 .padding()
                 .foregroundColor(Color.white)
                 .background(Color.blue)
-                .layoutPriority(1)
+                .layoutPriority(3)
             Image(systemName: "hand.thumbsup.fill")
                 .font(.largeTitle)
             Image("SF Symbols")
             Image("yosemite")
                 .resizable()
-                .frame(width: 320, height: 100, alignment: .leading)
+                .frame(width: 320, height: 50, alignment: .leading)
                 .opacity(0.7) // make image 70% solid
                 .background(Color.red.opacity(0.3)) // Layer behind image
                 .background(Color.yellow.opacity(0.3)) // Layer behind red
                 .background(Color.blue.opacity(0.3)) // Layer behind yellow
                 .overlay(Text("Yosemite")) //Layer on top of image
+            Text("This text has a rounded rectangle behind it")
+                .foregroundColor(Color.white)
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 10)
+                                .foregroundColor(Color.blue))
+                .padding()
+                .layoutPriority(2)
+            Text("But some times i'll use color and coner radius:")
+                .font(.caption)
+            Text("This text has a color with corner radius")
+                .foregroundColor(Color.white)
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(20)
+                .padding()
+                .layoutPriority(2)
         }.font(.title)
-            .edgesIgnoringSafeArea(.bottom)
     }
 }
