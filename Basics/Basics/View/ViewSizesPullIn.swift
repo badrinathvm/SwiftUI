@@ -18,6 +18,7 @@ struct CustomText: View {
             .background(Color.purple)
             .foregroundColor(Color.white)
             .layoutPriority(1)
+            .font(.title)
     }
 }
 

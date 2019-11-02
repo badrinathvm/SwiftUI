@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             //window.rootViewController = UIHostingController(rootView: ContentView())
              //window.rootViewController = UIHostingController(rootView: TipView())
-             window.rootViewController = UIHostingController(rootView: ViewSizesPullIn())
+             window.rootViewController = UIHostingController(rootView: ViewSizesPushOut())
             self.window = window
             window.makeKeyAndVisible()
         }
