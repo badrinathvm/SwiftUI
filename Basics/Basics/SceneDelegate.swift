@@ -24,7 +24,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             //window.rootViewController = UIHostingController(rootView: ContentView())
              //window.rootViewController = UIHostingController(rootView: TipView())
-             window.rootViewController = UIHostingController(rootView: ViewSizesPushOut())
+            
+             //window.rootViewController = UIHostingController(rootView: Containers())
+             //window.rootViewController = UIHostingController(rootView: BasicTemplate())
+             //window.rootViewController = UIHostingController(rootView: ViewSizesPullsIn())
+             //window.rootViewController = UIHostingController(rootView: ViewSizesPushOut())
+            window.rootViewController = UIHostingController(rootView: VHZstacks())
             self.window = window
             window.makeKeyAndVisible()
         }

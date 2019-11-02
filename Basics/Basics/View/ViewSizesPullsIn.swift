@@ -9,11 +9,10 @@
 import Foundation
 import SwiftUI
 
-struct CustomText: View {
-    var text: String
-    var body: some View {
-        Text(text)
-            .frame(maxWidth: .infinity)
+//splitting the common modifiers in to seperate struct to be used at many place later
+struct BackGroundForeGroundLayoutModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.frame(maxWidth: .infinity)
             .padding()
             .background(Color.purple)
             .foregroundColor(Color.white)
@@ -22,8 +21,17 @@ struct CustomText: View {
     }
 }
 
+//Access the common one with the help of .modifier
+struct CustomText: View {
+    var text: String
+    var body: some View {
+        Text(text)
+        .modifier(BackGroundForeGroundLayoutModifier())
+    }
+}
 
-struct ViewSizesPullIn: View {
+
+struct ViewSizesPullsIn: View {
     
     private var PullInView: some View {
         HStack {
