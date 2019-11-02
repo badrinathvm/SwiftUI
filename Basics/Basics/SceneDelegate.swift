@@ -29,7 +29,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              //window.rootViewController = UIHostingController(rootView: BasicTemplate())
              //window.rootViewController = UIHostingController(rootView: ViewSizesPullsIn())
              //window.rootViewController = UIHostingController(rootView: ViewSizesPushOut())
-            window.rootViewController = UIHostingController(rootView: VHZstacks())
+            //window.rootViewController = UIHostingController(rootView: VHZstacks())
+            window.rootViewController = UIHostingController(rootView: GReader())
             self.window = window
             window.makeKeyAndVisible()
         }
