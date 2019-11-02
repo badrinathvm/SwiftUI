@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             //window.rootViewController = UIHostingController(rootView: ContentView())
              //window.rootViewController = UIHostingController(rootView: TipView())
-             window.rootViewController = UIHostingController(rootView: Day26())
+             window.rootViewController = UIHostingController(rootView: Containers())
             self.window = window
             window.makeKeyAndVisible()
         }
