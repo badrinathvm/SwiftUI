@@ -94,7 +94,7 @@ struct VHZstacks: View {
                     
                     Text("Yosemite National Park")
                         .font(.title)
-                        .forgroundColor(Color.gray)
+                        .foregroundColor(Color.gray)
                 }
                 
                 Spacer()
