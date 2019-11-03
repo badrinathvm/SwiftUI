@@ -33,7 +33,7 @@ struct LanguageView: View {
 }
 
 
-struct ScrollViews: View {
+struct ScrollVerticalView: View {
     
     @State var languages = ["Swift" , "Kotlin" , "Scala" , "R" ,"JavaScript" , "Java" , "Objective-C", "Python" , "Ruby", "Shell" , "Matlab"]
     
