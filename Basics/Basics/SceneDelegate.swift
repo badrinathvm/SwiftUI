@@ -35,7 +35,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //.window.rootViewController = UIHostingController(rootView: Forms())
             //window.rootViewController = UIHostingController(rootView: Lists())
              //window.rootViewController = UIHostingController(rootView: ListsMove())
-            window.rootViewController = UIHostingController(rootView: ListRowBackground())
+            //window.rootViewController = UIHostingController(rootView: ListRowBackground())
+            window.rootViewController = UIHostingController(rootView: NavigationViews())
             self.window = window
             window.makeKeyAndVisible()
         }
