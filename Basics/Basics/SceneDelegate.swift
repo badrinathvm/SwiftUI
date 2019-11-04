@@ -39,7 +39,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: NavigationViews())
             //window.rootViewController = UIHostingController(rootView: ScrollVerticalView())
             //window.rootViewController = UIHostingController(rootView: YosemiteView())
-            window.rootViewController = UIHostingController(rootView: ScrollHorizontalView())
+            //window.rootViewController = UIHostingController(rootView: ScrollHorizontalView())
+            //window.rootViewController = UIHostingController(rootView: SegmentControlView())
+            window.rootViewController = UIHostingController(rootView: SliderStepperView())
             self.window = window
             window.makeKeyAndVisible()
         }
