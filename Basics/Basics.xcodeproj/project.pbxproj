@@ -26,6 +26,7 @@
 		1BFF71E5236F95CD0024F4B8 /* ScrollHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71E4236F95CD0024F4B8 /* ScrollHorizontalView.swift */; };
 		1BFF71E7236F9B650024F4B8 /* SegmentControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71E6236F9B650024F4B8 /* SegmentControlView.swift */; };
 		1BFF71E9236FA0EA0024F4B8 /* SliderStepperViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71E8236FA0EA0024F4B8 /* SliderStepperViews.swift */; };
+		1BFF71EB236FAAC40024F4B8 /* TabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71EA236FAAC40024F4B8 /* TabViews.swift */; };
 		8B2C422F235237DD00E8C68E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C422E235237DD00E8C68E /* AppDelegate.swift */; };
 		8B2C4231235237DD00E8C68E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C4230235237DD00E8C68E /* SceneDelegate.swift */; };
 		8B2C4233235237DD00E8C68E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C4232235237DD00E8C68E /* ContentView.swift */; };
@@ -75,6 +76,7 @@
 		1BFF71E4236F95CD0024F4B8 /* ScrollHorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollHorizontalView.swift; sourceTree = "<group>"; };
 		1BFF71E6236F9B650024F4B8 /* SegmentControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlView.swift; sourceTree = "<group>"; };
 		1BFF71E8236FA0EA0024F4B8 /* SliderStepperViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderStepperViews.swift; sourceTree = "<group>"; };
+		1BFF71EA236FAAC40024F4B8 /* TabViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViews.swift; sourceTree = "<group>"; };
 		8B2C422B235237DD00E8C68E /* Basics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2C422E235237DD00E8C68E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B2C4230235237DD00E8C68E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				1BFF71E4236F95CD0024F4B8 /* ScrollHorizontalView.swift */,
 				1BFF71E6236F9B650024F4B8 /* SegmentControlView.swift */,
 				1BFF71E8236FA0EA0024F4B8 /* SliderStepperViews.swift */,
+				1BFF71EA236FAAC40024F4B8 /* TabViews.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				1B294628236DFBD000E44888 /* Buttons.swift in Sources */,
 				1BFF71DB236E22D00024F4B8 /* ListsMove.swift in Sources */,
 				1BFF71E9236FA0EA0024F4B8 /* SliderStepperViews.swift in Sources */,
+				1BFF71EB236FAAC40024F4B8 /* TabViews.swift in Sources */,
 				8B2C4231235237DD00E8C68E /* SceneDelegate.swift in Sources */,
 				1B269DC8236BFE5400B063EA /* Day29.swift in Sources */,
 				1B269DC6236BEB4800B063EA /* Day26.swift in Sources */,
