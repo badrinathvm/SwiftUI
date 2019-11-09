@@ -16,11 +16,11 @@ struct CustomRow: View  {
     var body: some View {
         HStack { // is optional , implicitly it will HStack for a row.
             Image(systemName: "person.circle.fill").foregroundColor(Color.red).padding(.trailing , 10)
-            Text(content)
+            Text("\(content)")
                 .font(content == "Grouped List Style" ? Font.largeTitle : Font.body)
                 .foregroundColor(Color.black)
             Spacer()
-            Image(systemName: content == "Lists" ? "circle.fill" : "circle" )
+            Image(systemName: self.content == "Lists" ? "circle.fill" : "circle" )
                 .foregroundColor(Color.red)
         }
         .font(.title)
@@ -46,7 +46,7 @@ struct Lists: View  {
                 Section(header: Text("To Do")) {
                     ForEach(todo, id: \.self) {value in
                         Text(value)
-                            .foregroundColor(Color.black)
+                           .foregroundColor(Color.black)
                             .font(.body)
                     }.onDelete(perform: delete) // enables Swipe to delete
                 }
