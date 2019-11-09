@@ -14,14 +14,16 @@ struct MoreCircleShapes: View {
         VStack(spacing: 10) {
             Circle().fill(Color.purple).frame(height: 100).padding()
             
-            Text("Note : Fill Modifier apples specifically to shapes nopt a view.")
-                                 .frame(maxWidth: .infinity)
-                                 .padding()
-                                 .background(Color.purple)
-                                 .foregroundColor(Color.white)
-                                 .layoutPriority(2)
+            //Text("Note : Fill Modifier apples specifically to shapes nopt a view.")
+//                                 .frame(maxWidth: .infinity)
+//                                 .padding()
+//                                 .background(Color.purple)
+//                                 .foregroundColor(Color.white)
+//                                 .layoutPriority(2)
+//
+            //Circle().foregroundColor(Color.purple).frame(height: 100).padding()
             
-            Circle().foregroundColor(Color.purple).frame(height: 100).padding()
+            Circle().stroke(Color.purple).padding().foregroundColor(Color.black)
         }.font(.title)
        
     }

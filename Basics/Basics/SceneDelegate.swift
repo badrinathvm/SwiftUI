@@ -44,7 +44,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: SliderStepperView())
             //window.rootViewController = UIHostingController(rootView: TabViews())
              //window.rootViewController = UIHostingController(rootView: PizzaView())
-            window.rootViewController = UIHostingController(rootView: CircularShapes())
+            //window.rootViewController = UIHostingController(rootView: CircularShapes())
+            //window.rootViewController = UIHostingController(rootView: CircleBorder())
+            window.rootViewController = UIHostingController(rootView: CircleTrim())
             self.window = window
             window.makeKeyAndVisible()
         }
