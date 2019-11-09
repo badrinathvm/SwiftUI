@@ -32,7 +32,32 @@ struct CircleTrim: View {
                     Text("0%")
                     Slider(value: $circleProgress)
                     Text("100%")
+                }.padding()
+            }
+            
+            VStack(spacing: 10) {
+                Button(action: {}) {
+                    Text("Use Capsule Border")
+                        .font(.title)
+                    .padding()
+                }.background(Capsule().strokeBorder(Color.purple, lineWidth: 2.0))
+                 .accentColor(Color.purple)
+                
+                Button(action : {}) {
+                    Text("Use Capsule Shape")
+                        .font(.largeTitle)
+                    .padding()
+                }.background(Capsule().foregroundColor(Color.purple))
+                    .accentColor(Color.white)
+                    
+                
+                Button(action : {}) {
+                    Image(systemName: "circle.grid.hex.fill")
+                        .font(.largeTitle)
+                    .padding()
                 }
+                .background(Circle().foregroundColor(Color.purple))
+                .accentColor(.white)
             }
         }
     }
