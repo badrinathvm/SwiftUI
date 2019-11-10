@@ -30,6 +30,7 @@
 		1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C432377CB0500D1FABE /* SheetViewIdentifiable.swift */; };
 		1BB87C47237887B300D1FABE /* ProgressRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C46237887B300D1FABE /* ProgressRowView.swift */; };
 		1BB87C4A2378B57700D1FABE /* ScaleEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C492378B57700D1FABE /* ScaleEffectView.swift */; };
+		1BB87C4C2378BDCA00D1FABE /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4B2378BDCA00D1FABE /* ShadowView.swift */; };
 		1BFF71DB236E22D00024F4B8 /* ListsMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DA236E22D00024F4B8 /* ListsMove.swift */; };
 		1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DC236E32060024F4B8 /* ListRowBackground.swift */; };
 		1BFF71DF236E534C0024F4B8 /* NavigationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DE236E534C0024F4B8 /* NavigationViews.swift */; };
@@ -92,6 +93,7 @@
 		1BB87C432377CB0500D1FABE /* SheetViewIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewIdentifiable.swift; sourceTree = "<group>"; };
 		1BB87C46237887B300D1FABE /* ProgressRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRowView.swift; sourceTree = "<group>"; };
 		1BB87C492378B57700D1FABE /* ScaleEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleEffectView.swift; sourceTree = "<group>"; };
+		1BB87C4B2378BDCA00D1FABE /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		1BFF71DA236E22D00024F4B8 /* ListsMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsMove.swift; sourceTree = "<group>"; };
 		1BFF71DC236E32060024F4B8 /* ListRowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowBackground.swift; sourceTree = "<group>"; };
 		1BFF71DE236E534C0024F4B8 /* NavigationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViews.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				1BFF71E8236FA0EA0024F4B8 /* SliderStepperViews.swift */,
 				1BFF71EA236FAAC40024F4B8 /* TabViews.swift */,
 				1BB87C492378B57700D1FABE /* ScaleEffectView.swift */,
+				1BB87C4B2378BDCA00D1FABE /* ShadowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				1BFF71E5236F95CD0024F4B8 /* ScrollHorizontalView.swift in Sources */,
 				8B2C426023524BDD00E8C68E /* TipView.swift in Sources */,
 				1BFF71DF236E534C0024F4B8 /* NavigationViews.swift in Sources */,
+				1BB87C4C2378BDCA00D1FABE /* ShadowView.swift in Sources */,
 				1B294626236DF42E00E44888 /* GReader.swift in Sources */,
 				1BB87C3F2377BED600D1FABE /* RadialGradientView.swift in Sources */,
 				1B269DCD236D537F00B063EA /* Containers.swift in Sources */,
