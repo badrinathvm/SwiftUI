@@ -11,7 +11,7 @@ import SwiftUI
 
 //Tip : for better blending make ure to have same color for start and end of the Gradient's color array
 
-struct GradientView: View  {
+struct AngularGradientView: View  {
     var body: some View {
         let gradient = Gradient(colors: [.pink, .purple, .pink])
         let angularGradient = AngularGradient(gradient: gradient, center: .center, angle: .degrees(0))

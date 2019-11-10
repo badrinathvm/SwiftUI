@@ -47,7 +47,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: CircularShapes())
             //window.rootViewController = UIHostingController(rootView: CircleBorder())
             //window.rootViewController = UIHostingController(rootView: CircleTrim())
-            window.rootViewController = UIHostingController(rootView: GradientView())
+            //window.rootViewController = UIHostingController(rootView: AngularGradientView())
+            //window.rootViewController = UIHostingController(rootView: LinearGradientView())
+            window.rootViewController = UIHostingController(rootView: RadialGradientView())
+
             self.window = window
             window.makeKeyAndVisible()
         }

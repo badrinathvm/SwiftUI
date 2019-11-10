@@ -23,7 +23,9 @@
 		1BB87C322377342000D1FABE /* CircleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C312377342000D1FABE /* CircleBorder.swift */; };
 		1BB87C342377376300D1FABE /* CircleTrim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C332377376300D1FABE /* CircleTrim.swift */; };
 		1BB87C3723773C1B00D1FABE /* circle.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1BB87C3623773C1B00D1FABE /* circle.gif */; };
-		1BB87C392377AFA600D1FABE /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C382377AFA500D1FABE /* GradientView.swift */; };
+		1BB87C3B2377B4CF00D1FABE /* AngularGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C3A2377B4CF00D1FABE /* AngularGradientView.swift */; };
+		1BB87C3D2377B4F500D1FABE /* LinearGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C3C2377B4F500D1FABE /* LinearGradientView.swift */; };
+		1BB87C3F2377BED600D1FABE /* RadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C3E2377BED600D1FABE /* RadialGradientView.swift */; };
 		1BFF71DB236E22D00024F4B8 /* ListsMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DA236E22D00024F4B8 /* ListsMove.swift */; };
 		1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DC236E32060024F4B8 /* ListRowBackground.swift */; };
 		1BFF71DF236E534C0024F4B8 /* NavigationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DE236E534C0024F4B8 /* NavigationViews.swift */; };
@@ -79,7 +81,9 @@
 		1BB87C312377342000D1FABE /* CircleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBorder.swift; sourceTree = "<group>"; };
 		1BB87C332377376300D1FABE /* CircleTrim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTrim.swift; sourceTree = "<group>"; };
 		1BB87C3623773C1B00D1FABE /* circle.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = circle.gif; sourceTree = "<group>"; };
-		1BB87C382377AFA500D1FABE /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		1BB87C3A2377B4CF00D1FABE /* AngularGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngularGradientView.swift; sourceTree = "<group>"; };
+		1BB87C3C2377B4F500D1FABE /* LinearGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradientView.swift; sourceTree = "<group>"; };
+		1BB87C3E2377BED600D1FABE /* RadialGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGradientView.swift; sourceTree = "<group>"; };
 		1BFF71DA236E22D00024F4B8 /* ListsMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsMove.swift; sourceTree = "<group>"; };
 		1BFF71DC236E32060024F4B8 /* ListRowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowBackground.swift; sourceTree = "<group>"; };
 		1BFF71DE236E534C0024F4B8 /* NavigationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViews.swift; sourceTree = "<group>"; };
@@ -247,7 +251,9 @@
 				1BFF71E6236F9B650024F4B8 /* SegmentControlView.swift */,
 				1BFF71E8236FA0EA0024F4B8 /* SliderStepperViews.swift */,
 				1BFF71EA236FAAC40024F4B8 /* TabViews.swift */,
-				1BB87C382377AFA500D1FABE /* GradientView.swift */,
+				1BB87C3A2377B4CF00D1FABE /* AngularGradientView.swift */,
+				1BB87C3C2377B4F500D1FABE /* LinearGradientView.swift */,
+				1BB87C3E2377BED600D1FABE /* RadialGradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,7 +392,6 @@
 			files = (
 				1BFF71E1236E93760024F4B8 /* ScrollVerticalView.swift in Sources */,
 				1BFF71E7236F9B650024F4B8 /* SegmentControlView.swift in Sources */,
-				1BB87C392377AFA600D1FABE /* GradientView.swift in Sources */,
 				1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */,
 				1B269DCF236D5EAC00B063EA /* BasicTemplate.swift in Sources */,
 				1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */,
@@ -394,6 +399,7 @@
 				8B2C426023524BDD00E8C68E /* TipView.swift in Sources */,
 				1BFF71DF236E534C0024F4B8 /* NavigationViews.swift in Sources */,
 				1B294626236DF42E00E44888 /* GReader.swift in Sources */,
+				1BB87C3F2377BED600D1FABE /* RadialGradientView.swift in Sources */,
 				1B269DCD236D537F00B063EA /* Containers.swift in Sources */,
 				1B269DD3236D6A8700B063EA /* ViewSizesPullsIn.swift in Sources */,
 				1B29462C236E17F800E44888 /* Lists.swift in Sources */,
@@ -401,6 +407,8 @@
 				8B2C422F235237DD00E8C68E /* AppDelegate.swift in Sources */,
 				1B294628236DFBD000E44888 /* Buttons.swift in Sources */,
 				1BFF71DB236E22D00024F4B8 /* ListsMove.swift in Sources */,
+				1BB87C3D2377B4F500D1FABE /* LinearGradientView.swift in Sources */,
+				1BB87C3B2377B4CF00D1FABE /* AngularGradientView.swift in Sources */,
 				1BB87C342377376300D1FABE /* CircleTrim.swift in Sources */,
 				1BFF71E9236FA0EA0024F4B8 /* SliderStepperViews.swift in Sources */,
 				1BB87C322377342000D1FABE /* CircleBorder.swift in Sources */,
