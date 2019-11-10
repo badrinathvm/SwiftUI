@@ -29,6 +29,7 @@
 		1BB87C422377C73900D1FABE /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C412377C73900D1FABE /* SheetView.swift */; };
 		1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C432377CB0500D1FABE /* SheetViewIdentifiable.swift */; };
 		1BB87C47237887B300D1FABE /* ProgressRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C46237887B300D1FABE /* ProgressRowView.swift */; };
+		1BB87C4A2378B57700D1FABE /* ScaleEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C492378B57700D1FABE /* ScaleEffectView.swift */; };
 		1BFF71DB236E22D00024F4B8 /* ListsMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DA236E22D00024F4B8 /* ListsMove.swift */; };
 		1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DC236E32060024F4B8 /* ListRowBackground.swift */; };
 		1BFF71DF236E534C0024F4B8 /* NavigationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DE236E534C0024F4B8 /* NavigationViews.swift */; };
@@ -90,6 +91,7 @@
 		1BB87C412377C73900D1FABE /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		1BB87C432377CB0500D1FABE /* SheetViewIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewIdentifiable.swift; sourceTree = "<group>"; };
 		1BB87C46237887B300D1FABE /* ProgressRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRowView.swift; sourceTree = "<group>"; };
+		1BB87C492378B57700D1FABE /* ScaleEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleEffectView.swift; sourceTree = "<group>"; };
 		1BFF71DA236E22D00024F4B8 /* ListsMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsMove.swift; sourceTree = "<group>"; };
 		1BFF71DC236E32060024F4B8 /* ListRowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowBackground.swift; sourceTree = "<group>"; };
 		1BFF71DE236E534C0024F4B8 /* NavigationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViews.swift; sourceTree = "<group>"; };
@@ -156,7 +158,6 @@
 				1BB87C2E23772A0F00D1FABE /* CircularShapes.swift */,
 				1BB87C312377342000D1FABE /* CircleBorder.swift */,
 				1BB87C332377376300D1FABE /* CircleTrim.swift */,
-				1BB87C46237887B300D1FABE /* ProgressRowView.swift */,
 			);
 			path = Circles;
 			sourceTree = "<group>";
@@ -186,6 +187,15 @@
 				1BB87C432377CB0500D1FABE /* SheetViewIdentifiable.swift */,
 			);
 			path = Sheets;
+			sourceTree = "<group>";
+		};
+		1BB87C482378B55400D1FABE /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				1BFF71E2236F58870024F4B8 /* YosemiteView.swift */,
+				1BB87C46237887B300D1FABE /* ProgressRowView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		8B2C4222235237DD00E8C68E = {
@@ -252,6 +262,7 @@
 		8B2C425E23524BC700E8C68E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1BB87C482378B55400D1FABE /* CustomViews */,
 				1BB87C452377CD7000D1FABE /* Sheets */,
 				1BB87C402377C70E00D1FABE /* Gradients */,
 				1BB87C302377340600D1FABE /* Circles */,
@@ -274,11 +285,11 @@
 				1BFF71DC236E32060024F4B8 /* ListRowBackground.swift */,
 				1BFF71DE236E534C0024F4B8 /* NavigationViews.swift */,
 				1BFF71E0236E93760024F4B8 /* ScrollVerticalView.swift */,
-				1BFF71E2236F58870024F4B8 /* YosemiteView.swift */,
 				1BFF71E4236F95CD0024F4B8 /* ScrollHorizontalView.swift */,
 				1BFF71E6236F9B650024F4B8 /* SegmentControlView.swift */,
 				1BFF71E8236FA0EA0024F4B8 /* SliderStepperViews.swift */,
 				1BFF71EA236FAAC40024F4B8 /* TabViews.swift */,
+				1BB87C492378B57700D1FABE /* ScaleEffectView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -415,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BB87C4A2378B57700D1FABE /* ScaleEffectView.swift in Sources */,
 				1BFF71E1236E93760024F4B8 /* ScrollVerticalView.swift in Sources */,
 				1BFF71E7236F9B650024F4B8 /* SegmentControlView.swift in Sources */,
 				1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */,

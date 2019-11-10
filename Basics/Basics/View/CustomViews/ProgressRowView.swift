@@ -10,29 +10,30 @@ import Foundation
 import SwiftUI
 
 struct CircularRingView: View {
+    let circleProgress = 85
     var body: some View {
         let gradient = Gradient(colors: [.purple, .blue])
         let linearGradient = LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom)
         //rgb(245,245,245)
         return ZStack {
-                Circle()
-                    .trim(from: 0, to: 1)
-                    .stroke(Color(red: 245/255, green: 245/255, blue: 245/255), lineWidth: 10)
-                    .frame(height: 80)
-                Circle()
-                    .trim(from: 0, to: 0.75)
-                    .stroke(linearGradient, style: StrokeStyle(lineWidth: 8, lineCap: CGLineCap.round))
-                    .shadow(radius: 4)
-                    .rotationEffect(.degrees(-70))
-                    .frame(height: 70)
-                    .overlay(
-                        HStack(spacing: 2) {
-                            Text("85")
-                                .font(.system(size: 16, weight: Font.Weight.bold))
-                                .padding(.leading,8)
-                            Text("%").foregroundColor(Color.gray)
-                                .font(.system(size: 14, weight: Font.Weight.bold))
-                        })
+            Circle()
+                .trim(from: 0, to: 1)
+                .stroke(Color(red: 245/255, green: 245/255, blue: 245/255), lineWidth: 10)
+                .frame(height: 80)
+            Circle()
+                .trim(from: 0, to: 0.75)
+                .stroke(linearGradient, style: StrokeStyle(lineWidth: 8, lineCap: CGLineCap.round))
+                .shadow(radius: 4)
+                .rotationEffect(.degrees(-70))
+                .frame(height: 70)
+                .overlay(
+                    HStack(spacing: 2) {
+                        Text("\(circleProgress)")
+                            .font(.system(size: 16, weight: Font.Weight.bold))
+                            .padding(.leading,8)
+                        Text("%").foregroundColor(Color.gray)
+                            .font(.system(size: 14, weight: Font.Weight.bold))
+                })
         }
     }
 }
