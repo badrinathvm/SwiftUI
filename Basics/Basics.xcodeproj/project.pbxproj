@@ -26,6 +26,8 @@
 		1BB87C3B2377B4CF00D1FABE /* AngularGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C3A2377B4CF00D1FABE /* AngularGradientView.swift */; };
 		1BB87C3D2377B4F500D1FABE /* LinearGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C3C2377B4F500D1FABE /* LinearGradientView.swift */; };
 		1BB87C3F2377BED600D1FABE /* RadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C3E2377BED600D1FABE /* RadialGradientView.swift */; };
+		1BB87C422377C73900D1FABE /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C412377C73900D1FABE /* SheetView.swift */; };
+		1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C432377CB0500D1FABE /* SheetViewIdentifiable.swift */; };
 		1BFF71DB236E22D00024F4B8 /* ListsMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DA236E22D00024F4B8 /* ListsMove.swift */; };
 		1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DC236E32060024F4B8 /* ListRowBackground.swift */; };
 		1BFF71DF236E534C0024F4B8 /* NavigationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DE236E534C0024F4B8 /* NavigationViews.swift */; };
@@ -84,6 +86,8 @@
 		1BB87C3A2377B4CF00D1FABE /* AngularGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngularGradientView.swift; sourceTree = "<group>"; };
 		1BB87C3C2377B4F500D1FABE /* LinearGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradientView.swift; sourceTree = "<group>"; };
 		1BB87C3E2377BED600D1FABE /* RadialGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGradientView.swift; sourceTree = "<group>"; };
+		1BB87C412377C73900D1FABE /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		1BB87C432377CB0500D1FABE /* SheetViewIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewIdentifiable.swift; sourceTree = "<group>"; };
 		1BFF71DA236E22D00024F4B8 /* ListsMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsMove.swift; sourceTree = "<group>"; };
 		1BFF71DC236E32060024F4B8 /* ListRowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowBackground.swift; sourceTree = "<group>"; };
 		1BFF71DE236E534C0024F4B8 /* NavigationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViews.swift; sourceTree = "<group>"; };
@@ -162,6 +166,25 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		1BB87C402377C70E00D1FABE /* Gradients */ = {
+			isa = PBXGroup;
+			children = (
+				1BB87C3A2377B4CF00D1FABE /* AngularGradientView.swift */,
+				1BB87C3C2377B4F500D1FABE /* LinearGradientView.swift */,
+				1BB87C3E2377BED600D1FABE /* RadialGradientView.swift */,
+			);
+			path = Gradients;
+			sourceTree = "<group>";
+		};
+		1BB87C452377CD7000D1FABE /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				1BB87C412377C73900D1FABE /* SheetView.swift */,
+				1BB87C432377CB0500D1FABE /* SheetViewIdentifiable.swift */,
+			);
+			path = Sheets;
+			sourceTree = "<group>";
+		};
 		8B2C4222235237DD00E8C68E = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +249,8 @@
 		8B2C425E23524BC700E8C68E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1BB87C452377CD7000D1FABE /* Sheets */,
+				1BB87C402377C70E00D1FABE /* Gradients */,
 				1BB87C302377340600D1FABE /* Circles */,
 				1B6E7D8523748B0C00BDF41A /* Binding */,
 				8B2C4232235237DD00E8C68E /* ContentView.swift */,
@@ -251,9 +276,6 @@
 				1BFF71E6236F9B650024F4B8 /* SegmentControlView.swift */,
 				1BFF71E8236FA0EA0024F4B8 /* SliderStepperViews.swift */,
 				1BFF71EA236FAAC40024F4B8 /* TabViews.swift */,
-				1BB87C3A2377B4CF00D1FABE /* AngularGradientView.swift */,
-				1BB87C3C2377B4F500D1FABE /* LinearGradientView.swift */,
-				1BB87C3E2377BED600D1FABE /* RadialGradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -394,6 +416,7 @@
 				1BFF71E7236F9B650024F4B8 /* SegmentControlView.swift in Sources */,
 				1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */,
 				1B269DCF236D5EAC00B063EA /* BasicTemplate.swift in Sources */,
+				1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */,
 				1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */,
 				1BFF71E5236F95CD0024F4B8 /* ScrollHorizontalView.swift in Sources */,
 				8B2C426023524BDD00E8C68E /* TipView.swift in Sources */,
@@ -406,6 +429,7 @@
 				8B942B9E2353F04C004A7B83 /* GuessView.swift in Sources */,
 				8B2C422F235237DD00E8C68E /* AppDelegate.swift in Sources */,
 				1B294628236DFBD000E44888 /* Buttons.swift in Sources */,
+				1BB87C422377C73900D1FABE /* SheetView.swift in Sources */,
 				1BFF71DB236E22D00024F4B8 /* ListsMove.swift in Sources */,
 				1BB87C3D2377B4F500D1FABE /* LinearGradientView.swift in Sources */,
 				1BB87C3B2377B4CF00D1FABE /* AngularGradientView.swift in Sources */,
