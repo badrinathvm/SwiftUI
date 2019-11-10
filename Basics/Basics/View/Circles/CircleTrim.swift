@@ -21,7 +21,7 @@ struct CircleTrim: View {
                 .trim(from: 0, to:circleProgress )
                 .stroke(Color.purple, style: StrokeStyle(lineWidth: 40, lineCap: CGLineCap.round))
                 .frame(height: 300)
-                .rotationEffect(.degrees(-90)) //refer circle diagram to indicate why -90
+               .rotationEffect(.degrees(-90)) //refer circle diagram to indicate why -90//
                 .overlay(Text("\(circlePercentage)%")
                     .font(.largeTitle)
                     .padding(40))
@@ -35,7 +35,7 @@ struct CircleTrim: View {
                 }.padding()
             }
             
-            VStack(spacing: 10) {
+            VStack(spacing: 20) {
                 Button(action: {}) {
                     Text("Use Capsule Border")
                         .font(.title)

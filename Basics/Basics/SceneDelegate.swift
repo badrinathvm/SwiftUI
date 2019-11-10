@@ -46,7 +46,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              //window.rootViewController = UIHostingController(rootView: PizzaView())
             //window.rootViewController = UIHostingController(rootView: CircularShapes())
             //window.rootViewController = UIHostingController(rootView: CircleBorder())
-            window.rootViewController = UIHostingController(rootView: CircleTrim())
+            //window.rootViewController = UIHostingController(rootView: CircleTrim())
+            window.rootViewController = UIHostingController(rootView: GradientView())
             self.window = window
             window.makeKeyAndVisible()
         }
