@@ -23,6 +23,7 @@
 		1BADE33A23790E88006B4825 /* BlendModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33923790E88006B4825 /* BlendModeView.swift */; };
 		1BADE33C237911CB006B4825 /* CustomPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33B237911CB006B4825 /* CustomPopupView.swift */; };
 		1BADE33E23791766006B4825 /* EdgesIgnoringSafeAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33D23791766006B4825 /* EdgesIgnoringSafeAreaView.swift */; };
+		1BADE34023791974006B4825 /* ClippedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33F23791974006B4825 /* ClippedView.swift */; };
 		1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C2E23772A0F00D1FABE /* CircularShapes.swift */; };
 		1BB87C322377342000D1FABE /* CircleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C312377342000D1FABE /* CircleBorder.swift */; };
 		1BB87C342377376300D1FABE /* CircleTrim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C332377376300D1FABE /* CircleTrim.swift */; };
@@ -92,6 +93,7 @@
 		1BADE33923790E88006B4825 /* BlendModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendModeView.swift; sourceTree = "<group>"; };
 		1BADE33B237911CB006B4825 /* CustomPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupView.swift; sourceTree = "<group>"; };
 		1BADE33D23791766006B4825 /* EdgesIgnoringSafeAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgesIgnoringSafeAreaView.swift; sourceTree = "<group>"; };
+		1BADE33F23791974006B4825 /* ClippedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClippedView.swift; sourceTree = "<group>"; };
 		1BB87C2E23772A0F00D1FABE /* CircularShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularShapes.swift; sourceTree = "<group>"; };
 		1BB87C312377342000D1FABE /* CircleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBorder.swift; sourceTree = "<group>"; };
 		1BB87C332377376300D1FABE /* CircleTrim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTrim.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				1BADE33923790E88006B4825 /* BlendModeView.swift */,
 				1BADE33B237911CB006B4825 /* CustomPopupView.swift */,
 				1BADE33D23791766006B4825 /* EdgesIgnoringSafeAreaView.swift */,
+				1BADE33F23791974006B4825 /* ClippedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				1B269DD3236D6A8700B063EA /* ViewSizesPullsIn.swift in Sources */,
 				1BADE33C237911CB006B4825 /* CustomPopupView.swift in Sources */,
 				1B29462C236E17F800E44888 /* Lists.swift in Sources */,
+				1BADE34023791974006B4825 /* ClippedView.swift in Sources */,
 				8B942B9E2353F04C004A7B83 /* GuessView.swift in Sources */,
 				8B2C422F235237DD00E8C68E /* AppDelegate.swift in Sources */,
 				1B294628236DFBD000E44888 /* Buttons.swift in Sources */,
