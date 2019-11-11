@@ -19,6 +19,8 @@
 		1B29462A236E0A6700E44888 /* Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294629236E0A6700E44888 /* Forms.swift */; };
 		1B29462C236E17F800E44888 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29462B236E17F800E44888 /* Lists.swift */; };
 		1B6E7D8723748B1B00BDF41A /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E7D8623748B1B00BDF41A /* Pizza.swift */; };
+		1BADE33823790B7E006B4825 /* OffsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33723790B7E006B4825 /* OffsetView.swift */; };
+		1BADE33A23790E88006B4825 /* BlendModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33923790E88006B4825 /* BlendModeView.swift */; };
 		1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C2E23772A0F00D1FABE /* CircularShapes.swift */; };
 		1BB87C322377342000D1FABE /* CircleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C312377342000D1FABE /* CircleBorder.swift */; };
 		1BB87C342377376300D1FABE /* CircleTrim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C332377376300D1FABE /* CircleTrim.swift */; };
@@ -84,6 +86,8 @@
 		1B294629236E0A6700E44888 /* Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forms.swift; sourceTree = "<group>"; };
 		1B29462B236E17F800E44888 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
 		1B6E7D8623748B1B00BDF41A /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		1BADE33723790B7E006B4825 /* OffsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetView.swift; sourceTree = "<group>"; };
+		1BADE33923790E88006B4825 /* BlendModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendModeView.swift; sourceTree = "<group>"; };
 		1BB87C2E23772A0F00D1FABE /* CircularShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularShapes.swift; sourceTree = "<group>"; };
 		1BB87C312377342000D1FABE /* CircleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBorder.swift; sourceTree = "<group>"; };
 		1BB87C332377376300D1FABE /* CircleTrim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTrim.swift; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 				1BB87C4B2378BDCA00D1FABE /* ShadowView.swift */,
 				1BB87C4D2378C79800D1FABE /* TransalationView.swift */,
 				1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */,
+				1BADE33723790B7E006B4825 /* OffsetView.swift */,
+				1BADE33923790E88006B4825 /* BlendModeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 				1BB87C4A2378B57700D1FABE /* ScaleEffectView.swift in Sources */,
 				1BFF71E1236E93760024F4B8 /* ScrollVerticalView.swift in Sources */,
 				1BFF71E7236F9B650024F4B8 /* SegmentControlView.swift in Sources */,
+				1BADE33A23790E88006B4825 /* BlendModeView.swift in Sources */,
 				1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */,
 				1B269DCF236D5EAC00B063EA /* BasicTemplate.swift in Sources */,
 				1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */,
@@ -456,6 +463,7 @@
 				8B2C422F235237DD00E8C68E /* AppDelegate.swift in Sources */,
 				1B294628236DFBD000E44888 /* Buttons.swift in Sources */,
 				1BB87C422377C73900D1FABE /* SheetView.swift in Sources */,
+				1BADE33823790B7E006B4825 /* OffsetView.swift in Sources */,
 				1BFF71DB236E22D00024F4B8 /* ListsMove.swift in Sources */,
 				1BB87C3D2377B4F500D1FABE /* LinearGradientView.swift in Sources */,
 				1BB87C3B2377B4CF00D1FABE /* AngularGradientView.swift in Sources */,

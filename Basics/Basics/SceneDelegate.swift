@@ -56,7 +56,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: ScaleEffectView())
             //window.rootViewController = UIHostingController(rootView: ShadowView())
             //window.rootViewController = UIHostingController(rootView: TransalationView())
-             window.rootViewController = UIHostingController(rootView: RotationalEffectView())
+             //window.rootViewController = UIHostingController(rootView: RotationalEffectView())
+            //window.rootViewController = UIHostingController(rootView: Offsetview())
+            window.rootViewController = UIHostingController(rootView: BlendModeView())
             self.window = window
             window.makeKeyAndVisible()
         }
