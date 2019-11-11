@@ -63,7 +63,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: EdgesIgnoringInsetView())
             //window.rootViewController = UIHostingController(rootView: ClippedView())
             //window.rootViewController = UIHostingController(rootView: ButtonStyleView())
-            window.rootViewController = UIHostingController(rootView: CheckBoxView())
+            //window.rootViewController = UIHostingController(rootView: CheckBoxView())
+             window.rootViewController = UIHostingController(rootView: ToggleReConstructionView())
             self.window = window
             window.makeKeyAndVisible()
         }
