@@ -34,6 +34,7 @@ struct TransalationView: View {
                 //.transformEffect(applyEffect ? CGAffineTransform(scaleX: 2, y: 2) : .identity)
                 //.border(Color.red)
                 .scaleEffect(applyEffect ? CGSize(width: 2, height: 2) : CGSize(width: 1, height: 1))
+                .animation(.easeIn)
             
 //            Image(systemName: "pencil.and.outline")
 //                .font(.system(size: 100))

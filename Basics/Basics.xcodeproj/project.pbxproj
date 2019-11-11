@@ -24,6 +24,8 @@
 		1BADE33C237911CB006B4825 /* CustomPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33B237911CB006B4825 /* CustomPopupView.swift */; };
 		1BADE33E23791766006B4825 /* EdgesIgnoringSafeAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33D23791766006B4825 /* EdgesIgnoringSafeAreaView.swift */; };
 		1BADE34023791974006B4825 /* ClippedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33F23791974006B4825 /* ClippedView.swift */; };
+		1BADE3422379E974006B4825 /* ButtonStylesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE3412379E974006B4825 /* ButtonStylesView.swift */; };
+		1BADE3442379EE70006B4825 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE3432379EE70006B4825 /* CheckBoxView.swift */; };
 		1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C2E23772A0F00D1FABE /* CircularShapes.swift */; };
 		1BB87C322377342000D1FABE /* CircleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C312377342000D1FABE /* CircleBorder.swift */; };
 		1BB87C342377376300D1FABE /* CircleTrim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C332377376300D1FABE /* CircleTrim.swift */; };
@@ -94,6 +96,8 @@
 		1BADE33B237911CB006B4825 /* CustomPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupView.swift; sourceTree = "<group>"; };
 		1BADE33D23791766006B4825 /* EdgesIgnoringSafeAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgesIgnoringSafeAreaView.swift; sourceTree = "<group>"; };
 		1BADE33F23791974006B4825 /* ClippedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClippedView.swift; sourceTree = "<group>"; };
+		1BADE3412379E974006B4825 /* ButtonStylesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStylesView.swift; sourceTree = "<group>"; };
+		1BADE3432379EE70006B4825 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 		1BB87C2E23772A0F00D1FABE /* CircularShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularShapes.swift; sourceTree = "<group>"; };
 		1BB87C312377342000D1FABE /* CircleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBorder.swift; sourceTree = "<group>"; };
 		1BB87C332377376300D1FABE /* CircleTrim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTrim.swift; sourceTree = "<group>"; };
@@ -314,6 +318,8 @@
 				1BADE33B237911CB006B4825 /* CustomPopupView.swift */,
 				1BADE33D23791766006B4825 /* EdgesIgnoringSafeAreaView.swift */,
 				1BADE33F23791974006B4825 /* ClippedView.swift */,
+				1BADE3412379E974006B4825 /* ButtonStylesView.swift */,
+				1BADE3432379EE70006B4825 /* CheckBoxView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -463,6 +469,8 @@
 				1BFF71DF236E534C0024F4B8 /* NavigationViews.swift in Sources */,
 				1BADE33E23791766006B4825 /* EdgesIgnoringSafeAreaView.swift in Sources */,
 				1BB87C4C2378BDCA00D1FABE /* ShadowView.swift in Sources */,
+				1BADE3442379EE70006B4825 /* CheckBoxView.swift in Sources */,
+				1BADE3422379E974006B4825 /* ButtonStylesView.swift in Sources */,
 				1B294626236DF42E00E44888 /* GReader.swift in Sources */,
 				1BB87C3F2377BED600D1FABE /* RadialGradientView.swift in Sources */,
 				1BB87C4E2378C79800D1FABE /* TransalationView.swift in Sources */,
