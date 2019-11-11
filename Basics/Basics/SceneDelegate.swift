@@ -54,7 +54,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: SheetViewIDentifiable())
             //window.rootViewController = UIHostingController(rootView: ProgressRowView())
             //window.rootViewController = UIHostingController(rootView: ScaleEffectView())
-            window.rootViewController = UIHostingController(rootView: ShadowView())
+            //window.rootViewController = UIHostingController(rootView: ShadowView())
+            //window.rootViewController = UIHostingController(rootView: TransalationView())
+             window.rootViewController = UIHostingController(rootView: RotationalEffectView())
             self.window = window
             window.makeKeyAndVisible()
         }

@@ -31,6 +31,8 @@
 		1BB87C47237887B300D1FABE /* ProgressRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C46237887B300D1FABE /* ProgressRowView.swift */; };
 		1BB87C4A2378B57700D1FABE /* ScaleEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C492378B57700D1FABE /* ScaleEffectView.swift */; };
 		1BB87C4C2378BDCA00D1FABE /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4B2378BDCA00D1FABE /* ShadowView.swift */; };
+		1BB87C4E2378C79800D1FABE /* TransalationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4D2378C79800D1FABE /* TransalationView.swift */; };
+		1BB87C502378DC5400D1FABE /* RotationalEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */; };
 		1BFF71DB236E22D00024F4B8 /* ListsMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DA236E22D00024F4B8 /* ListsMove.swift */; };
 		1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DC236E32060024F4B8 /* ListRowBackground.swift */; };
 		1BFF71DF236E534C0024F4B8 /* NavigationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DE236E534C0024F4B8 /* NavigationViews.swift */; };
@@ -94,6 +96,8 @@
 		1BB87C46237887B300D1FABE /* ProgressRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRowView.swift; sourceTree = "<group>"; };
 		1BB87C492378B57700D1FABE /* ScaleEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleEffectView.swift; sourceTree = "<group>"; };
 		1BB87C4B2378BDCA00D1FABE /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		1BB87C4D2378C79800D1FABE /* TransalationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransalationView.swift; sourceTree = "<group>"; };
+		1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationalEffectView.swift; sourceTree = "<group>"; };
 		1BFF71DA236E22D00024F4B8 /* ListsMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsMove.swift; sourceTree = "<group>"; };
 		1BFF71DC236E32060024F4B8 /* ListRowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowBackground.swift; sourceTree = "<group>"; };
 		1BFF71DE236E534C0024F4B8 /* NavigationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViews.swift; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 				1BFF71EA236FAAC40024F4B8 /* TabViews.swift */,
 				1BB87C492378B57700D1FABE /* ScaleEffectView.swift */,
 				1BB87C4B2378BDCA00D1FABE /* ShadowView.swift */,
+				1BB87C4D2378C79800D1FABE /* TransalationView.swift */,
+				1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -442,6 +448,7 @@
 				1BB87C4C2378BDCA00D1FABE /* ShadowView.swift in Sources */,
 				1B294626236DF42E00E44888 /* GReader.swift in Sources */,
 				1BB87C3F2377BED600D1FABE /* RadialGradientView.swift in Sources */,
+				1BB87C4E2378C79800D1FABE /* TransalationView.swift in Sources */,
 				1B269DCD236D537F00B063EA /* Containers.swift in Sources */,
 				1B269DD3236D6A8700B063EA /* ViewSizesPullsIn.swift in Sources */,
 				1B29462C236E17F800E44888 /* Lists.swift in Sources */,
@@ -452,6 +459,7 @@
 				1BFF71DB236E22D00024F4B8 /* ListsMove.swift in Sources */,
 				1BB87C3D2377B4F500D1FABE /* LinearGradientView.swift in Sources */,
 				1BB87C3B2377B4CF00D1FABE /* AngularGradientView.swift in Sources */,
+				1BB87C502378DC5400D1FABE /* RotationalEffectView.swift in Sources */,
 				1BB87C47237887B300D1FABE /* ProgressRowView.swift in Sources */,
 				1BB87C342377376300D1FABE /* CircleTrim.swift in Sources */,
 				1BFF71E9236FA0EA0024F4B8 /* SliderStepperViews.swift in Sources */,
