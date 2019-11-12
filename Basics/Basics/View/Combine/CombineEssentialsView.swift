@@ -59,25 +59,25 @@ class ToggleModel: ObservableObject {
             
     var validateRead: AnyPublisher<Bool, Never> {
         return $readTask
-            .debounce(for: 0.5, scheduler: RunLoop.main)
+            .debounce(for: 0.1, scheduler: RunLoop.main)
             .eraseToAnyPublisher()
     }
     
     var validatePractice: AnyPublisher<Bool, Never> {
         return $practiceTask
-             .debounce(for: 0.5, scheduler: RunLoop.main)
+            .debounce(for: 0.1, scheduler: RunLoop.main)
             .eraseToAnyPublisher()
     }
     
     var validateTeacherApproved: AnyPublisher<Bool, Never> {
         return $teacherApproved
-            .debounce(for: 0.5, scheduler: RunLoop.main)
+            .debounce(for: 0.1, scheduler: RunLoop.main)
             .eraseToAnyPublisher()
     }
     
     var validatedTasks: AnyPublisher<(Bool,Bool,Bool), Never> {
         return Publishers.CombineLatest3(validateRead,validatePractice,validateTeacherApproved)
-                .receive(on: RunLoop.main)
-         .eraseToAnyPublisher()
+            .receive(on: RunLoop.main)
+            .eraseToAnyPublisher()
     }
 }
