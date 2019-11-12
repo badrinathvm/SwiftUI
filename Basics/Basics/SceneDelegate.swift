@@ -66,7 +66,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: CheckBoxView())
              //window.rootViewController = UIHostingController(rootView: ToggleReConstructionView())
               //window.rootViewController = UIHostingController(rootView: CombineEssentialsView())
-            window.rootViewController = UIHostingController(rootView: CombinedStreamView())
+            //window.rootViewController = UIHostingController(rootView: CombineMapStreamView())
+             window.rootViewController = UIHostingController(rootView: OperationListView())
             self.window = window
             window.makeKeyAndVisible()
         }
