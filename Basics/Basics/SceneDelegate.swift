@@ -52,7 +52,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: RadialGradientView())
             //window.rootViewController = UIHostingController(rootView: SheetView())
             //window.rootViewController = UIHostingController(rootView: SheetViewIDentifiable())
-            window.rootViewController = UIHostingController(rootView: ProgressRowView())
+            //window.rootViewController = UIHostingController(rootView: ProgressRowView())
             //window.rootViewController = UIHostingController(rootView: ScaleEffectView())
             //window.rootViewController = UIHostingController(rootView: ShadowView())
             //window.rootViewController = UIHostingController(rootView: TransalationView())
@@ -66,6 +66,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: CheckBoxView())
              //window.rootViewController = UIHostingController(rootView: ToggleReConstructionView())
               //window.rootViewController = UIHostingController(rootView: CombineEssentialsView())
+            window.rootViewController = UIHostingController(rootView: CombinedStreamView())
             self.window = window
             window.makeKeyAndVisible()
         }

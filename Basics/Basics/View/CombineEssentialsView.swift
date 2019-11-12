@@ -13,8 +13,6 @@ import Combine
 struct CombineEssentialsView: View {
     var tasks = ["Read Manual" /*,"Practiced in Simulator" , "Teacher Approved"*/]
     @State private var taskStatus = false
-        
-   //@Published var readManualStatus: Bool = false
     
     var body: some View {
         VStack(spacing: 20) {
