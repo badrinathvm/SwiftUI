@@ -10,15 +10,9 @@ import Foundation
 import SwiftUI
 import Combine
 
-struct Task: Identifiable {
-    var id: Int
-    var taskName: String
-}
-
 struct CombineEssentialsView: View {
-    var tasks = [Task(id: 0, taskName: "Read More"), Task(id: 1, taskName: "Practiced Simulator")]
-    
     @State private var createAccountButtonDisabled : Bool = false
+    @State private var buttonBackGround:Color = Color.gray
     
     //States need to be handled via model
     @ObservedObject var toggleModel = ToggleModel()
@@ -26,19 +20,33 @@ struct CombineEssentialsView: View {
     @State var cancellable: AnyCancellable?
     
     var body: some View {
-        VStack(spacing: 20) {
-            ForEach(tasks) { task in
-                Toggle(isOn: task.id == 0 ?  self.$toggleModel.readTask: self.$toggleModel.practiceTask ) {
-                    Text("\(task.taskName)").font(.body)
-                }.padding(.horizontal, 10)
-            }
-
-            Button(action: {}) {
-                Text("Create Account")
-            }.disabled(!self.$createAccountButtonDisabled.wrappedValue)
-                .onReceive(self.toggleModel.validatedTasks) { (publisher) in
-                    self.createAccountButtonDisabled = (publisher.0 && publisher.1)
-            }
+        NavigationView {
+            VStack(spacing: 20) {
+                Toggle(isOn: self.$toggleModel.readTask) {
+                    Text("Read Manual").font(.system(size: 16, weight: Font.Weight.bold))
+                }.padding(.horizontal , 10).padding(.top, 10)
+                
+                Toggle(isOn: self.$toggleModel.practiceTask) {
+                    Text("Practiced in Simulator").font(.system(size: 16, weight: Font.Weight.bold))
+                }.padding(.horizontal , 10).padding(.top, 10)
+                
+                Toggle(isOn: self.$toggleModel.teacherApproved) {
+                    Text("Teacher Approved").font(.system(size: 16, weight: Font.Weight.bold))
+                }.padding(.horizontal , 10).padding(.top, 10)
+                
+                Button(action: {}) {
+                    Text("Create Account")
+                        .foregroundColor(Color.white)
+                }.padding()
+                    .background(RoundedRectangle(cornerRadius: 20).foregroundColor(buttonBackGround))
+                    .disabled(!self.$createAccountButtonDisabled.wrappedValue)
+                    .onReceive(self.toggleModel.validatedTasks) { (publisher) in
+                        self.createAccountButtonDisabled = (publisher.0 && publisher.1 && publisher.2)
+                        self.buttonBackGround = (publisher.0 && publisher.1 && publisher.2) ? Color.blue : Color.gray
+                }
+                
+                Spacer()
+            }.navigationBarTitle("Terms & Conditions")
         }
     }
 }
@@ -47,6 +55,7 @@ class ToggleModel: ObservableObject {
     
     @Published var readTask: Bool = false
     @Published var practiceTask: Bool = false
+    @Published var teacherApproved: Bool = false
             
     var validateRead: AnyPublisher<Bool, Never> {
         return $readTask
@@ -60,8 +69,14 @@ class ToggleModel: ObservableObject {
             .eraseToAnyPublisher()
     }
     
-    var validatedTasks: AnyPublisher<(Bool,Bool), Never> {
-        return Publishers.CombineLatest(validateRead,validatePractice)
+    var validateTeacherApproved: AnyPublisher<Bool, Never> {
+        return $teacherApproved
+            .debounce(for: 0.5, scheduler: RunLoop.main)
+            .eraseToAnyPublisher()
+    }
+    
+    var validatedTasks: AnyPublisher<(Bool,Bool,Bool), Never> {
+        return Publishers.CombineLatest3(validateRead,validatePractice,validateTeacherApproved)
                 .receive(on: RunLoop.main)
          .eraseToAnyPublisher()
     }
