@@ -11,6 +11,7 @@ import SwiftUI
 
 struct CircularRingView: View {
     let circleProgress = 85
+    @State private var show = false
     var body: some View {
         let gradient = Gradient(colors: [.purple, .blue])
         let linearGradient = LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom)
@@ -21,10 +22,11 @@ struct CircularRingView: View {
                 .stroke(Color(red: 245/255, green: 245/255, blue: 245/255), lineWidth: 10)
                 .frame(height: 80)
             Circle()
-                .trim(from: 0, to: 0.75)
+                .trim(from: show ?  0 : 0.9, to: 0.75)
                 .stroke(linearGradient, style: StrokeStyle(lineWidth: 8, lineCap: CGLineCap.round))
                 .shadow(radius: 4)
                 .rotationEffect(.degrees(-70))
+                .rotation3DEffect(Angle.degrees(180), axis: (x: 1, y: 0, z: 0))
                 .frame(height: 70)
                 .overlay(
                     HStack(spacing: 2) {
@@ -34,6 +36,10 @@ struct CircularRingView: View {
                         Text("%").foregroundColor(Color.gray)
                             .font(.system(size: 14, weight: Font.Weight.bold))
                 })
+              .animation(.easeOut)
+                .onTapGesture {
+                    self.show.toggle()
+            }
         }
     }
 }

@@ -27,6 +27,7 @@
 		1BADE3422379E974006B4825 /* ButtonStylesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE3412379E974006B4825 /* ButtonStylesView.swift */; };
 		1BADE3442379EE70006B4825 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE3432379EE70006B4825 /* CheckBoxView.swift */; };
 		1BADE3462379F0B7006B4825 /* ToggleReConstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE3452379F0B7006B4825 /* ToggleReConstructionView.swift */; };
+		1BADE34C237A880F006B4825 /* CombineEssentialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE34B237A880F006B4825 /* CombineEssentialsView.swift */; };
 		1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C2E23772A0F00D1FABE /* CircularShapes.swift */; };
 		1BB87C322377342000D1FABE /* CircleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C312377342000D1FABE /* CircleBorder.swift */; };
 		1BB87C342377376300D1FABE /* CircleTrim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C332377376300D1FABE /* CircleTrim.swift */; };
@@ -100,6 +101,7 @@
 		1BADE3412379E974006B4825 /* ButtonStylesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStylesView.swift; sourceTree = "<group>"; };
 		1BADE3432379EE70006B4825 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 		1BADE3452379F0B7006B4825 /* ToggleReConstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleReConstructionView.swift; sourceTree = "<group>"; };
+		1BADE34B237A880F006B4825 /* CombineEssentialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineEssentialsView.swift; sourceTree = "<group>"; };
 		1BB87C2E23772A0F00D1FABE /* CircularShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularShapes.swift; sourceTree = "<group>"; };
 		1BB87C312377342000D1FABE /* CircleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBorder.swift; sourceTree = "<group>"; };
 		1BB87C332377376300D1FABE /* CircleTrim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTrim.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				1BADE33D23791766006B4825 /* EdgesIgnoringSafeAreaView.swift */,
 				1BADE33F23791974006B4825 /* ClippedView.swift */,
 				1BADE3412379E974006B4825 /* ButtonStylesView.swift */,
+				1BADE34B237A880F006B4825 /* CombineEssentialsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				1BB87C342377376300D1FABE /* CircleTrim.swift in Sources */,
 				1BFF71E9236FA0EA0024F4B8 /* SliderStepperViews.swift in Sources */,
 				1BB87C322377342000D1FABE /* CircleBorder.swift in Sources */,
+				1BADE34C237A880F006B4825 /* CombineEssentialsView.swift in Sources */,
 				1B6E7D8723748B1B00BDF41A /* Pizza.swift in Sources */,
 				1BFF71EB236FAAC40024F4B8 /* TabViews.swift in Sources */,
 				8B2C4231235237DD00E8C68E /* SceneDelegate.swift in Sources */,
