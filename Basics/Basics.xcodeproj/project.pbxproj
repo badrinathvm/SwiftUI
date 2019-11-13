@@ -18,6 +18,7 @@
 		1B294628236DFBD000E44888 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294627236DFBD000E44888 /* Buttons.swift */; };
 		1B29462A236E0A6700E44888 /* Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294629236E0A6700E44888 /* Forms.swift */; };
 		1B29462C236E17F800E44888 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29462B236E17F800E44888 /* Lists.swift */; };
+		1B4CAD7C237BBD7800B49B4A /* BarAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CAD7B237BBD7800B49B4A /* BarAnimationView.swift */; };
 		1B6E7D8723748B1B00BDF41A /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E7D8623748B1B00BDF41A /* Pizza.swift */; };
 		1BADE33823790B7E006B4825 /* OffsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33723790B7E006B4825 /* OffsetView.swift */; };
 		1BADE33A23790E88006B4825 /* BlendModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33923790E88006B4825 /* BlendModeView.swift */; };
@@ -94,6 +95,7 @@
 		1B294627236DFBD000E44888 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		1B294629236E0A6700E44888 /* Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forms.swift; sourceTree = "<group>"; };
 		1B29462B236E17F800E44888 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
+		1B4CAD7B237BBD7800B49B4A /* BarAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAnimationView.swift; sourceTree = "<group>"; };
 		1B6E7D8623748B1B00BDF41A /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		1BADE33723790B7E006B4825 /* OffsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetView.swift; sourceTree = "<group>"; };
 		1BADE33923790E88006B4825 /* BlendModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendModeView.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				1BFF71E2236F58870024F4B8 /* YosemiteView.swift */,
 				1BB87C46237887B300D1FABE /* ProgressRowView.swift */,
 				1BADE3452379F0B7006B4825 /* ToggleReConstructionView.swift */,
+				1B4CAD7B237BBD7800B49B4A /* BarAnimationView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				1BB87C4C2378BDCA00D1FABE /* ShadowView.swift in Sources */,
 				1BADE3442379EE70006B4825 /* CheckBoxView.swift in Sources */,
 				1BADE3422379E974006B4825 /* ButtonStylesView.swift in Sources */,
+				1B4CAD7C237BBD7800B49B4A /* BarAnimationView.swift in Sources */,
 				1B294626236DF42E00E44888 /* GReader.swift in Sources */,
 				1BADE3462379F0B7006B4825 /* ToggleReConstructionView.swift in Sources */,
 				1BB87C3F2377BED600D1FABE /* RadialGradientView.swift in Sources */,
