@@ -68,7 +68,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: CombineEssentialsView())
             //window.rootViewController = UIHostingController(rootView: CombineMapStreamView())
              //window.rootViewController = UIHostingController(rootView: OperationListView())
-             window.rootViewController = UIHostingController(rootView: BarAnimationView())
+             //window.rootViewController = UIHostingController(rootView: BarAnimationView())
+             //window.rootViewController = UIHostingController(rootView: CombineAsync())
+             //window.rootViewController = UIHostingController(rootView: CreditScoreView())
+             window.rootViewController = UIHostingController(rootView: GeometryView())
             self.window = window
             window.makeKeyAndVisible()
         }
