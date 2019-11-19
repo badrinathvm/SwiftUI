@@ -51,6 +51,7 @@
 		1BFF4951238240F2006DBB0F /* GeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4950238240F2006DBB0F /* GeometryView.swift */; };
 		1BFF495323835B2C006DBB0F /* BudgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF495223835B2C006DBB0F /* BudgetsView.swift */; };
 		1BFF495523836206006DBB0F /* CardBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF495423836206006DBB0F /* CardBottomView.swift */; };
+		1BFF4957238383DC006DBB0F /* NotificationPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4956238383DC006DBB0F /* NotificationPublisher.swift */; };
 		1BFF71DB236E22D00024F4B8 /* ListsMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DA236E22D00024F4B8 /* ListsMove.swift */; };
 		1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DC236E32060024F4B8 /* ListRowBackground.swift */; };
 		1BFF71DF236E534C0024F4B8 /* NavigationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF71DE236E534C0024F4B8 /* NavigationViews.swift */; };
@@ -134,6 +135,7 @@
 		1BFF4950238240F2006DBB0F /* GeometryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryView.swift; sourceTree = "<group>"; };
 		1BFF495223835B2C006DBB0F /* BudgetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsView.swift; sourceTree = "<group>"; };
 		1BFF495423836206006DBB0F /* CardBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBottomView.swift; sourceTree = "<group>"; };
+		1BFF4956238383DC006DBB0F /* NotificationPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPublisher.swift; sourceTree = "<group>"; };
 		1BFF71DA236E22D00024F4B8 /* ListsMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsMove.swift; sourceTree = "<group>"; };
 		1BFF71DC236E32060024F4B8 /* ListRowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowBackground.swift; sourceTree = "<group>"; };
 		1BFF71DE236E534C0024F4B8 /* NavigationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViews.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				1BADE350237AA69E006B4825 /* OperationListView.swift */,
 				1BADE34B237A880F006B4825 /* CombineEssentialsView.swift */,
 				1B4CAD80237C70BB00B49B4A /* CombineAsync.swift */,
+				1BFF4956238383DC006DBB0F /* NotificationPublisher.swift */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				1B269DCD236D537F00B063EA /* Containers.swift in Sources */,
 				1B269DD3236D6A8700B063EA /* ViewSizesPullsIn.swift in Sources */,
 				1BADE33C237911CB006B4825 /* CustomPopupView.swift in Sources */,
+				1BFF4957238383DC006DBB0F /* NotificationPublisher.swift in Sources */,
 				1B29462C236E17F800E44888 /* Lists.swift in Sources */,
 				1BADE34023791974006B4825 /* ClippedView.swift in Sources */,
 				8B942B9E2353F04C004A7B83 /* GuessView.swift in Sources */,

@@ -40,7 +40,7 @@ class DataSource: ObservableObject {
                 }
             }
             .assertNoFailure()
-        .receive(on: RunLoop.main)
+            .receive(on: RunLoop.main)
             .sink { result in
                 print("Request Finished \(result.data)")
             }
