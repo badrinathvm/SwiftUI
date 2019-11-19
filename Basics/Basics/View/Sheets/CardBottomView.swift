@@ -61,7 +61,7 @@ struct BottomView: View {
                     })
             }.edgesIgnoringSafeArea(.vertical)
                 .offset(y: !self.show ? screen.height - sheetHeight : 0)
-                .offset(y:self.viewHeight.height)
+                .offset(y: self.viewHeight.height )
                 .onTapGesture {
                     self.show.toggle()
             }
@@ -71,9 +71,12 @@ struct BottomView: View {
                     self.viewHeight = value.translation
                 })
                 .onEnded({ (value) in
-                    if value.translation.height > sheetHeight - 50 {
-                        print("Value is \(value.translation.height)")
+                    let height =  value.translation.height
+                    if  height > sheetHeight - 50 {
+                        //print("Value is \(value.translation.height)")
                         self.show.toggle()
+                    }else {
+                        print("here \(height)")
                     }
                     self.viewHeight.height = .zero
                 })
