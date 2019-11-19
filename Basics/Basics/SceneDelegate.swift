@@ -74,7 +74,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              //window.rootViewController = UIHostingController(rootView: GeometryView())
              //window.rootViewController = UIHostingController(rootView: BudgetsView())
              //window.rootViewController = UIHostingController(rootView: CardBottomView())
-            window.rootViewController = ViewController()
+            //window.rootViewController = ViewController()
+            window.rootViewController = UIHostingController(rootView: MenuView())
             self.window = window
             window.makeKeyAndVisible()
         }
