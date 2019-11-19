@@ -71,7 +71,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              //window.rootViewController = UIHostingController(rootView: BarAnimationView())
              //window.rootViewController = UIHostingController(rootView: CombineAsync())
              //window.rootViewController = UIHostingController(rootView: CreditScoreView())
-             window.rootViewController = UIHostingController(rootView: GeometryView())
+             //window.rootViewController = UIHostingController(rootView: GeometryView())
+            //window.rootViewController = UIHostingController(rootView: BudgetsView())
+             window.rootViewController = UIHostingController(rootView: CardBottomView())
             self.window = window
             window.makeKeyAndVisible()
         }

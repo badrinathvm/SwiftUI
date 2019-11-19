@@ -51,7 +51,7 @@ struct GeometryView: View {
                         .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(height: self.calculateFrameHeight(minHeight: 120, maxHeight: 300, yOffset: gr.frame(in: .global).origin.y))
-                            //.shadow(radius: self.calculateFrameHeight(minHeight: 120, maxHeight: 300, yOffset: gr.frame(in: .global).origin.y) < 140 ? 8 : 0)
+                            .shadow(radius: self.calculateFrameHeight(minHeight: 120, maxHeight: 300, yOffset: gr.frame(in: .global).origin.y) < 140 ? 8 : 0)
                             .overlay(Text("UTAH").foregroundColor(Color.white).font(.system(size: 70, weight: .black)))
                             //logic - if the image is scrolling up say for eg : -100 // push it down  else
                             .offset(y: gr.frame(in: .global).origin.y < 0 ? abs(gr.frame(in: .global).origin.y) : -gr.frame(in: .global).origin.y)

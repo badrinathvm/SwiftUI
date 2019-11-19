@@ -24,8 +24,9 @@ struct SheetViewIDentifiable: View {
                 Text("Show Sheet")
                 .padding()
                     .foregroundColor(Color.pink)
-            }.background(Capsule().strokeBorder(Color.purple, lineWidth: 2))
-                .sheet(item: $detailInfo) { (detailInfo)  in
+            }
+            .background(Capsule().strokeBorder(Color.purple, lineWidth: 2))
+            .sheet(item: $detailInfo) { (detailInfo)  in
                     DetailSheetView(details: detailInfo)
             }
         }

@@ -60,8 +60,9 @@ struct SheetView: View {
                 Text("Show Modal")
                     .padding()
                     .foregroundColor(Color.purple)
-            }.background(Capsule().strokeBorder(LinearGradient(gradient: gradientColors, startPoint: .top, endPoint: .bottom), lineWidth: 2))
-                .sheet(isPresented: $isPresentingSheet) {
+            }
+            .background(Capsule().strokeBorder(LinearGradient(gradient: gradientColors, startPoint: .top, endPoint: .bottom), lineWidth: 2))
+            .sheet(isPresented: $isPresentingSheet) {
                     ModalView(title: "Sheet", subtitle: "Presenting Sheet")
             }
             Spacer()
