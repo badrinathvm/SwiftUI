@@ -76,7 +76,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              //window.rootViewController = UIHostingController(rootView: CardBottomView())
             //window.rootViewController = ViewController()
             //window.rootViewController = UIHostingController(rootView: MenuView())
-            window.rootViewController = UIHostingController(rootView: PublishedView())
+            //window.rootViewController = UIHostingController(rootView: PublishedView())
+              //window.rootViewController = UIHostingController(rootView: UpperCasedView())
+             window.rootViewController = UIHostingController(rootView: CombineExamplesView())
             self.window = window
             window.makeKeyAndVisible()
         }
