@@ -10,7 +10,6 @@ import Foundation
 import SwiftUI
 import Combine
 
-
 let subject = PassthroughSubject<String, Never>()
 
 class Subject : ObservableObject {
@@ -26,13 +25,13 @@ class Subject : ObservableObject {
     }
 }
 
-struct CombineExamplesView : View {
-    
-    var subject  = Subject()
-    
-    var body: some View {
-        let publisher = Just("Here we go")
-        publisher.subscribe(subject)
-        Text("Hello")
-    }
-}
+//struct CombineExamplesView : View {
+//
+//    var subject  = Subject()
+//
+//    var body: some View {
+//        let publisher = Just("Here we go")
+//        publisher.subscribe(subject)
+//        Text("Hello")
+//    }
+//}
