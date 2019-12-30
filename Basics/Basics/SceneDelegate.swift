@@ -78,7 +78,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: MenuView())
             //window.rootViewController = UIHostingController(rootView: PublishedView())
               //window.rootViewController = UIHostingController(rootView: UpperCasedView())
-             window.rootViewController = UIHostingController(rootView: AnimationView())
+             //window.rootViewController = UIHostingController(rootView: AnimationView())
+            window.rootViewController = UIHostingController(rootView: SequenceAnimationView())
             self.window = window
             window.makeKeyAndVisible()
         }

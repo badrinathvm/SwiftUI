@@ -78,7 +78,7 @@ struct AnimationView: View {
                     .animation(.easeInOut)
                 
                 //Spacer()
-               
+
                 Button(action: {
                     self.change.toggle()
                 }) {
