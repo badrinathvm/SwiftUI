@@ -16,20 +16,20 @@ struct AppearDisappearAnimationView: View  {
         VStack {
             Spacer()
             
-            Circle()
-                .fill(Color.green)
-                .frame(width: 100, height: 100)
-                .offset(x: 0, y: -20)
-            .overlay(Image(systemName: "line.horizontal.3")
-                .foregroundColor(Color.white)
-                .offset(x: 0, y: -50))
-
-            // this extends space entier screen
-            HStack {
-                Spacer()
-            }
-
-            Spacer()
+//            Circle()
+//                .fill(Color.green)
+//                .frame(width: 100, height: 100)
+//                .offset(x: 0, y: -20)
+//            .overlay(Image(systemName: "line.horizontal.3")
+//                .foregroundColor(Color.white)
+//                .offset(x: 0, y: -50))
+//
+//            // this extends space entier screen
+//            HStack {
+//                Spacer()
+//            }
+//
+//            Spacer()
             
             if showTip {
                 VStack(spacing: 20) {
@@ -72,8 +72,5 @@ struct AppearDisappearAnimationView: View  {
             }
         }.animation(.default)
             .font(.title)
-//            .frame(height: 200)
-//            .background(RoundedRectangle(cornerRadius: 20).fill(Color.red))
-//            .offset(x: 0, y: 20)
     }
 }
