@@ -30,6 +30,7 @@
 		1B7E779923BBFBBF006CF53B /* MultipleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E779823BBFBBF006CF53B /* MultipleAnimationView.swift */; };
 		1B9EECD823C1C15600434EA4 /* DragAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECD723C1C15600434EA4 /* DragAnimationView.swift */; };
 		1B9EECDB23C27C5700434EA4 /* ExerciseAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */; };
+		1B9EECDD23C2896800434EA4 /* RotationGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */; };
 		1BADE33823790B7E006B4825 /* OffsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33723790B7E006B4825 /* OffsetView.swift */; };
 		1BADE33A23790E88006B4825 /* BlendModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33923790E88006B4825 /* BlendModeView.swift */; };
 		1BADE33C237911CB006B4825 /* CustomPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33B237911CB006B4825 /* CustomPopupView.swift */; };
@@ -128,6 +129,7 @@
 		1B7E779823BBFBBF006CF53B /* MultipleAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleAnimationView.swift; sourceTree = "<group>"; };
 		1B9EECD723C1C15600434EA4 /* DragAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAnimationView.swift; sourceTree = "<group>"; };
 		1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAnimationView.swift; sourceTree = "<group>"; };
+		1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureView.swift; sourceTree = "<group>"; };
 		1BADE33723790B7E006B4825 /* OffsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetView.swift; sourceTree = "<group>"; };
 		1BADE33923790E88006B4825 /* BlendModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendModeView.swift; sourceTree = "<group>"; };
 		1BADE33B237911CB006B4825 /* CustomPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupView.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				1B9EECD723C1C15600434EA4 /* DragAnimationView.swift */,
+				1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */,
 			);
 			path = Gestures;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9EECDD23C2896800434EA4 /* RotationGestureView.swift in Sources */,
 				1B4CAD7F237C70A200B49B4A /* User.swift in Sources */,
 				1BB87C4A2378B57700D1FABE /* ScaleEffectView.swift in Sources */,
 				1BFF71E1236E93760024F4B8 /* ScrollVerticalView.swift in Sources */,
