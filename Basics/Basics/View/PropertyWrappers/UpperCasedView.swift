@@ -53,3 +53,4 @@ struct UserDefault<T> {
 enum UserPreferences {
     @UserDefault(key: "isSwiftUIEnabled", initialValue: "YES") static var isSwiftUIEnabled:String
 }
+
