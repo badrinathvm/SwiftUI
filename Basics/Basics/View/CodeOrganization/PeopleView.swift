@@ -11,6 +11,7 @@ import SwiftUI
 
 struct PeopleView: View {
     
+    // An ObservableObject needs to be a class type and will update the View whenever the properties that are marked with @Published changes.
     @ObservedObject var viewModel = PeopleViewModel()
     
     var body: some View {

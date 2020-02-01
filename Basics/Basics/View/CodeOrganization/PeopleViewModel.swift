@@ -17,5 +17,6 @@ final class PeopleViewModel: ObservableObject {
         var occupation: String
     }
     
+//    It’s a wrapper that can be used for properties that are declared in ObservableObject. Whenever the value changes, it will invoke objectWillChange method so View can react to the changes published.
     @Published var people = [People(name: "SwiftUI", occupation: "Swifter")]
 }
