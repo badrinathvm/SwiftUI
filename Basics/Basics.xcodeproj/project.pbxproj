@@ -21,8 +21,11 @@
 		1B4CAD7C237BBD7800B49B4A /* BarAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CAD7B237BBD7800B49B4A /* BarAnimationView.swift */; };
 		1B4CAD7F237C70A200B49B4A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CAD7E237C70A200B49B4A /* User.swift */; };
 		1B4CAD81237C70BB00B49B4A /* CombineAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CAD80237C70BB00B49B4A /* CombineAsync.swift */; };
+		1B53B0E72426D98300D15C97 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B53B0E62426D98300D15C97 /* View+Extension.swift */; };
+		1B53B0E92426DE8B00D15C97 /* CustomAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B53B0E82426DE8B00D15C97 /* CustomAnimationView.swift */; };
 		1B66D13523E62EA500AB7855 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B66D13423E62EA500AB7855 /* PeopleView.swift */; };
 		1B66D13723E62EF200AB7855 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B66D13623E62EF200AB7855 /* PeopleViewModel.swift */; };
+		1B66D17523E74DA300AB7855 /* AddToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B66D17423E74DA200AB7855 /* AddToCartView.swift */; };
 		1B6E7D8723748B1B00BDF41A /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E7D8623748B1B00BDF41A /* Pizza.swift */; };
 		1B7E778F23AB9519006CF53B /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E778E23AB9519006CF53B /* AnimationView.swift */; };
 		1B7E779123BAA296006CF53B /* SequenceAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E779023BAA296006CF53B /* SequenceAnimationView.swift */; };
@@ -122,8 +125,11 @@
 		1B4CAD7B237BBD7800B49B4A /* BarAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAnimationView.swift; sourceTree = "<group>"; };
 		1B4CAD7E237C70A200B49B4A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1B4CAD80237C70BB00B49B4A /* CombineAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineAsync.swift; sourceTree = "<group>"; };
+		1B53B0E62426D98300D15C97 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		1B53B0E82426DE8B00D15C97 /* CustomAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimationView.swift; sourceTree = "<group>"; };
 		1B66D13423E62EA500AB7855 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		1B66D13623E62EF200AB7855 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		1B66D17423E74DA200AB7855 /* AddToCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartView.swift; sourceTree = "<group>"; };
 		1B6E7D8623748B1B00BDF41A /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		1B7E778E23AB9519006CF53B /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		1B7E779023BAA296006CF53B /* SequenceAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceAnimationView.swift; sourceTree = "<group>"; };
@@ -230,6 +236,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1B53B0E42426D96400D15C97 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1B53B0E52426D96C00D15C97 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1B53B0E52426D96C00D15C97 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1B53B0E62426D98300D15C97 /* View+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1B66D13323E62E8700AB7855 /* CodeOrganization */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +291,8 @@
 			children = (
 				1B9EECD723C1C15600434EA4 /* DragAnimationView.swift */,
 				1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */,
+				1B66D17423E74DA200AB7855 /* AddToCartView.swift */,
+				1B53B0E82426DE8B00D15C97 /* CustomAnimationView.swift */,
 			);
 			path = Gestures;
 			sourceTree = "<group>";
@@ -372,6 +396,7 @@
 		8B2C422D235237DD00E8C68E /* Basics */ = {
 			isa = PBXGroup;
 			children = (
+				1B53B0E42426D96400D15C97 /* Utils */,
 				1BB87C3523773C1100D1FABE /* Resources */,
 				8B2C425E23524BC700E8C68E /* View */,
 				8B2C422E235237DD00E8C68E /* AppDelegate.swift */,
@@ -594,6 +619,7 @@
 				1B9EECDD23C2896800434EA4 /* RotationGestureView.swift in Sources */,
 				1B4CAD7F237C70A200B49B4A /* User.swift in Sources */,
 				1BB87C4A2378B57700D1FABE /* ScaleEffectView.swift in Sources */,
+				1B66D17523E74DA300AB7855 /* AddToCartView.swift in Sources */,
 				1BFF71E1236E93760024F4B8 /* ScrollVerticalView.swift in Sources */,
 				1BFF71E7236F9B650024F4B8 /* SegmentControlView.swift in Sources */,
 				1BADE33A23790E88006B4825 /* BlendModeView.swift in Sources */,
@@ -616,6 +642,7 @@
 				1BADE33E23791766006B4825 /* EdgesIgnoringSafeAreaView.swift in Sources */,
 				1B66D13523E62EA500AB7855 /* PeopleView.swift in Sources */,
 				1BB87C4C2378BDCA00D1FABE /* ShadowView.swift in Sources */,
+				1B53B0E92426DE8B00D15C97 /* CustomAnimationView.swift in Sources */,
 				1BADE3442379EE70006B4825 /* CheckBoxView.swift in Sources */,
 				1BADE3422379E974006B4825 /* ButtonStylesView.swift in Sources */,
 				1B4CAD7C237BBD7800B49B4A /* BarAnimationView.swift in Sources */,
@@ -630,6 +657,7 @@
 				1BADE33C237911CB006B4825 /* CustomPopupView.swift in Sources */,
 				1BFF4957238383DC006DBB0F /* NotificationPublisher.swift in Sources */,
 				1B29462C236E17F800E44888 /* Lists.swift in Sources */,
+				1B53B0E72426D98300D15C97 /* View+Extension.swift in Sources */,
 				1BADE34023791974006B4825 /* ClippedView.swift in Sources */,
 				8B942B9E2353F04C004A7B83 /* GuessView.swift in Sources */,
 				1BB4691423C1B07C0041B1D8 /* AppearDisappearAnimationView.swift in Sources */,
