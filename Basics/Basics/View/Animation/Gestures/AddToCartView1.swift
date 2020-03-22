@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 
-struct AddToCartView: View {
+struct AddToCartView1: View {
     @State private var taps: Int = 0
     var body: some View  {
         Button("Empty Cart") {

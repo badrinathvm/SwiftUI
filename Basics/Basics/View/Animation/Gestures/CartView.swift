@@ -20,32 +20,22 @@ struct Shake: AnimatableModifier {
     }
 }
 
-struct CustomAnimationView: View {
+struct CartView: View {
     @State private var taps: Int = 0
-    @State private var fill: Bool = false
+    @State private var status: Bool = false
     
     var body: some View {
         VStack {
-            HStack {
-                Button("Empty Cart") {
-                    withAnimation(.linear(duration: 0.5)) {
-                        self.taps += 1
-                        self.fill = true
-                    }
-                }.disabled(self.fill && self.taps > 0 )
-                
-                Spacer()
-                
-                Button("Fill Cart") {
-                    withAnimation(.linear(duration: 0.5)) {
-                        self.fill = true
-                        self.taps = 0
-                    }
-                }.disabled(self.taps == 0)
-
-            }.padding(.horizontal, 70)
+            Button(self.status ? "Fill Cart" : "Empty Cart") {
+                withAnimation(.linear(duration: 0.5)) {
+                    self.taps += 1
+                    self.status.toggle()
+                }
+            }.animation(nil)
+            .padding()
+            .font(.system(size: 16, weight: Font.Weight.heavy))
             
-            Image( self.fill && self.taps > 0 ? "cart_empty" : "cart_filled")
+            Image(self.status ? "cart_empty" : "cart_filled")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40 , height: 40)
