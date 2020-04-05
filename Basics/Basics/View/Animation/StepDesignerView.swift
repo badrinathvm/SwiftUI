@@ -27,7 +27,7 @@ struct StepDesignerView: View {
         return HStack {
             Divider()
                 .background(Color.gray)
-                .frame(height: dividerHeight + 50)
+                .frame(height: dividerHeight)
                 .padding()
         }
     }
@@ -47,50 +47,54 @@ struct StepDesignerView: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text("Refinance Reason")
-                        .foregroundColor(Color.gray)
                         .padding(.vertical , 10)
                         .padding(.horizontal, 5)
                     Spacer()
                 }
                 Text("Home Loan")
-                    .foregroundColor(Color.gray)
                     .padding(.vertical , 10)
                     .padding(.horizontal, 5)
-                
+                   
                 Text("Home Loan1")
-                    .foregroundColor(Color.gray)
                     .padding(.vertical , 10)
                     .padding(.horizontal, 5)
-        }
+            }
+            .foregroundColor(Color.gray)
     }
     
     var body: some View {
-        GeometryReader { proxy in
-            HStack {
-                self.divider()
-                VStack {
-                    ForEach(0..<5, id:\.self) { index in
-                        HStack(alignment: index % 2 == 0 ? .customTop : .customBottom) {
-                            self.circles()
-                                .padding(.horizontal, 10)
-                                .alignmentGuide(index % 2 == 0 ? .customTop : .customBottom) { d in index % 2 == 0 ? d[VerticalAlignment.top] - 15 : d[VerticalAlignment.bottom] + 15  }
-                            self.roundedRectangle()
-                            .heightPreference(column: index)
-                        }
-                        .onPreferenceChange(HeightPreference.self) {
+        NavigationView {
+            GeometryReader { proxy in
+                ScrollView(Axis.Set.vertical, showsIndicators: false) {
+                    HStack {
+                        self.divider()
+                        VStack(spacing: 30) {
+                            ForEach(0..<6, id:\.self) { index in
+                                HStack(alignment: index % 2 == 0 ? .customTop : .customBottom) {
+                                    self.circles()
+                                        .padding(.horizontal, 10)
+                                        .alignmentGuide(index % 2 == 0 ? .customTop : .customBottom) { d in index % 2 == 0 ? d[VerticalAlignment.top] - 15 : d[VerticalAlignment.bottom] + 15  }
+                                    self.roundedRectangle()
+                                        .heightPreference(column: index)
+                                }
+                                .offset(x: -40)
+                            }
+                        }.onPreferenceChange(HeightPreference.self) {
                             self.columnHeights = $0
                             print(self.columnHeights)
-                            self.dividerHeight += CGFloat(self.columnHeights[index]!)
+                            //get heights of each of the cell + paddings
+                            self.dividerHeight = Array(self.columnHeights.values).reduce(0, +) + (30 * 5)
                             print(" Divider Height \(self.dividerHeight)")
                         }
-                        .offset(x: -40)
-                    }
+                    }.padding()
                 }
-            }.padding()
+            }
+            .navigationBarTitle("Stepper View")
         }
     }
 }
 
+//MARK:- Custom alignments
 extension VerticalAlignment {
     private enum CustomTopAlignment: AlignmentID {
         static func defaultValue(in context: ViewDimensions) -> CGFloat {
@@ -119,6 +123,7 @@ extension View {
     }
 }
 
+//MARK:- Collects width of all the cells, with reduce takes the maximum value for the given key
 struct HeightPreference: PreferenceKey {
     typealias Value = [Int:CGFloat]
     static let defaultValue: Value = [:]
@@ -127,93 +132,3 @@ struct HeightPreference: PreferenceKey {
         value.merge(nextValue(), uniquingKeysWith: max)
     }
 }
-
-
-//extension HorizontalAlignment {
-//    private enum Mid:AlignmentID {
-//        static func defaultValue(in context: ViewDimensions) -> CGFloat {
-//            return context[HorizontalAlignment.center]
-//        }
-//    }
-//
-//    static let mid = HorizontalAlignment(Mid.self)
-//}
-
-
-//-------------------------------------------------------------------------------------------
-
-//    var body: some View {
-//        VStack {
-//          ForEach(1..<6, id:\.self) { index in
-//            StepCardView(height: 80)
-//           }
-//        }
-//    }
-    
-//struct StepperView: View {
-//    var height: Int
-//    var body: some View  {
-//        VStack(alignment: .center) {
-//            ZStack{
-//                Circle()
-//                    .frame(width: 12, height:12)
-//                    .foregroundColor(Color.blue)
-//                Circle()
-//                    .frame(width: 10, height:10)
-//                    .foregroundColor(Color.green)
-//            }
-//            HStack {
-//                Divider().background(Color.gray)
-//                    //.frame(height: CGFloat(height))
-//                    //.offset(y: -5)
-//                .padding()
-//            }
-//        }
-//    }
-//}
-
-
-//------------------------------------------------------
-//struct StepCardView: View {
-//    var height:Int
-//    var body: some View {
-//        HStack(alignment: .midCard) {
-//            VStack {
-//                StepperView(height: height)
-//                    .alignmentGuide(.midCard) { d in d[.center] }
-//            }
-//            VStack {
-//                RoundedRectangle(cornerRadius: 8)
-//                    .frame(width: 350, height: 100)
-//                    .foregroundColor(Color.white)
-//                    .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, x: 5, y: -5)
-//                    .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, y: 5)
-//                    .border(Color.gray)
-//            }
-//        }
-//    }
-//}
-
-
-//    func temp() -> some View {
-//        return  ZStack {
-//            VStack {
-//                ForEach(0..<5) { _ in
-//                    HStack(alignment: .midCard) {
-//                        self.circles()
-//                        .alignmentGuide(.midCard) { d in d[VerticalAlignment.bottom] / 2 }
-//                    }
-//                }
-//            }.zIndex(1)
-//            divider()
-//        }
-//    }
-    
-
-//        return RoundedRectangle(cornerRadius: 8)
-//            .frame(width: 300, height: CGFloat(height))
-//            .foregroundColor(Color.white)
-//            .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, x: 5, y: -5)
-//            .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, y: 5)
-//            .border(Color.gray)
-//            .overlay(roundText())
