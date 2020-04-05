@@ -9,7 +9,7 @@
 import SwiftUI
 
 enum StepperAlignment: String, CaseIterable {
-    case top, center, bottom
+    case top = "Top", center = "Center", bottom = "Bottom"
 }
 
 struct StepDesignerView: View {
@@ -58,41 +58,43 @@ struct StepDesignerView: View {
     fileprivate func rectangleContent() -> some View  {
         return
             VStack(alignment: .leading) {
-                ForEach(["Top Text", "Middle Text", "Bottom Text"], id:\.self) { value in
+                ForEach([StepperAlignment.top.rawValue, StepperAlignment.center.rawValue, StepperAlignment.bottom.rawValue], id:\.self) { value in
                     self.textContent(text: value)
                 }
             }
     }
     
-
     var cells = [StepperAlignment.top, StepperAlignment.center, StepperAlignment.bottom, StepperAlignment.top, StepperAlignment.center, StepperAlignment.bottom]
+    
+    fileprivate func stepperView() -> some View {
+        return HStack {
+            self.divider()
+            VStack(spacing: 30) {
+                ForEach(0..<self.cells.count, id:\.self) { index in
+                    HStack(alignment: self.getAlignment(type: self.cells[index])) {
+                        self.circles()
+                            .padding(.horizontal, 10)
+                            .setAlignment(type: self.cells[index])
+                        self.roundedRectangle()
+                            .heightPreference(column: index)
+                    }
+                    .offset(x: -40)
+                }
+            }.onPreferenceChange(HeightPreference.self) {
+                self.columnHeights = $0
+                print(self.columnHeights)
+                //get heights of each of the cell + paddings
+                self.dividerHeight = Array(self.columnHeights.values).reduce(0, +) + (30 * 5)
+                print("Divider Height \(self.dividerHeight)")
+            }
+        }.padding()
+    }
     
     var body: some View {
         NavigationView {
             GeometryReader { proxy in
                 ScrollView(Axis.Set.vertical, showsIndicators: false) {
-                    HStack {
-                        self.divider()
-                        VStack(spacing: 30) {
-                            ForEach(0..<self.cells.count, id:\.self) { index in
-                                HStack(alignment: self.getAlignment(type: self.cells[index])) {
-                                    self.circles()
-                                        .padding(.horizontal, 10)
-                                        //.alignmentGuide(index % 2 == 0 ? .customTop : .customBottom) { d in index % 2 == 0 ? d[VerticalAlignment.top] - 15 : d[VerticalAlignment.bottom] + 15  }
-                                        .setAlignment(type: self.cells[index])
-                                    self.roundedRectangle()
-                                        .heightPreference(column: index)
-                                }
-                                .offset(x: -40)
-                            }
-                        }.onPreferenceChange(HeightPreference.self) {
-                            self.columnHeights = $0
-                            print(self.columnHeights)
-                            //get heights of each of the cell + paddings
-                            self.dividerHeight = Array(self.columnHeights.values).reduce(0, +) + (30 * 5)
-                            print("Divider Height \(self.dividerHeight)")
-                        }
-                    }.padding()
+                    self.stepperView()
                 }
             }
             .navigationBarTitle("Stepper View")
