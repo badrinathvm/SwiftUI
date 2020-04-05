@@ -13,72 +13,16 @@ enum StepperAlignment: String, CaseIterable {
 }
 
 struct StepDesignerView: View {
-    @State private var dividerHeight:CGFloat = 0.0
-    @State private var columnHeights: [Int: CGFloat] = [:]
-        
-    fileprivate func roundedRectangle() -> some View {
-        return rectangleContent()
-        .overlay(RoundedRectangle(cornerRadius: 8)
-                    .frame(width: 300)
-                    .foregroundColor(Color.clear)
-                    .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, x: 5, y: -5)
-                    .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, y: 5)
-                    .border(Color.gray))
-    }
-    
-    fileprivate func textContent(text: String) -> some View {
-        return HStack {
-                Text(text)
-                .padding(.vertical , 10)
-                .padding(.horizontal, 5)
-                .foregroundColor(Color.gray)
-            Spacer()
-        }
-    }
-    
-    fileprivate func rectangleContent() -> some View  {
-        return
-            VStack(alignment: .leading) {
-                ForEach([StepperAlignment.top.rawValue, StepperAlignment.center.rawValue, StepperAlignment.bottom.rawValue], id:\.self) { value in
-                    self.textContent(text: value)
-                }
-            }
-    }
-    
-    var cells = [StepperAlignment.top, StepperAlignment.center, StepperAlignment.bottom, StepperAlignment.top, StepperAlignment.center, StepperAlignment.bottom]
-    
-    fileprivate func stepperView() -> some View {
-        return HStack {
-            LineView(dividerHeight: $dividerHeight)
-            VStack(spacing: 30) {
-                ForEach(0..<self.cells.count, id:\.self) { index in
-                    HStack(alignment: self.getAlignment(type: self.cells[index])) {
-                            CircleView()
-                            .padding(.horizontal, 10)
-                            .setAlignment(type: self.cells[index])
-                        self.roundedRectangle()
-                            .heightPreference(column: index)
-                    }
-                    .offset(x: -40)
-                }
-            }.onPreferenceChange(HeightPreference.self) {
-                self.columnHeights = $0
-                print(self.columnHeights)
-                //get heights of each of the cell + paddings
-                self.dividerHeight = Array(self.columnHeights.values).reduce(0, +) + CGFloat(24 * self.cells.count)
-                print("Divider Height \(self.dividerHeight)")
-            }
-        }.padding()
-    }
+    let cells = [StepperContentView(alignment: .top), StepperContentView(alignment: .center), StepperContentView(alignment: .bottom),StepperContentView(alignment: .top), StepperContentView(alignment: .center), StepperContentView(alignment: .bottom)]
     
     var body: some View {
         NavigationView {
             GeometryReader { proxy in
                 ScrollView(Axis.Set.vertical, showsIndicators: false) {
-                    self.stepperView()
+                    StepperView(cells: self.cells)
                 }
             }
-            .navigationBarTitle("Stepper View")
+            .navigationBarTitle("Stepper View1")
         }
     }
 }
@@ -106,6 +50,74 @@ struct LineView: View {
             .frame(height: dividerHeight)
             .padding()
     }
+}
+
+//MARK:- Stepper View Implementation
+struct StepperView: View  {
+    @State var dividerHeight:CGFloat = 0
+    @State private var columnHeights: [Int: CGFloat] = [:]
+    var cells:[StepperContentView]
+    var body: some View {
+        HStack {
+            //line view to host circle to point
+            LineView(dividerHeight: $dividerHeight)
+            VStack(spacing: 30) {
+                ForEach(0..<self.cells.count, id:\.self) { index in
+                    HStack(alignment: self.getAlignment(type: self.cells[index].alignment)) {
+                            CircleView()
+                                .padding(.horizontal, 10.0)
+                                .setAlignment(type: self.cells[index].alignment)
+                        self.cells[index]
+                            .heightPreference(column: index)
+                    }
+                    .offset(x: -40)
+                }
+            }.onPreferenceChange(HeightPreference.self) {
+                self.columnHeights = $0
+                print(self.columnHeights)
+                //get heights of each of the cell + paddings
+                self.dividerHeight = Array(self.columnHeights.values).reduce(0, +) + CGFloat(24 * self.cells.count)
+                print("Divider Height \(self.dividerHeight)")
+            }
+        }.padding()
+    }
+}
+
+//MARK:- Stepper Content View
+struct StepperContentView: View  {
+    var alignment: StepperAlignment
+    var body: some View {
+        return roundedRectangle()
+    }
+    
+    fileprivate func roundedRectangle() -> some View {
+        return rectangleContent()
+        .overlay(RoundedRectangle(cornerRadius: 8)
+                    .frame(width: 300)
+                    .foregroundColor(Color.clear)
+                    .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, x: 5, y: -5)
+                    .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, y: 5)
+                    .border(Color.gray))
+    }
+    
+    fileprivate func textContent(text: String) -> some View {
+          return HStack {
+                  Text(text)
+                  .padding(.vertical , 10)
+                  .padding(.horizontal, 5)
+                  .foregroundColor(Color.gray)
+              Spacer()
+          }
+      }
+      
+      fileprivate func rectangleContent() -> some View  {
+          return
+              VStack(alignment: .leading) {
+                  ForEach([StepperAlignment.top.rawValue, StepperAlignment.center.rawValue, StepperAlignment.bottom.rawValue], id:\.self) { value in
+                      self.textContent(text: value)
+                  }
+              }
+      }
 }
 
 //MARK:- Custom alignments
