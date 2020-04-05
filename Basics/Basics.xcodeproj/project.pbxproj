@@ -297,8 +297,6 @@
 				1BB4691323C1B07C0041B1D8 /* AppearDisappearAnimationView.swift */,
 				1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */,
 				1BF0B9D224356BD600492C74 /* ProgressBarView.swift */,
-				1BF0B9D6243697AA00492C74 /* StepDesignerView.swift */,
-				1BF0B9E42439A98900492C74 /* StepperView.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -392,6 +390,15 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		1BF0B9E62439AA7A00492C74 /* StepperView */ = {
+			isa = PBXGroup;
+			children = (
+				1BF0B9E42439A98900492C74 /* StepperView.swift */,
+				1BF0B9D6243697AA00492C74 /* StepDesignerView.swift */,
+			);
+			path = StepperView;
+			sourceTree = "<group>";
+		};
 		1BFF495C238435EF006DBB0F /* PropertyWrappers */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +472,7 @@
 		8B2C425E23524BC700E8C68E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1BF0B9E62439AA7A00492C74 /* StepperView */,
 				1B83DC42243278A700A7F3C6 /* PageControl */,
 				1B66D13323E62E8700AB7855 /* CodeOrganization */,
 				1B7E778D23AB94F8006CF53B /* Animation */,
