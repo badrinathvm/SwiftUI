@@ -35,34 +35,33 @@ struct StepDesignerView: View {
     }
     
     fileprivate func roundedRectangle(height: Int) -> some View {
-        return RoundedRectangle(cornerRadius: 8)
-            .frame(width: 300, height: CGFloat(height))
-            .foregroundColor(Color.white)
-            .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, x: 5, y: -5)
-            .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, y: 5)
-            .border(Color.gray)
-            .overlay(roundText())
+        return rectangleContent()
+        .overlay(RoundedRectangle(cornerRadius: 8)
+                    .frame(width: 300)
+                    .foregroundColor(Color.clear)
+                    .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, x: 5, y: -5)
+                    .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, y: 5)
+                    .border(Color.gray))
     }
     
-    func roundText() -> some View  {
+    fileprivate func rectangleContent() -> some View  {
         return
             VStack(alignment: .leading) {
                 HStack {
                     Text("Refinance Reason")
                         .foregroundColor(Color.gray)
-                        .padding(.horizontal, 10)
-                        .padding(.top, 10)
+                        .padding(.vertical , 10)
+                        .padding(.horizontal, 5)
                     Spacer()
                 }
-            Spacer()
                 Text("Home Loan")
                      .foregroundColor(Color.gray)
-                     .padding(.horizontal, 10)
-                     .padding(.vertical, 10)
-        }
+                     .padding(.vertical , 10)
+                     .padding(.horizontal, 5)
+            }
     }
     
-    var cardHeights = [100, 100 , 100, 100, 100]
+    var cardHeights = [100, 50 , 100, 100, 100]
     var body: some View {
         GeometryReader { proxy in
             HStack {
@@ -75,13 +74,14 @@ struct StepDesignerView: View {
                                 .alignmentGuide(index % 2 == 0 ? .customTop : .customBottom) { d in index % 2 == 0 ? d[VerticalAlignment.top] - 10 : d[VerticalAlignment.bottom] + 10  }
                             self.roundedRectangle(height: self.cardHeights[index])
                         }.onAppear {
+                            print(proxy.frame(in: .global))
                                 self.dividerHeight += CGFloat(self.cardHeights[index])
                                 print(" Divider Height \(self.dividerHeight)")
                             }
                         .offset(x: -40)
                     }
                 }
-            }
+            }.padding()
         }
     }
 }
@@ -185,3 +185,11 @@ extension VerticalAlignment {
 //        }
 //    }
     
+
+//        return RoundedRectangle(cornerRadius: 8)
+//            .frame(width: 300, height: CGFloat(height))
+//            .foregroundColor(Color.white)
+//            .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, x: 5, y: -5)
+//            .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, y: 5)
+//            .border(Color.gray)
+//            .overlay(roundText())
