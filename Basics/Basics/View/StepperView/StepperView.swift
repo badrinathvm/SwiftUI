@@ -9,6 +9,7 @@
 import SwiftUI
 
 //MARK:- Circle View for Stepper Indicator
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 struct CircleView: View {
     var body: some View {
         ZStack {
@@ -23,6 +24,7 @@ struct CircleView: View {
 }
 
 //MARK:- Line View for Stepper
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 struct LineView: View {
     @Binding var dividerHeight:CGFloat
     var body:some View {
@@ -34,6 +36,7 @@ struct LineView: View {
 }
 
 //MARK:- Stepper View Implementation
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 struct StepperView: View  {
     @State var dividerHeight:CGFloat = 0
     @State private var columnHeights: [Int: CGFloat] = [:]
@@ -68,6 +71,7 @@ struct StepperView: View  {
 }
 
 //MARK:- Custom alignments
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 extension VerticalAlignment {
     private enum CustomTopAlignment: AlignmentID {
         static func defaultValue(in context: ViewDimensions) -> CGFloat {
@@ -95,6 +99,7 @@ extension VerticalAlignment {
 }
 
 //MARK:- To Calculate the height
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 extension View {
     // Stores the width for each of the column which will be passed as part of onPreference change on the view.
     func heightPreference(column: Int) -> some View {
@@ -129,6 +134,7 @@ extension View {
 }
 
 //MARK:- Collects width of all the cells, with reduce takes the maximum value for the given key
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 struct HeightPreference: PreferenceKey {
     typealias Value = [Int:CGFloat]
     static let defaultValue: Value = [:]
@@ -139,7 +145,7 @@ struct HeightPreference: PreferenceKey {
 }
 
 //MARK:- Stepper View alignments
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 enum StepperAlignment: String, CaseIterable {
     case top = "Top", center = "Center", bottom = "Bottom"
 }
-Basics/View/StepperView/StepperView.swift
