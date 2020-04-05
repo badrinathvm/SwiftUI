@@ -71,7 +71,7 @@ struct StepDesignerView: View {
                         HStack(alignment: index % 2 == 0 ? .customTop : .customBottom) {
                             self.circles()
                                 .padding(.horizontal, 10)
-                                .alignmentGuide(index % 2 == 0 ? .customTop : .customBottom) { d in index % 2 == 0 ? d[VerticalAlignment.top] - 10 : d[VerticalAlignment.bottom] + 10  }
+                                .alignmentGuide(index % 2 == 0 ? .customTop : .customBottom) { d in index % 2 == 0 ? d[VerticalAlignment.top] - 15 : d[VerticalAlignment.bottom] + 15  }
                             self.roundedRectangle(height: self.cardHeights[index])
                         }.onAppear {
                             print(proxy.frame(in: .global))
