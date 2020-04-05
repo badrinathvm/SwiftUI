@@ -16,14 +16,6 @@ struct StepDesignerView: View {
     @State private var dividerHeight:CGFloat = 0.0
     @State private var columnHeights: [Int: CGFloat] = [:]
         
-    fileprivate func divider() -> some View {
-        return
-            Divider()
-                .background(Color.gray)
-                .frame(height: dividerHeight)
-                .padding()
-    }
-    
     fileprivate func roundedRectangle() -> some View {
         return rectangleContent()
         .overlay(RoundedRectangle(cornerRadius: 8)
@@ -57,7 +49,7 @@ struct StepDesignerView: View {
     
     fileprivate func stepperView() -> some View {
         return HStack {
-            self.divider()
+            LineView(dividerHeight: $dividerHeight)
             VStack(spacing: 30) {
                 ForEach(0..<self.cells.count, id:\.self) { index in
                     HStack(alignment: self.getAlignment(type: self.cells[index])) {
@@ -102,6 +94,17 @@ struct CircleView: View {
                         .frame(width: 10, height:10)
                         .foregroundColor(Color.green))
         }
+    }
+}
+
+//MARK:- Line View for Stepper
+struct LineView: View {
+    @Binding var dividerHeight:CGFloat
+    var body:some View {
+        return Divider()
+            .background(Color.gray)
+            .frame(height: dividerHeight)
+            .padding()
     }
 }
 
