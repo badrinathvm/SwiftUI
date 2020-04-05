@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct StepDesignerView: View {
-    @State private var position:CGFloat = 0.0
     @State private var dividerHeight:CGFloat = 0.0
     
     fileprivate func circles() -> some View {
@@ -23,7 +22,7 @@ struct StepDesignerView: View {
                         .frame(width: 10, height:10)
                         .foregroundColor(Color.green))
             }
-        }//.padding(.vertical, -10)
+        }
     }
     
     fileprivate func divider() -> some View {
@@ -42,23 +41,40 @@ struct StepDesignerView: View {
             .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, x: 5, y: -5)
             .shadow(color: Color(UIColor.black).opacity(0.03), radius: 8, y: 5)
             .border(Color.gray)
+            .overlay(roundText())
     }
     
-    var cardHeights = [100, 50 , 100, 100, 100]
+    func roundText() -> some View  {
+        return
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("Refinance Reason")
+                        .foregroundColor(Color.gray)
+                        .padding(.horizontal, 10)
+                        .padding(.top, 10)
+                    Spacer()
+                }
+            Spacer()
+                Text("Home Loan")
+                     .foregroundColor(Color.gray)
+                     .padding(.horizontal, 10)
+                     .padding(.vertical, 10)
+        }
+    }
+    
+    var cardHeights = [100, 100 , 100, 100, 100]
     var body: some View {
         GeometryReader { proxy in
             HStack {
                 self.divider()
                 VStack {
                     ForEach(0..<self.cardHeights.count, id:\.self) { index in
-                        HStack(alignment: .midCard) {
+                        HStack(alignment: index % 2 == 0 ? .customTop : .customBottom) {
                             self.circles()
                                 .padding(.horizontal, 10)
-                                //.offset(y: -15) // need it if to place at the top.
+                                .alignmentGuide(index % 2 == 0 ? .customTop : .customBottom) { d in index % 2 == 0 ? d[VerticalAlignment.top] - 10 : d[VerticalAlignment.bottom] + 10  }
                             self.roundedRectangle(height: self.cardHeights[index])
                         }.onAppear {
-                                self.position = proxy.frame(in: CoordinateSpace.global).minY
-                                print(self.position)
                                 self.dividerHeight += CGFloat(self.cardHeights[index])
                                 print(" Divider Height \(self.dividerHeight)")
                             }
@@ -71,25 +87,33 @@ struct StepDesignerView: View {
 }
 
 extension VerticalAlignment {
-    private enum MidCard: AlignmentID {
+    private enum CustomTopAlignment: AlignmentID {
         static func defaultValue(in context: ViewDimensions) -> CGFloat {
-            return context[VerticalAlignment.center]
+            return context[.top]
         }
     }
     
-    static let midCard = VerticalAlignment(MidCard.self)
-}
-
-
-extension HorizontalAlignment {
-    private enum Mid:AlignmentID {
+    private enum CustomBottomAlignment: AlignmentID {
         static func defaultValue(in context: ViewDimensions) -> CGFloat {
-            return context[HorizontalAlignment.center]
+            return context[.bottom]
         }
     }
     
-    static let mid = HorizontalAlignment(Mid.self)
+    static let customTop = VerticalAlignment(CustomTopAlignment.self)
+    
+    static let customBottom = VerticalAlignment(CustomBottomAlignment.self)
 }
+
+
+//extension HorizontalAlignment {
+//    private enum Mid:AlignmentID {
+//        static func defaultValue(in context: ViewDimensions) -> CGFloat {
+//            return context[HorizontalAlignment.center]
+//        }
+//    }
+//
+//    static let mid = HorizontalAlignment(Mid.self)
+//}
 
 
 //-------------------------------------------------------------------------------------------
