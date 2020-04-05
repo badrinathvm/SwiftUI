@@ -84,7 +84,7 @@ struct StepDesignerView: View {
                 self.columnHeights = $0
                 print(self.columnHeights)
                 //get heights of each of the cell + paddings
-                self.dividerHeight = Array(self.columnHeights.values).reduce(0, +) + (30 * 5)
+                self.dividerHeight = Array(self.columnHeights.values).reduce(0, +) + CGFloat(24 * self.cells.count)
                 print("Divider Height \(self.dividerHeight)")
             }
         }.padding()
@@ -98,17 +98,6 @@ struct StepDesignerView: View {
                 }
             }
             .navigationBarTitle("Stepper View")
-        }
-    }
-    
-    func getAlignment(type: StepperAlignment) -> VerticalAlignment{
-        switch type {
-        case .top:
-            return .customTop
-        case .center:
-             return .customCenter
-        case .bottom:
-            return .customBottom
         }
     }
 }
@@ -149,6 +138,8 @@ extension View {
         })
     }
     
+    /// returns the alignment guide based on the alignemnt type.
+    /// - Parameter type: <#type description#>
     func setAlignment(type: StepperAlignment)-> some View  {
           switch type {
           case .top:
@@ -159,6 +150,17 @@ extension View {
             return self.alignmentGuide(.customBottom) { d in d[VerticalAlignment.bottom] + 15 }
           }
       }
+    
+    func getAlignment(type: StepperAlignment) -> VerticalAlignment{
+        switch type {
+        case .top:
+            return .customTop
+        case .center:
+             return .customCenter
+        case .bottom:
+            return .customBottom
+        }
+    }
 }
 
 //MARK:- Collects width of all the cells, with reduce takes the maximum value for the given key
