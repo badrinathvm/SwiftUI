@@ -70,6 +70,7 @@
 		1BB87C502378DC5400D1FABE /* RotationalEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */; };
 		1BF0B9D324356BD600492C74 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0B9D224356BD600492C74 /* ProgressBarView.swift */; };
 		1BF0B9D7243697AA00492C74 /* StepDesignerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0B9D6243697AA00492C74 /* StepDesignerView.swift */; };
+		1BF0B9E52439A98B00492C74 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0B9E42439A98900492C74 /* StepperView.swift */; };
 		1BFF4951238240F2006DBB0F /* GeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4950238240F2006DBB0F /* GeometryView.swift */; };
 		1BFF495323835B2C006DBB0F /* BudgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF495223835B2C006DBB0F /* BudgetsView.swift */; };
 		1BFF495523836206006DBB0F /* CardBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF495423836206006DBB0F /* CardBottomView.swift */; };
@@ -180,6 +181,7 @@
 		1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationalEffectView.swift; sourceTree = "<group>"; };
 		1BF0B9D224356BD600492C74 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		1BF0B9D6243697AA00492C74 /* StepDesignerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDesignerView.swift; sourceTree = "<group>"; };
+		1BF0B9E42439A98900492C74 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 		1BFF4950238240F2006DBB0F /* GeometryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryView.swift; sourceTree = "<group>"; };
 		1BFF495223835B2C006DBB0F /* BudgetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsView.swift; sourceTree = "<group>"; };
 		1BFF495423836206006DBB0F /* CardBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBottomView.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */,
 				1BF0B9D224356BD600492C74 /* ProgressBarView.swift */,
 				1BF0B9D6243697AA00492C74 /* StepDesignerView.swift */,
+				1BF0B9E42439A98900492C74 /* StepperView.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				1B9EECD823C1C15600434EA4 /* DragAnimationView.swift in Sources */,
 				1BB87C502378DC5400D1FABE /* RotationalEffectView.swift in Sources */,
 				1BB87C47237887B300D1FABE /* ProgressRowView.swift in Sources */,
+				1BF0B9E52439A98B00492C74 /* StepperView.swift in Sources */,
 				1BB87C342377376300D1FABE /* CircleTrim.swift in Sources */,
 				1BB4691223C1A9350041B1D8 /* StepperAnimationView.swift in Sources */,
 				1BFF71E9236FA0EA0024F4B8 /* SliderStepperViews.swift in Sources */,
