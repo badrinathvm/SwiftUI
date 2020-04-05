@@ -14,14 +14,12 @@ struct StepDesignerView: View {
     
     fileprivate func circles() -> some View {
         return ZStack {
-            VStack {
-                Circle()
-                    .stroke(Color(red: 245/255, green: 245/255, blue: 245/255), lineWidth: 5)
-                    .frame(width: 12, height:12)
-                    .overlay( Circle()
+            Circle()
+                .stroke(Color(red: 245/255, green: 245/255, blue: 245/255), lineWidth: 5)
+                .frame(width: 12, height:12)
+                .overlay(Circle()
                         .frame(width: 10, height:10)
                         .foregroundColor(Color.green))
-            }
         }
     }
     
