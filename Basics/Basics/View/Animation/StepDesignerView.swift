@@ -42,24 +42,23 @@ struct StepDesignerView: View {
                     .border(Color.gray))
     }
     
+    fileprivate func textContent(text: String) -> some View {
+        return HStack {
+                Text(text)
+                .padding(.vertical , 10)
+                .padding(.horizontal, 5)
+                .foregroundColor(Color.gray)
+            Spacer()
+        }
+    }
+    
     fileprivate func rectangleContent() -> some View  {
         return
             VStack(alignment: .leading) {
-                HStack {
-                    Text("Refinance Reason")
-                        .padding(.vertical , 10)
-                        .padding(.horizontal, 5)
-                    Spacer()
+                ForEach(["Top Text", "Middle Text", "Bottom Text"], id:\.self) { value in
+                    self.textContent(text: value)
                 }
-                Text("Home Loan")
-                    .padding(.vertical , 10)
-                    .padding(.horizontal, 5)
-                   
-                Text("Home Loan1")
-                    .padding(.vertical , 10)
-                    .padding(.horizontal, 5)
             }
-            .foregroundColor(Color.gray)
     }
     
     var body: some View {
