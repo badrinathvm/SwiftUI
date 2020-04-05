@@ -8,6 +8,10 @@
 
 import SwiftUI
 
+enum StepperAlignment: String, CaseIterable {
+    case top, center, bottom
+}
+
 struct StepDesignerView: View {
     @State private var dividerHeight:CGFloat = 0.0
     @State private var columnHeights: [Int: CGFloat] = [:]
@@ -24,12 +28,11 @@ struct StepDesignerView: View {
     }
     
     fileprivate func divider() -> some View {
-        return HStack {
+        return
             Divider()
                 .background(Color.gray)
                 .frame(height: dividerHeight)
                 .padding()
-        }
     }
     
     fileprivate func roundedRectangle() -> some View {
@@ -61,6 +64,9 @@ struct StepDesignerView: View {
             }
     }
     
+
+    var cells = [StepperAlignment.top, StepperAlignment.center, StepperAlignment.bottom, StepperAlignment.top, StepperAlignment.center, StepperAlignment.bottom]
+    
     var body: some View {
         NavigationView {
             GeometryReader { proxy in
@@ -68,11 +74,12 @@ struct StepDesignerView: View {
                     HStack {
                         self.divider()
                         VStack(spacing: 30) {
-                            ForEach(0..<6, id:\.self) { index in
-                                HStack(alignment: index % 2 == 0 ? .customTop : .customBottom) {
+                            ForEach(0..<self.cells.count, id:\.self) { index in
+                                HStack(alignment: self.getAlignment(type: self.cells[index])) {
                                     self.circles()
                                         .padding(.horizontal, 10)
-                                        .alignmentGuide(index % 2 == 0 ? .customTop : .customBottom) { d in index % 2 == 0 ? d[VerticalAlignment.top] - 15 : d[VerticalAlignment.bottom] + 15  }
+                                        //.alignmentGuide(index % 2 == 0 ? .customTop : .customBottom) { d in index % 2 == 0 ? d[VerticalAlignment.top] - 15 : d[VerticalAlignment.bottom] + 15  }
+                                        .setAlignment(type: self.cells[index])
                                     self.roundedRectangle()
                                         .heightPreference(column: index)
                                 }
@@ -83,12 +90,23 @@ struct StepDesignerView: View {
                             print(self.columnHeights)
                             //get heights of each of the cell + paddings
                             self.dividerHeight = Array(self.columnHeights.values).reduce(0, +) + (30 * 5)
-                            print(" Divider Height \(self.dividerHeight)")
+                            print("Divider Height \(self.dividerHeight)")
                         }
                     }.padding()
                 }
             }
             .navigationBarTitle("Stepper View")
+        }
+    }
+    
+    func getAlignment(type: StepperAlignment) -> VerticalAlignment{
+        switch type {
+        case .top:
+            return .customTop
+        case .center:
+             return .customCenter
+        case .bottom:
+            return .customBottom
         }
     }
 }
@@ -107,9 +125,17 @@ extension VerticalAlignment {
         }
     }
     
+    private enum CustomCenterAlignment: AlignmentID {
+        static func defaultValue(in context: ViewDimensions) -> CGFloat {
+            return context[VerticalAlignment.center]
+        }
+    }
+    
     static let customTop = VerticalAlignment(CustomTopAlignment.self)
     
     static let customBottom = VerticalAlignment(CustomBottomAlignment.self)
+    
+    static let customCenter = VerticalAlignment(CustomCenterAlignment.self)
 }
 
 //MARK:- To Calculate the height
@@ -120,6 +146,17 @@ extension View {
             Color.clear.preference(key: HeightPreference.self, value: [column: proxy.size.height])
         })
     }
+    
+    func setAlignment(type: StepperAlignment)-> some View  {
+          switch type {
+          case .top:
+            return self.alignmentGuide(.customTop) { d in d[VerticalAlignment.top] - 15 }
+          case .center:
+            return self.alignmentGuide(.customCenter) { d in d[VerticalAlignment.center] }
+          case .bottom:
+            return self.alignmentGuide(.customBottom) { d in d[VerticalAlignment.bottom] + 15 }
+          }
+      }
 }
 
 //MARK:- Collects width of all the cells, with reduce takes the maximum value for the given key
