@@ -15,18 +15,7 @@ enum StepperAlignment: String, CaseIterable {
 struct StepDesignerView: View {
     @State private var dividerHeight:CGFloat = 0.0
     @State private var columnHeights: [Int: CGFloat] = [:]
-    
-    fileprivate func circles() -> some View {
-        return ZStack {
-            Circle()
-                .stroke(Color(red: 245/255, green: 245/255, blue: 245/255), lineWidth: 5)
-                .frame(width: 12, height:12)
-                .overlay(Circle()
-                        .frame(width: 10, height:10)
-                        .foregroundColor(Color.green))
-        }
-    }
-    
+        
     fileprivate func divider() -> some View {
         return
             Divider()
@@ -72,7 +61,7 @@ struct StepDesignerView: View {
             VStack(spacing: 30) {
                 ForEach(0..<self.cells.count, id:\.self) { index in
                     HStack(alignment: self.getAlignment(type: self.cells[index])) {
-                        self.circles()
+                            CircleView()
                             .padding(.horizontal, 10)
                             .setAlignment(type: self.cells[index])
                         self.roundedRectangle()
@@ -98,6 +87,20 @@ struct StepDesignerView: View {
                 }
             }
             .navigationBarTitle("Stepper View")
+        }
+    }
+}
+
+//MARK:- Circle View for Stepper Indicator
+struct CircleView: View {
+    var body: some View {
+        ZStack {
+            Circle()
+                .stroke(Color(red: 245/255, green: 245/255, blue: 245/255), lineWidth: 5)
+                .frame(width: 12, height:12)
+                .overlay(Circle()
+                        .frame(width: 10, height:10)
+                        .foregroundColor(Color.green))
         }
     }
 }
