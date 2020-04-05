@@ -10,6 +10,7 @@ import SwiftUI
 
 struct StepDesignerView: View {
     @State private var dividerHeight:CGFloat = 0.0
+    @State private var columnHeights: [Int: CGFloat] = [:]
     
     fileprivate func circles() -> some View {
         return ZStack {
@@ -17,7 +18,6 @@ struct StepDesignerView: View {
                 Circle()
                     .stroke(Color(red: 245/255, green: 245/255, blue: 245/255), lineWidth: 5)
                     .frame(width: 12, height:12)
-                    .foregroundColor(Color.blue)
                     .overlay( Circle()
                         .frame(width: 10, height:10)
                         .foregroundColor(Color.green))
@@ -34,7 +34,7 @@ struct StepDesignerView: View {
         }
     }
     
-    fileprivate func roundedRectangle(height: Int) -> some View {
+    fileprivate func roundedRectangle() -> some View {
         return rectangleContent()
         .overlay(RoundedRectangle(cornerRadius: 8)
                     .frame(width: 300)
@@ -55,29 +55,36 @@ struct StepDesignerView: View {
                     Spacer()
                 }
                 Text("Home Loan")
-                     .foregroundColor(Color.gray)
-                     .padding(.vertical , 10)
-                     .padding(.horizontal, 5)
-            }
+                    .foregroundColor(Color.gray)
+                    .padding(.vertical , 10)
+                    .padding(.horizontal, 5)
+                
+                Text("Home Loan1")
+                    .foregroundColor(Color.gray)
+                    .padding(.vertical , 10)
+                    .padding(.horizontal, 5)
+        }
     }
     
-    var cardHeights = [100, 50 , 100, 100, 100]
     var body: some View {
         GeometryReader { proxy in
             HStack {
                 self.divider()
                 VStack {
-                    ForEach(0..<self.cardHeights.count, id:\.self) { index in
+                    ForEach(0..<5, id:\.self) { index in
                         HStack(alignment: index % 2 == 0 ? .customTop : .customBottom) {
                             self.circles()
                                 .padding(.horizontal, 10)
                                 .alignmentGuide(index % 2 == 0 ? .customTop : .customBottom) { d in index % 2 == 0 ? d[VerticalAlignment.top] - 15 : d[VerticalAlignment.bottom] + 15  }
-                            self.roundedRectangle(height: self.cardHeights[index])
-                        }.onAppear {
-                            print(proxy.frame(in: .global))
-                                self.dividerHeight += CGFloat(self.cardHeights[index])
-                                print(" Divider Height \(self.dividerHeight)")
-                            }
+                            self.roundedRectangle()
+                            .heightPreference(column: index)
+                        }
+                        .onPreferenceChange(HeightPreference.self) {
+                            self.columnHeights = $0
+                            print(self.columnHeights)
+                            self.dividerHeight += CGFloat(self.columnHeights[index]!)
+                            print(" Divider Height \(self.dividerHeight)")
+                        }
                         .offset(x: -40)
                     }
                 }
@@ -102,6 +109,25 @@ extension VerticalAlignment {
     static let customTop = VerticalAlignment(CustomTopAlignment.self)
     
     static let customBottom = VerticalAlignment(CustomBottomAlignment.self)
+}
+
+//MARK:- To Calculate the height
+extension View {
+    // Stores the width for each of the column which will be passed as part of onPreference change on the view.
+    func heightPreference(column: Int) -> some View {
+        background(GeometryReader { proxy in
+            Color.clear.preference(key: HeightPreference.self, value: [column: proxy.size.height])
+        })
+    }
+}
+
+struct HeightPreference: PreferenceKey {
+    typealias Value = [Int:CGFloat]
+    static let defaultValue: Value = [:]
+    
+    static func reduce(value: inout Value, nextValue: () -> Value) {
+        value.merge(nextValue(), uniquingKeysWith: max)
+    }
 }
 
 
