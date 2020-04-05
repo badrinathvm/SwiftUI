@@ -15,7 +15,7 @@ struct StepDesignerView: View {
         NavigationView {
             GeometryReader { proxy in
                 ScrollView(Axis.Set.vertical, showsIndicators: false) {
-                    StepperView(cells: self.cells) 
+                    StepperView(cells: self.cells, verticalSpacing: 40.0)
                 }
             }
             .navigationBarTitle("Stepper View")

@@ -38,16 +38,18 @@ struct StepperView: View  {
     @State var dividerHeight:CGFloat = 0
     @State private var columnHeights: [Int: CGFloat] = [:]
     var cells:[StepperContentView]
+    var verticalSpacing: CGFloat = 30.0
+    
     var body: some View {
         HStack {
             //line view to host circle to point
             LineView(dividerHeight: $dividerHeight)
-            VStack(spacing: 30) {
+            VStack(spacing: verticalSpacing) {
                 ForEach(0..<self.cells.count, id:\.self) { index in
                     HStack(alignment: self.getAlignment(type: self.cells[index].alignment)) {
-                            CircleView()
-                                .padding(.horizontal, 10.0)
-                                .setAlignment(type: self.cells[index].alignment)
+                        CircleView()
+                            .padding(.horizontal, 10.0)
+                            .setAlignment(type: self.cells[index].alignment)
                         self.cells[index]
                             .heightPreference(column: index)
                     }
@@ -57,7 +59,8 @@ struct StepperView: View  {
                 self.columnHeights = $0
                 print(self.columnHeights)
                 //get heights of each of the cell + paddings
-                self.dividerHeight = Array(self.columnHeights.values).reduce(0, +) + CGFloat(24 * self.cells.count)
+                let paddings = CGFloat((self.verticalSpacing - 5) * CGFloat(self.cells.count))
+                self.dividerHeight = Array(self.columnHeights.values).reduce(0, +) + paddings
                 print("Divider Height \(self.dividerHeight)")
             }
         }.padding()
@@ -139,4 +142,4 @@ struct HeightPreference: PreferenceKey {
 enum StepperAlignment: String, CaseIterable {
     case top = "Top", center = "Center", bottom = "Bottom"
 }
-
+Basics/View/StepperView/StepperView.swift
