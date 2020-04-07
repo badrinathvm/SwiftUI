@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -40,6 +40,8 @@
 		1B9EECD823C1C15600434EA4 /* DragAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECD723C1C15600434EA4 /* DragAnimationView.swift */; };
 		1B9EECDB23C27C5700434EA4 /* ExerciseAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */; };
 		1B9EECDD23C2896800434EA4 /* RotationGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */; };
+		1BA315D8243CF93D0026C37E /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = 1BA315D7243CF93D0026C37E /* StepperView */; };
+		1BA315DB243CF9950026C37E /* StepTesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA315DA243CF9950026C37E /* StepTesterView.swift */; };
 		1BADE33823790B7E006B4825 /* OffsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33723790B7E006B4825 /* OffsetView.swift */; };
 		1BADE33A23790E88006B4825 /* BlendModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33923790E88006B4825 /* BlendModeView.swift */; };
 		1BADE33C237911CB006B4825 /* CustomPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33B237911CB006B4825 /* CustomPopupView.swift */; };
@@ -69,8 +71,6 @@
 		1BB87C4E2378C79800D1FABE /* TransalationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4D2378C79800D1FABE /* TransalationView.swift */; };
 		1BB87C502378DC5400D1FABE /* RotationalEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */; };
 		1BF0B9D324356BD600492C74 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0B9D224356BD600492C74 /* ProgressBarView.swift */; };
-		1BF0B9D7243697AA00492C74 /* StepDesignerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0B9D6243697AA00492C74 /* StepDesignerView.swift */; };
-		1BF0B9E52439A98B00492C74 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0B9E42439A98900492C74 /* StepperView.swift */; };
 		1BFF4951238240F2006DBB0F /* GeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4950238240F2006DBB0F /* GeometryView.swift */; };
 		1BFF495323835B2C006DBB0F /* BudgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF495223835B2C006DBB0F /* BudgetsView.swift */; };
 		1BFF495523836206006DBB0F /* CardBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF495423836206006DBB0F /* CardBottomView.swift */; };
@@ -151,6 +151,7 @@
 		1B9EECD723C1C15600434EA4 /* DragAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAnimationView.swift; sourceTree = "<group>"; };
 		1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAnimationView.swift; sourceTree = "<group>"; };
 		1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureView.swift; sourceTree = "<group>"; };
+		1BA315DA243CF9950026C37E /* StepTesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTesterView.swift; sourceTree = "<group>"; };
 		1BADE33723790B7E006B4825 /* OffsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetView.swift; sourceTree = "<group>"; };
 		1BADE33923790E88006B4825 /* BlendModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendModeView.swift; sourceTree = "<group>"; };
 		1BADE33B237911CB006B4825 /* CustomPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupView.swift; sourceTree = "<group>"; };
@@ -180,8 +181,6 @@
 		1BB87C4D2378C79800D1FABE /* TransalationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransalationView.swift; sourceTree = "<group>"; };
 		1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationalEffectView.swift; sourceTree = "<group>"; };
 		1BF0B9D224356BD600492C74 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
-		1BF0B9D6243697AA00492C74 /* StepDesignerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDesignerView.swift; sourceTree = "<group>"; };
-		1BF0B9E42439A98900492C74 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 		1BFF4950238240F2006DBB0F /* GeometryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryView.swift; sourceTree = "<group>"; };
 		1BFF495223835B2C006DBB0F /* BudgetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsView.swift; sourceTree = "<group>"; };
 		1BFF495423836206006DBB0F /* CardBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBottomView.swift; sourceTree = "<group>"; };
@@ -222,6 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA315D8243CF93D0026C37E /* StepperView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +322,14 @@
 			path = Gestures;
 			sourceTree = "<group>";
 		};
+		1BA315D9243CF95C0026C37E /* Stepper */ = {
+			isa = PBXGroup;
+			children = (
+				1BA315DA243CF9950026C37E /* StepTesterView.swift */,
+			);
+			path = Stepper;
+			sourceTree = "<group>";
+		};
 		1BADE34D237A9085006B4825 /* Combine */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,15 +396,6 @@
 				1BFF49582383B1B8006DBB0F /* MenuView.swift */,
 			);
 			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		1BF0B9E62439AA7A00492C74 /* StepperView */ = {
-			isa = PBXGroup;
-			children = (
-				1BF0B9E42439A98900492C74 /* StepperView.swift */,
-				1BF0B9D6243697AA00492C74 /* StepDesignerView.swift */,
-			);
-			path = StepperView;
 			sourceTree = "<group>";
 		};
 		1BFF495C238435EF006DBB0F /* PropertyWrappers */ = {
@@ -472,7 +471,7 @@
 		8B2C425E23524BC700E8C68E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1BF0B9E62439AA7A00492C74 /* StepperView */,
+				1BA315D9243CF95C0026C37E /* Stepper */,
 				1B83DC42243278A700A7F3C6 /* PageControl */,
 				1B66D13323E62E8700AB7855 /* CodeOrganization */,
 				1B7E778D23AB94F8006CF53B /* Animation */,
@@ -537,6 +536,9 @@
 			dependencies = (
 			);
 			name = Basics;
+			packageProductDependencies = (
+				1BA315D7243CF93D0026C37E /* StepperView */,
+			);
 			productName = Basics;
 			productReference = 8B2C422B235237DD00E8C68E /* Basics.app */;
 			productType = "com.apple.product-type.application";
@@ -609,6 +611,9 @@
 				Base,
 			);
 			mainGroup = 8B2C4222235237DD00E8C68E;
+			packageReferences = (
+				1BA315D6243CF93D0026C37E /* XCRemoteSwiftPackageReference "StepperView" */,
+			);
 			productRefGroup = 8B2C422C235237DD00E8C68E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -670,6 +675,7 @@
 				1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */,
 				1B269DCF236D5EAC00B063EA /* BasicTemplate.swift in Sources */,
 				1BADE351237AA69E006B4825 /* OperationListView.swift in Sources */,
+				1BA315DB243CF9950026C37E /* StepTesterView.swift in Sources */,
 				1B83DC462432DA0400A7F3C6 /* ActivityIndicator.swift in Sources */,
 				1B7E779123BAA296006CF53B /* SequenceAnimationView.swift in Sources */,
 				1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */,
@@ -714,7 +720,6 @@
 				1B9EECD823C1C15600434EA4 /* DragAnimationView.swift in Sources */,
 				1BB87C502378DC5400D1FABE /* RotationalEffectView.swift in Sources */,
 				1BB87C47237887B300D1FABE /* ProgressRowView.swift in Sources */,
-				1BF0B9E52439A98B00492C74 /* StepperView.swift in Sources */,
 				1BB87C342377376300D1FABE /* CircleTrim.swift in Sources */,
 				1BB4691223C1A9350041B1D8 /* StepperAnimationView.swift in Sources */,
 				1BFF71E9236FA0EA0024F4B8 /* SliderStepperViews.swift in Sources */,
@@ -723,7 +728,6 @@
 				1B6E7D8723748B1B00BDF41A /* Pizza.swift in Sources */,
 				1B9EECDB23C27C5700434EA4 /* ExerciseAnimationView.swift in Sources */,
 				1BFF71EB236FAAC40024F4B8 /* TabViews.swift in Sources */,
-				1BF0B9D7243697AA00492C74 /* StepDesignerView.swift in Sources */,
 				8B2C4231235237DD00E8C68E /* SceneDelegate.swift in Sources */,
 				1B269DC8236BFE5400B063EA /* Day29.swift in Sources */,
 				1B269DC6236BEB4800B063EA /* Day26.swift in Sources */,
@@ -1054,6 +1058,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1BA315D6243CF93D0026C37E /* XCRemoteSwiftPackageReference "StepperView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/badrinathvm/StepperView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1BA315D7243CF93D0026C37E /* StepperView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BA315D6243CF93D0026C37E /* XCRemoteSwiftPackageReference "StepperView" */;
+			productName = StepperView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B2C4223235237DD00E8C68E /* Project object */;
 }

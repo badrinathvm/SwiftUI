@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "StepperView",
+        "repositoryURL": "https://github.com/badrinathvm/StepperView",
+        "state": {
+          "branch": null,
+          "revision": "333e26b2655bc76a647243a42c839826f8ebc625",
+          "version": "1.0.6"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
