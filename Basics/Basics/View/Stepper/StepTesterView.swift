@@ -13,13 +13,11 @@ struct StepTesterView: View {
 
     let alignments = [StepperAlignment.top,StepperAlignment.center,StepperAlignment.bottom]
 
-    let indicatorTypes = [  StepperIndicationType<AnyView>.circle,
-                            StepperIndicationType.image(Image(systemName: "arrow.right.circle")),
-                            StepperIndicationType.image(Image(systemName: "arrow.uturn.right"))
-                        ]
-
+    let indicatorTypes = [StepperIndicationType<AnyView>.image(Image(systemName: "arrow.right.circle"), 20),
+                            StepperIndicationType<AnyView>.image(Image(systemName: "arrow.uturn.right"),20)]
+    
     var body: some View {
-          StepperView(cells: [cellBody, cellBody , cellBody], alignments: alignments,indicationType:indicatorTypes, verticalSpacing: 30.0)
+          StepperView(cells: [cellBody , cellBody], alignments: alignments,indicationType:indicatorTypes, verticalSpacing: 30.0)
     }
     
     var cellBody:some View {
