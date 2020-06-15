@@ -19,6 +19,9 @@
 		1B29462A236E0A6700E44888 /* Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294629236E0A6700E44888 /* Forms.swift */; };
 		1B29462C236E17F800E44888 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29462B236E17F800E44888 /* Lists.swift */; };
 		1B476E7E2497F91D00767E01 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B476E7D2497F91D00767E01 /* Arc.swift */; };
+		1B476E8024980E8900767E01 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B476E7F24980E8900767E01 /* Triangle.swift */; };
+		1B476E8224980FFC00767E01 /* Hexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B476E8124980FFC00767E01 /* Hexagon.swift */; };
+		1B476E8424981ED000767E01 /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B476E8324981ED000767E01 /* Arrow.swift */; };
 		1B4CAD7C237BBD7800B49B4A /* BarAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CAD7B237BBD7800B49B4A /* BarAnimationView.swift */; };
 		1B4CAD7F237C70A200B49B4A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CAD7E237C70A200B49B4A /* User.swift */; };
 		1B4CAD81237C70BB00B49B4A /* CombineAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CAD80237C70BB00B49B4A /* CombineAsync.swift */; };
@@ -136,6 +139,9 @@
 		1B294629236E0A6700E44888 /* Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forms.swift; sourceTree = "<group>"; };
 		1B29462B236E17F800E44888 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
 		1B476E7D2497F91D00767E01 /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
+		1B476E7F24980E8900767E01 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		1B476E8124980FFC00767E01 /* Hexagon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexagon.swift; sourceTree = "<group>"; };
+		1B476E8324981ED000767E01 /* Arrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
 		1B4CAD7B237BBD7800B49B4A /* BarAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAnimationView.swift; sourceTree = "<group>"; };
 		1B4CAD7E237C70A200B49B4A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1B4CAD80237C70BB00B49B4A /* CombineAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineAsync.swift; sourceTree = "<group>"; };
@@ -417,6 +423,9 @@
 				1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */,
 				1BD260CF2497204B00E37AFC /* Wave.swift */,
 				1B476E7D2497F91D00767E01 /* Arc.swift */,
+				1B476E7F24980E8900767E01 /* Triangle.swift */,
+				1B476E8124980FFC00767E01 /* Hexagon.swift */,
+				1B476E8324981ED000767E01 /* Arrow.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -712,6 +721,7 @@
 				1B7E779123BAA296006CF53B /* SequenceAnimationView.swift in Sources */,
 				1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */,
 				1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */,
+				1B476E8424981ED000767E01 /* Arrow.swift in Sources */,
 				1BFF71E5236F95CD0024F4B8 /* ScrollHorizontalView.swift in Sources */,
 				1BD260CC24971A4200E37AFC /* CurvedRectangle.swift in Sources */,
 				8B2C426023524BDD00E8C68E /* TipView.swift in Sources */,
@@ -761,10 +771,12 @@
 				1B6E7D8723748B1B00BDF41A /* Pizza.swift in Sources */,
 				1B9EECDB23C27C5700434EA4 /* ExerciseAnimationView.swift in Sources */,
 				1BFF71EB236FAAC40024F4B8 /* TabViews.swift in Sources */,
+				1B476E8224980FFC00767E01 /* Hexagon.swift in Sources */,
 				8B2C4231235237DD00E8C68E /* SceneDelegate.swift in Sources */,
 				1B269DC8236BFE5400B063EA /* Day29.swift in Sources */,
 				1B269DC6236BEB4800B063EA /* Day26.swift in Sources */,
 				1BFF71E3236F58870024F4B8 /* YosemiteView.swift in Sources */,
+				1B476E8024980E8900767E01 /* Triangle.swift in Sources */,
 				1B269DD7236DE71800B063EA /* VHZstacks.swift in Sources */,
 				1B269DD5236D6E2E00B063EA /* ViewSizesPushOut.swift in Sources */,
 				1BFF4951238240F2006DBB0F /* GeometryView.swift in Sources */,

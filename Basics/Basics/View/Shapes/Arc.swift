@@ -14,7 +14,7 @@ struct Arc: Shape {
 //        path.addArc(center: CGPoint(x: rect.midX, y: rect.midY), radius: rect.width / 2, startAngle:.degrees(0), endAngle: .degrees(0), clockwise: true)
         
     // Shapes measure their coordinates from the bottom-left corner rather than the top-left corner,which means SwiftUI goes the other way around from one angle to the other.
-    // so we habe to make rotation adjustment of .angle(90) to make it work.
+    // so we have to make rotation adjustment of .angle(90) to make it work.
         
         let rotationAdjustment = Angle.degrees(90)
         let modifiedStart = .degrees(0) - rotationAdjustment
