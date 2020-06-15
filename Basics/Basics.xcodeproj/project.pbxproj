@@ -18,6 +18,7 @@
 		1B294628236DFBD000E44888 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294627236DFBD000E44888 /* Buttons.swift */; };
 		1B29462A236E0A6700E44888 /* Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294629236E0A6700E44888 /* Forms.swift */; };
 		1B29462C236E17F800E44888 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29462B236E17F800E44888 /* Lists.swift */; };
+		1B476E7E2497F91D00767E01 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B476E7D2497F91D00767E01 /* Arc.swift */; };
 		1B4CAD7C237BBD7800B49B4A /* BarAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CAD7B237BBD7800B49B4A /* BarAnimationView.swift */; };
 		1B4CAD7F237C70A200B49B4A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CAD7E237C70A200B49B4A /* User.swift */; };
 		1B4CAD81237C70BB00B49B4A /* CombineAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CAD80237C70BB00B49B4A /* CombineAsync.swift */; };
@@ -70,6 +71,11 @@
 		1BB87C4C2378BDCA00D1FABE /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4B2378BDCA00D1FABE /* ShadowView.swift */; };
 		1BB87C4E2378C79800D1FABE /* TransalationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4D2378C79800D1FABE /* TransalationView.swift */; };
 		1BB87C502378DC5400D1FABE /* RotationalEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */; };
+		1BD260B524949C4500E37AFC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1BD260B424949C4500E37AFC /* Alamofire */; };
+		1BD260B824949D4C00E37AFC /* TracingActivity in Frameworks */ = {isa = PBXBuildFile; productRef = 1BD260B724949D4C00E37AFC /* TracingActivity */; };
+		1BD260CC24971A4200E37AFC /* CurvedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */; };
+		1BD260CE24971D0C00E37AFC /* CurvedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */; };
+		1BD260D02497204B00E37AFC /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CF2497204B00E37AFC /* Wave.swift */; };
 		1BF0B9D324356BD600492C74 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0B9D224356BD600492C74 /* ProgressBarView.swift */; };
 		1BFF4951238240F2006DBB0F /* GeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4950238240F2006DBB0F /* GeometryView.swift */; };
 		1BFF495323835B2C006DBB0F /* BudgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF495223835B2C006DBB0F /* BudgetsView.swift */; };
@@ -129,6 +135,7 @@
 		1B294627236DFBD000E44888 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		1B294629236E0A6700E44888 /* Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forms.swift; sourceTree = "<group>"; };
 		1B29462B236E17F800E44888 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
+		1B476E7D2497F91D00767E01 /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 		1B4CAD7B237BBD7800B49B4A /* BarAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAnimationView.swift; sourceTree = "<group>"; };
 		1B4CAD7E237C70A200B49B4A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1B4CAD80237C70BB00B49B4A /* CombineAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineAsync.swift; sourceTree = "<group>"; };
@@ -180,6 +187,9 @@
 		1BB87C4B2378BDCA00D1FABE /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		1BB87C4D2378C79800D1FABE /* TransalationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransalationView.swift; sourceTree = "<group>"; };
 		1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationalEffectView.swift; sourceTree = "<group>"; };
+		1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangle.swift; sourceTree = "<group>"; };
+		1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangleView.swift; sourceTree = "<group>"; };
+		1BD260CF2497204B00E37AFC /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		1BF0B9D224356BD600492C74 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		1BFF4950238240F2006DBB0F /* GeometryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryView.swift; sourceTree = "<group>"; };
 		1BFF495223835B2C006DBB0F /* BudgetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsView.swift; sourceTree = "<group>"; };
@@ -221,7 +231,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BD260B824949D4C00E37AFC /* TracingActivity in Frameworks */,
 				1BA315D8243CF93D0026C37E /* StepperView in Frameworks */,
+				1BD260B524949C4500E37AFC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +410,17 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		1BD260CA24971A2900E37AFC /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */,
+				1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */,
+				1BD260CF2497204B00E37AFC /* Wave.swift */,
+				1B476E7D2497F91D00767E01 /* Arc.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
 		1BFF495C238435EF006DBB0F /* PropertyWrappers */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +494,7 @@
 		8B2C425E23524BC700E8C68E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1BD260CA24971A2900E37AFC /* Shapes */,
 				1BA315D9243CF95C0026C37E /* Stepper */,
 				1B83DC42243278A700A7F3C6 /* PageControl */,
 				1B66D13323E62E8700AB7855 /* CodeOrganization */,
@@ -538,6 +562,8 @@
 			name = Basics;
 			packageProductDependencies = (
 				1BA315D7243CF93D0026C37E /* StepperView */,
+				1BD260B424949C4500E37AFC /* Alamofire */,
+				1BD260B724949D4C00E37AFC /* TracingActivity */,
 			);
 			productName = Basics;
 			productReference = 8B2C422B235237DD00E8C68E /* Basics.app */;
@@ -613,6 +639,9 @@
 			mainGroup = 8B2C4222235237DD00E8C68E;
 			packageReferences = (
 				1BA315D6243CF93D0026C37E /* XCRemoteSwiftPackageReference "StepperView" */,
+				1BD260B324949C4500E37AFC /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1BD260B624949D4C00E37AFC /* XCRemoteSwiftPackageReference "TracingActivity" */,
+				1BD260B92494A3B700E37AFC /* XCRemoteSwiftPackageReference "xcopen" */,
 			);
 			productRefGroup = 8B2C422C235237DD00E8C68E /* Products */;
 			projectDirPath = "";
@@ -664,6 +693,7 @@
 				1B66D17523E74DA300AB7855 /* AddToCartView1.swift in Sources */,
 				1BFF71E1236E93760024F4B8 /* ScrollVerticalView.swift in Sources */,
 				1BFF71E7236F9B650024F4B8 /* SegmentControlView.swift in Sources */,
+				1BD260D02497204B00E37AFC /* Wave.swift in Sources */,
 				1BF0B9D324356BD600492C74 /* ProgressBarView.swift in Sources */,
 				1BADE33A23790E88006B4825 /* BlendModeView.swift in Sources */,
 				1B7E779523BBEDE3006CF53B /* MultipleAnimationsView.swift in Sources */,
@@ -671,9 +701,11 @@
 				1BFF496023843DB9006DBB0F /* CombineExamples.swift in Sources */,
 				1BFF495523836206006DBB0F /* CardBottomView.swift in Sources */,
 				1B83DC3F242ADEA000A7F3C6 /* HowItWorksView.swift in Sources */,
+				1BD260CE24971D0C00E37AFC /* CurvedRectangleView.swift in Sources */,
 				1B7E779923BBFBBF006CF53B /* MultipleAnimationView.swift in Sources */,
 				1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */,
 				1B269DCF236D5EAC00B063EA /* BasicTemplate.swift in Sources */,
+				1B476E7E2497F91D00767E01 /* Arc.swift in Sources */,
 				1BADE351237AA69E006B4825 /* OperationListView.swift in Sources */,
 				1BA315DB243CF9950026C37E /* StepTesterView.swift in Sources */,
 				1B83DC462432DA0400A7F3C6 /* ActivityIndicator.swift in Sources */,
@@ -681,6 +713,7 @@
 				1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */,
 				1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */,
 				1BFF71E5236F95CD0024F4B8 /* ScrollHorizontalView.swift in Sources */,
+				1BD260CC24971A4200E37AFC /* CurvedRectangle.swift in Sources */,
 				8B2C426023524BDD00E8C68E /* TipView.swift in Sources */,
 				1B7E779723BBF836006CF53B /* FlipAnimationView.swift in Sources */,
 				1BFF71DF236E534C0024F4B8 /* NavigationViews.swift in Sources */,
@@ -1068,6 +1101,30 @@
 				minimumVersion = 1.0.4;
 			};
 		};
+		1BD260B324949C4500E37AFC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.1;
+			};
+		};
+		1BD260B624949D4C00E37AFC /* XCRemoteSwiftPackageReference "TracingActivity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/matis-schotte/TracingActivity.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+		1BD260B92494A3B700E37AFC /* XCRemoteSwiftPackageReference "xcopen" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/erica/xcopen.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1075,6 +1132,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1BA315D6243CF93D0026C37E /* XCRemoteSwiftPackageReference "StepperView" */;
 			productName = StepperView;
+		};
+		1BD260B424949C4500E37AFC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BD260B324949C4500E37AFC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		1BD260B724949D4C00E37AFC /* TracingActivity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BD260B624949D4C00E37AFC /* XCRemoteSwiftPackageReference "TracingActivity" */;
+			productName = TracingActivity;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
