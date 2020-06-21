@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05441A40249FEAAA00DC0E04 /* WaveShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05441A3F249FEAAA00DC0E04 /* WaveShape.swift */; };
+		05441A42249FED3A00DC0E04 /* WaveFilled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05441A41249FED3A00DC0E04 /* WaveFilled.swift */; };
+		05441A44249FEEA900DC0E04 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05441A43249FEEA900DC0E04 /* ColorExtensions.swift */; };
 		1B269DC6236BEB4800B063EA /* Day26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B269DC5236BEB4800B063EA /* Day26.swift */; };
 		1B269DC8236BFE5400B063EA /* Day29.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B269DC7236BFE5400B063EA /* Day29.swift */; };
 		1B269DCD236D537F00B063EA /* Containers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B269DCC236D537F00B063EA /* Containers.swift */; };
@@ -74,8 +77,6 @@
 		1BB87C4C2378BDCA00D1FABE /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4B2378BDCA00D1FABE /* ShadowView.swift */; };
 		1BB87C4E2378C79800D1FABE /* TransalationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4D2378C79800D1FABE /* TransalationView.swift */; };
 		1BB87C502378DC5400D1FABE /* RotationalEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */; };
-		1BD260B524949C4500E37AFC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1BD260B424949C4500E37AFC /* Alamofire */; };
-		1BD260B824949D4C00E37AFC /* TracingActivity in Frameworks */ = {isa = PBXBuildFile; productRef = 1BD260B724949D4C00E37AFC /* TracingActivity */; };
 		1BD260CC24971A4200E37AFC /* CurvedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */; };
 		1BD260CE24971D0C00E37AFC /* CurvedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */; };
 		1BD260D02497204B00E37AFC /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CF2497204B00E37AFC /* Wave.swift */; };
@@ -127,6 +128,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05441A3F249FEAAA00DC0E04 /* WaveShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveShape.swift; sourceTree = "<group>"; };
+		05441A41249FED3A00DC0E04 /* WaveFilled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveFilled.swift; sourceTree = "<group>"; };
+		05441A43249FEEA900DC0E04 /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		1B269DC5236BEB4800B063EA /* Day26.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day26.swift; sourceTree = "<group>"; };
 		1B269DC7236BFE5400B063EA /* Day29.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day29.swift; sourceTree = "<group>"; };
 		1B269DCC236D537F00B063EA /* Containers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Containers.swift; sourceTree = "<group>"; };
@@ -237,9 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BD260B824949D4C00E37AFC /* TracingActivity in Frameworks */,
 				1BA315D8243CF93D0026C37E /* StepperView in Frameworks */,
-				1BD260B524949C4500E37AFC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +377,7 @@
 		1BB87C3523773C1100D1FABE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				05441A43249FEEA900DC0E04 /* ColorExtensions.swift */,
 				1BB87C3623773C1B00D1FABE /* circle.gif */,
 			);
 			path = Resources;
@@ -426,6 +429,8 @@
 				1B476E7F24980E8900767E01 /* Triangle.swift */,
 				1B476E8124980FFC00767E01 /* Hexagon.swift */,
 				1B476E8324981ED000767E01 /* Arrow.swift */,
+				05441A3F249FEAAA00DC0E04 /* WaveShape.swift */,
+				05441A41249FED3A00DC0E04 /* WaveFilled.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -571,8 +576,6 @@
 			name = Basics;
 			packageProductDependencies = (
 				1BA315D7243CF93D0026C37E /* StepperView */,
-				1BD260B424949C4500E37AFC /* Alamofire */,
-				1BD260B724949D4C00E37AFC /* TracingActivity */,
 			);
 			productName = Basics;
 			productReference = 8B2C422B235237DD00E8C68E /* Basics.app */;
@@ -648,9 +651,6 @@
 			mainGroup = 8B2C4222235237DD00E8C68E;
 			packageReferences = (
 				1BA315D6243CF93D0026C37E /* XCRemoteSwiftPackageReference "StepperView" */,
-				1BD260B324949C4500E37AFC /* XCRemoteSwiftPackageReference "Alamofire" */,
-				1BD260B624949D4C00E37AFC /* XCRemoteSwiftPackageReference "TracingActivity" */,
-				1BD260B92494A3B700E37AFC /* XCRemoteSwiftPackageReference "xcopen" */,
 			);
 			productRefGroup = 8B2C422C235237DD00E8C68E /* Products */;
 			projectDirPath = "";
@@ -715,6 +715,7 @@
 				1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */,
 				1B269DCF236D5EAC00B063EA /* BasicTemplate.swift in Sources */,
 				1B476E7E2497F91D00767E01 /* Arc.swift in Sources */,
+				05441A44249FEEA900DC0E04 /* ColorExtensions.swift in Sources */,
 				1BADE351237AA69E006B4825 /* OperationListView.swift in Sources */,
 				1BA315DB243CF9950026C37E /* StepTesterView.swift in Sources */,
 				1B83DC462432DA0400A7F3C6 /* ActivityIndicator.swift in Sources */,
@@ -747,6 +748,7 @@
 				1BFF4957238383DC006DBB0F /* NotificationPublisher.swift in Sources */,
 				1B29462C236E17F800E44888 /* Lists.swift in Sources */,
 				1B53B0E72426D98300D15C97 /* View+Extension.swift in Sources */,
+				05441A42249FED3A00DC0E04 /* WaveFilled.swift in Sources */,
 				1BADE34023791974006B4825 /* ClippedView.swift in Sources */,
 				8B942B9E2353F04C004A7B83 /* GuessView.swift in Sources */,
 				1B83DC44243286FC00A7F3C6 /* CaraouselView.swift in Sources */,
@@ -758,6 +760,7 @@
 				1BADE34F237A9096006B4825 /* CombineView.swift in Sources */,
 				1BFF71DB236E22D00024F4B8 /* ListsMove.swift in Sources */,
 				1BB87C3D2377B4F500D1FABE /* LinearGradientView.swift in Sources */,
+				05441A40249FEAAA00DC0E04 /* WaveShape.swift in Sources */,
 				1BB87C3B2377B4CF00D1FABE /* AngularGradientView.swift in Sources */,
 				1BB7A6E2237FD2E2000CDD49 /* CreditScoreView.swift in Sources */,
 				1B9EECD823C1C15600434EA4 /* DragAnimationView.swift in Sources */,
@@ -1113,30 +1116,6 @@
 				minimumVersion = 1.0.4;
 			};
 		};
-		1BD260B324949C4500E37AFC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.2.1;
-			};
-		};
-		1BD260B624949D4C00E37AFC /* XCRemoteSwiftPackageReference "TracingActivity" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/matis-schotte/TracingActivity.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.1;
-			};
-		};
-		1BD260B92494A3B700E37AFC /* XCRemoteSwiftPackageReference "xcopen" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/erica/xcopen.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.2;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1144,16 +1123,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1BA315D6243CF93D0026C37E /* XCRemoteSwiftPackageReference "StepperView" */;
 			productName = StepperView;
-		};
-		1BD260B424949C4500E37AFC /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1BD260B324949C4500E37AFC /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		1BD260B724949D4C00E37AFC /* TracingActivity */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1BD260B624949D4C00E37AFC /* XCRemoteSwiftPackageReference "TracingActivity" */;
-			productName = TracingActivity;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

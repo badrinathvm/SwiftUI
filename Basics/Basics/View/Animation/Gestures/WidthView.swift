@@ -100,7 +100,7 @@ struct CarouselView<Cell:View>: View {
         HStack(spacing: 8) {
             ForEach(self.cells.indices) { column in
                     self.cells[column]
-                        .widthPreference(column: column)
+                        //.widthPreference(column: column)
                         .padding(8)
                         .background(RoundedRectangle(cornerRadius: 8)
                             .frame(width: self.columnWidths[column], height: self.columnWidths[column])
