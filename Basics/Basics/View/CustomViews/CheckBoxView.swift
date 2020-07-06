@@ -40,3 +40,9 @@ struct CheckMarkToggleStyle: ToggleStyle {
             .padding(.horizontal)
     }
 }
+
+struct CheckBoxView_Previews: PreviewProvider {
+    static var previews: some View {
+        CheckBoxView()
+    }
+}

@@ -80,6 +80,7 @@
 		1BD260CC24971A4200E37AFC /* CurvedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */; };
 		1BD260CE24971D0C00E37AFC /* CurvedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */; };
 		1BD260D02497204B00E37AFC /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CF2497204B00E37AFC /* Wave.swift */; };
+		1BEA5F6D24B2B7E5003866D2 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA5F6C24B2B7E5003866D2 /* CheckBox.swift */; };
 		1BF0B9D324356BD600492C74 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0B9D224356BD600492C74 /* ProgressBarView.swift */; };
 		1BFF4951238240F2006DBB0F /* GeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4950238240F2006DBB0F /* GeometryView.swift */; };
 		1BFF495323835B2C006DBB0F /* BudgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF495223835B2C006DBB0F /* BudgetsView.swift */; };
@@ -200,6 +201,7 @@
 		1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangle.swift; sourceTree = "<group>"; };
 		1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangleView.swift; sourceTree = "<group>"; };
 		1BD260CF2497204B00E37AFC /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
+		1BEA5F6C24B2B7E5003866D2 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		1BF0B9D224356BD600492C74 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		1BFF4950238240F2006DBB0F /* GeometryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryView.swift; sourceTree = "<group>"; };
 		1BFF495223835B2C006DBB0F /* BudgetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsView.swift; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 				1BADE33F23791974006B4825 /* ClippedView.swift */,
 				1BADE3412379E974006B4825 /* ButtonStylesView.swift */,
 				1B83DC452432DA0400A7F3C6 /* ActivityIndicator.swift */,
+				1BEA5F6C24B2B7E5003866D2 /* CheckBox.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				1B53B0E72426D98300D15C97 /* View+Extension.swift in Sources */,
 				05441A42249FED3A00DC0E04 /* WaveFilled.swift in Sources */,
 				1BADE34023791974006B4825 /* ClippedView.swift in Sources */,
+				1BEA5F6D24B2B7E5003866D2 /* CheckBox.swift in Sources */,
 				8B942B9E2353F04C004A7B83 /* GuessView.swift in Sources */,
 				1B83DC44243286FC00A7F3C6 /* CaraouselView.swift in Sources */,
 				1BB4691423C1B07C0041B1D8 /* AppearDisappearAnimationView.swift in Sources */,
