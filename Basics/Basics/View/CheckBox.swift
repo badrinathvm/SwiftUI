@@ -113,7 +113,6 @@ struct OffView: View {
 }
 
 
-
 struct CheckView_Previews: PreviewProvider {
     static var previews: some View {
         FilterList()

@@ -62,6 +62,8 @@
 		1BADE351237AA69E006B4825 /* OperationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE350237AA69E006B4825 /* OperationListView.swift */; };
 		1BB4691223C1A9350041B1D8 /* StepperAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4691123C1A9350041B1D8 /* StepperAnimationView.swift */; };
 		1BB4691423C1B07C0041B1D8 /* AppearDisappearAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4691323C1B07C0041B1D8 /* AppearDisappearAnimationView.swift */; };
+		1BB5159424BBDCF50058D68A /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5159324BBDCF50058D68A /* ShapeView.swift */; };
+		1BB5159624BBE1D70058D68A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5159524BBE1D70058D68A /* UIColor+Extension.swift */; };
 		1BB7A6E2237FD2E2000CDD49 /* CreditScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7A6E1237FD2E2000CDD49 /* CreditScoreView.swift */; };
 		1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C2E23772A0F00D1FABE /* CircularShapes.swift */; };
 		1BB87C322377342000D1FABE /* CircleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C312377342000D1FABE /* CircleBorder.swift */; };
@@ -183,6 +185,8 @@
 		1BADE350237AA69E006B4825 /* OperationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationListView.swift; sourceTree = "<group>"; };
 		1BB4691123C1A9350041B1D8 /* StepperAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperAnimationView.swift; sourceTree = "<group>"; };
 		1BB4691323C1B07C0041B1D8 /* AppearDisappearAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearDisappearAnimationView.swift; sourceTree = "<group>"; };
+		1BB5159324BBDCF50058D68A /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
+		1BB5159524BBE1D70058D68A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		1BB7A6E1237FD2E2000CDD49 /* CreditScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreView.swift; sourceTree = "<group>"; };
 		1BB87C2E23772A0F00D1FABE /* CircularShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularShapes.swift; sourceTree = "<group>"; };
 		1BB87C312377342000D1FABE /* CircleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBorder.swift; sourceTree = "<group>"; };
@@ -433,6 +437,7 @@
 				1B476E8324981ED000767E01 /* Arrow.swift */,
 				05441A3F249FEAAA00DC0E04 /* WaveShape.swift */,
 				05441A41249FED3A00DC0E04 /* WaveFilled.swift */,
+				1BB5159324BBDCF50058D68A /* ShapeView.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -557,6 +562,7 @@
 				1BADE3412379E974006B4825 /* ButtonStylesView.swift */,
 				1B83DC452432DA0400A7F3C6 /* ActivityIndicator.swift */,
 				1BEA5F6C24B2B7E5003866D2 /* CheckBox.swift */,
+				1BB5159524BBE1D70058D68A /* UIColor+Extension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -709,6 +715,7 @@
 				1BF0B9D324356BD600492C74 /* ProgressBarView.swift in Sources */,
 				1BADE33A23790E88006B4825 /* BlendModeView.swift in Sources */,
 				1B7E779523BBEDE3006CF53B /* MultipleAnimationsView.swift in Sources */,
+				1BB5159624BBE1D70058D68A /* UIColor+Extension.swift in Sources */,
 				1BFF495B2383C6B7006DBB0F /* PublishedView.swift in Sources */,
 				1BFF496023843DB9006DBB0F /* CombineExamples.swift in Sources */,
 				1BFF495523836206006DBB0F /* CardBottomView.swift in Sources */,
@@ -753,6 +760,7 @@
 				1B53B0E72426D98300D15C97 /* View+Extension.swift in Sources */,
 				05441A42249FED3A00DC0E04 /* WaveFilled.swift in Sources */,
 				1BADE34023791974006B4825 /* ClippedView.swift in Sources */,
+				1BB5159424BBDCF50058D68A /* ShapeView.swift in Sources */,
 				1BEA5F6D24B2B7E5003866D2 /* CheckBox.swift in Sources */,
 				8B942B9E2353F04C004A7B83 /* GuessView.swift in Sources */,
 				1B83DC44243286FC00A7F3C6 /* CaraouselView.swift in Sources */,
