@@ -82,6 +82,7 @@
 		1BD260CC24971A4200E37AFC /* CurvedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */; };
 		1BD260CE24971D0C00E37AFC /* CurvedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */; };
 		1BD260D02497204B00E37AFC /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CF2497204B00E37AFC /* Wave.swift */; };
+		1BD627E024C5273C0058ED30 /* TwitterHeartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627DF24C5273C0058ED30 /* TwitterHeartAnimation.swift */; };
 		1BEA5F6D24B2B7E5003866D2 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA5F6C24B2B7E5003866D2 /* CheckBox.swift */; };
 		1BF0B9D324356BD600492C74 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0B9D224356BD600492C74 /* ProgressBarView.swift */; };
 		1BFF4951238240F2006DBB0F /* GeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4950238240F2006DBB0F /* GeometryView.swift */; };
@@ -205,6 +206,7 @@
 		1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangle.swift; sourceTree = "<group>"; };
 		1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangleView.swift; sourceTree = "<group>"; };
 		1BD260CF2497204B00E37AFC /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
+		1BD627DF24C5273C0058ED30 /* TwitterHeartAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterHeartAnimation.swift; sourceTree = "<group>"; };
 		1BEA5F6C24B2B7E5003866D2 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		1BF0B9D224356BD600492C74 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		1BFF4950238240F2006DBB0F /* GeometryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryView.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 		1B7E778D23AB94F8006CF53B /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				1BD627DF24C5273C0058ED30 /* TwitterHeartAnimation.swift */,
 				1B9EECD923C27C3800434EA4 /* Gestures */,
 				1B7E778E23AB9519006CF53B /* AnimationView.swift */,
 				1B7E779023BAA296006CF53B /* SequenceAnimationView.swift */,
@@ -748,6 +751,7 @@
 				1B4CAD7C237BBD7800B49B4A /* BarAnimationView.swift in Sources */,
 				1B66D13723E62EF200AB7855 /* PeopleViewModel.swift in Sources */,
 				1B294626236DF42E00E44888 /* GReader.swift in Sources */,
+				1BD627E024C5273C0058ED30 /* TwitterHeartAnimation.swift in Sources */,
 				1BADE3462379F0B7006B4825 /* ToggleReConstructionView.swift in Sources */,
 				1BB87C3F2377BED600D1FABE /* RadialGradientView.swift in Sources */,
 				1BFF495323835B2C006DBB0F /* BudgetsView.swift in Sources */,

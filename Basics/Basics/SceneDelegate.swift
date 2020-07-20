@@ -85,7 +85,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: FlipAnimationView())
             //window.rootViewController = UIHostingController(rootView: MultipleAnimationView())
             //window.rootViewController = UIHostingController(rootView: StepperAnimationView())
-            window.rootViewController = UIHostingController(rootView: FilterList())
+            window.rootViewController = UIHostingController(rootView: TwitterHeartAnimation())
             self.window = window
             window.makeKeyAndVisible()
         }
