@@ -83,6 +83,7 @@
 		1BD260CE24971D0C00E37AFC /* CurvedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */; };
 		1BD260D02497204B00E37AFC /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CF2497204B00E37AFC /* Wave.swift */; };
 		1BD627E024C5273C0058ED30 /* TwitterHeartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627DF24C5273C0058ED30 /* TwitterHeartAnimation.swift */; };
+		1BD627E224C530380058ED30 /* HollowDotsSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627E124C530370058ED30 /* HollowDotsSpinner.swift */; };
 		1BEA5F6D24B2B7E5003866D2 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA5F6C24B2B7E5003866D2 /* CheckBox.swift */; };
 		1BF0B9D324356BD600492C74 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0B9D224356BD600492C74 /* ProgressBarView.swift */; };
 		1BFF4951238240F2006DBB0F /* GeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4950238240F2006DBB0F /* GeometryView.swift */; };
@@ -207,6 +208,7 @@
 		1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangleView.swift; sourceTree = "<group>"; };
 		1BD260CF2497204B00E37AFC /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		1BD627DF24C5273C0058ED30 /* TwitterHeartAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterHeartAnimation.swift; sourceTree = "<group>"; };
+		1BD627E124C530370058ED30 /* HollowDotsSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HollowDotsSpinner.swift; sourceTree = "<group>"; };
 		1BEA5F6C24B2B7E5003866D2 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		1BF0B9D224356BD600492C74 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		1BFF4950238240F2006DBB0F /* GeometryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryView.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				1BB4691323C1B07C0041B1D8 /* AppearDisappearAnimationView.swift */,
 				1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */,
 				1BF0B9D224356BD600492C74 /* ProgressBarView.swift */,
+				1BD627E124C530370058ED30 /* HollowDotsSpinner.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -713,6 +716,7 @@
 				1BB87C4A2378B57700D1FABE /* ScaleEffectView.swift in Sources */,
 				1B66D17523E74DA300AB7855 /* AddToCartView1.swift in Sources */,
 				1BFF71E1236E93760024F4B8 /* ScrollVerticalView.swift in Sources */,
+				1BD627E224C530380058ED30 /* HollowDotsSpinner.swift in Sources */,
 				1BFF71E7236F9B650024F4B8 /* SegmentControlView.swift in Sources */,
 				1BD260D02497204B00E37AFC /* Wave.swift in Sources */,
 				1BF0B9D324356BD600492C74 /* ProgressBarView.swift in Sources */,
