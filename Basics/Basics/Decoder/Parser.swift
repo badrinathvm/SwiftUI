@@ -9,18 +9,14 @@
 import Foundation
 import SwiftUI
 
-// MARK: - Welcome
-struct AssetData: Decodable {
-    var id:String
-    var type:String
-    var value:String
-    var views:[Asset]
-}
-
-// MARK: - ViewWrapper
-struct Asset:Decodable,Hashable {
-    var heading:AssetWrapper
-    var subHeading:AssetWrapper
+protocol GenericAssetData : Decodable , Hashable {
+    associatedtype Asset
+    var id:String { get set }
+    var type:String { get set }
+    var value:String { get set }
+    var views: [Asset] { get set }
+    
+    func renderView() -> AnyView
 }
 
 // MARK: - Heading
@@ -58,7 +54,8 @@ struct AssetWrapper: Decodable,Hashable {
                 .padding()
                 .eraseToAnyView()
         case "image":
-            return Image(systemName: self.value).eraseToAnyView()
+            return Image(systemName: self.value)
+                    .eraseToAnyView()
         default: return EmptyView().eraseToAnyView()
         }
     }
@@ -81,30 +78,18 @@ extension View {
         return EmptyView()
     }
     
-    func loadView(for data: AssetData?) -> AnyView {
+    func loadView<T:GenericAssetData>(for data: T?) -> AnyView {
         switch data?.type {
         case "navigationView":
             return NavigationView {
-                renderAssets(assets: data!.views)
+                renderAssets(for: data!)
                     .navigationBarTitle(data!.value)
             }.eraseToAnyView()
         default: return EmptyView().eraseToAnyView()
         }
     }
         
-    func renderView(asset: Asset) -> AnyView {
-        return VStack {
-            log("Inside View")
-            asset.heading.render()
-            asset.subHeading.render()
-        }.eraseToAnyView()
-    }
-    
-    func renderAssets(assets: [Asset]) -> AnyView {
-        ForEach(assets, id: \.self) { data in
-            return VStack {
-                self.renderView(asset: data)
-            }
-        }.eraseToAnyView()
+    func renderAssets<T:GenericAssetData>(for data: T) -> AnyView {
+        return data.renderView().eraseToAnyView()
     }
 }

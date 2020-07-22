@@ -19,6 +19,11 @@
                 "metaData": {
                     "role": "link"
                 }
+            },
+            "image": {
+                "id":"image",
+                "type": "image",
+                "value": "person.and.person"
             }
         }
     ]

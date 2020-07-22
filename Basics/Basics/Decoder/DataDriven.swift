@@ -9,21 +9,42 @@
 import Foundation
 import SwiftUI
 
-protocol Render {
-    func renderView(asset: Asset) -> AnyView
+// MARK: - AssetData
+struct AssetData: GenericAssetData  {
+    var id:String
+    var type:String
+    var value:String
+    var views:[MainViewAsset]
+    
+    func renderView() -> AnyView {
+        return views.first?.loadAsset().eraseToAnyView()
+            ?? Color.red.frame(width: 30, height: 30).eraseToAnyView()
+    }
 }
 
-struct DataDrivenView: View, Render {
+// MARK: - Asset details
+struct MainViewAsset:Decodable,Hashable {
+    var heading:AssetWrapper
+    var subHeading:AssetWrapper
+    var image:AssetWrapper
+    
+    func loadAsset() -> some View {
+        VStack(alignment: .leading, spacing: 20) {
+            self.heading.render()
+                .font(.headline)
+            self.subHeading.render()
+                .font(.subheadline)
+            self.image.render()
+                .frame(width: 30, height: 30, alignment: .leading)
+        }
+    }
+}
+
+struct DataDrivenView: View {
+    var data = JSONLoader.decode(for: JSONLoader.unbox(for: "sample"))
     
     var body: some View {
-        return loadView(for: JSONLoader.decode(for: JSONLoader.unbox(for: "sample")))
-    }
-    
-    func renderView(asset: Asset) -> AnyView {
-        return VStack {
-            asset.heading.render()
-            asset.subHeading.render()
-        }.eraseToAnyView()
+        return loadView(for: data)
     }
 }
 
