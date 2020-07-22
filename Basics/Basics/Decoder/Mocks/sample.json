@@ -1,0 +1,25 @@
+{
+    "id":"Main View",
+    "type": "navigationView",
+    "value": "JSON Driven View",
+    "views": [
+        {
+            "heading": {
+                "id":"heading",
+                "type":"text",
+                "value":"Heading",
+                "metaData": {
+                    "role": "link"
+                }
+            },
+            "subHeading": {
+                "id":"heading",
+                "type":"text",
+                "value":"Sub Heading",
+                "metaData": {
+                    "role": "link"
+                }
+            }
+        }
+    ]
+}

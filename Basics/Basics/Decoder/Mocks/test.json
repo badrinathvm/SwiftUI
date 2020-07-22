@@ -1,0 +1,38 @@
+{
+    "type": "Navigation View",
+    "barTitle": "JSON Driven View",
+    "leading": "chevron.left",
+    "childViews": [
+        {
+            "type": "List",
+            "items": [
+                {
+                    "type": "text",
+                    "title": "Item1"
+                },
+                {
+                    "type": "text",
+                    "title": "Item2"
+                },
+                {
+                    "type": "text",
+                    "title": "Item3"
+                }
+            ]
+        },
+        {
+            "type":"text",
+            "title":"JSON Rendering Title"
+        },
+        {
+            "type":"text",
+            "title":"JSON Rendering Title2"
+        },
+        {
+            "type":"text",
+            "title":"JSON Rendering Title3"
+        }
+    ]
+}
+
+

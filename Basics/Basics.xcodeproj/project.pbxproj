@@ -84,6 +84,11 @@
 		1BD260D02497204B00E37AFC /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CF2497204B00E37AFC /* Wave.swift */; };
 		1BD627E024C5273C0058ED30 /* TwitterHeartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627DF24C5273C0058ED30 /* TwitterHeartAnimation.swift */; };
 		1BD627E224C530380058ED30 /* HollowDotsSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627E124C530370058ED30 /* HollowDotsSpinner.swift */; };
+		1BD627E524C770AF0058ED30 /* DataDriven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627E424C770AF0058ED30 /* DataDriven.swift */; };
+		1BD627E824C771660058ED30 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BD627E724C771660058ED30 /* sample.json */; };
+		1BD627EA24C78F610058ED30 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627E924C78F610058ED30 /* JSONLoader.swift */; };
+		1BD627EC24C7AB5B0058ED30 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BD627EB24C7AB5B0058ED30 /* test.json */; };
+		1BD627EE24C8A4870058ED30 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627ED24C8A4870058ED30 /* Parser.swift */; };
 		1BEA5F6D24B2B7E5003866D2 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA5F6C24B2B7E5003866D2 /* CheckBox.swift */; };
 		1BF0B9D324356BD600492C74 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0B9D224356BD600492C74 /* ProgressBarView.swift */; };
 		1BFF4951238240F2006DBB0F /* GeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4950238240F2006DBB0F /* GeometryView.swift */; };
@@ -209,6 +214,11 @@
 		1BD260CF2497204B00E37AFC /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		1BD627DF24C5273C0058ED30 /* TwitterHeartAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterHeartAnimation.swift; sourceTree = "<group>"; };
 		1BD627E124C530370058ED30 /* HollowDotsSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HollowDotsSpinner.swift; sourceTree = "<group>"; };
+		1BD627E424C770AF0058ED30 /* DataDriven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDriven.swift; sourceTree = "<group>"; };
+		1BD627E724C771660058ED30 /* sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		1BD627E924C78F610058ED30 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		1BD627EB24C7AB5B0058ED30 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		1BD627ED24C8A4870058ED30 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		1BEA5F6C24B2B7E5003866D2 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		1BF0B9D224356BD600492C74 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		1BFF4950238240F2006DBB0F /* GeometryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryView.swift; sourceTree = "<group>"; };
@@ -448,6 +458,26 @@
 			path = Shapes;
 			sourceTree = "<group>";
 		};
+		1BD627E324C7709B0058ED30 /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				1BD627E624C771510058ED30 /* Mocks */,
+				1BD627E424C770AF0058ED30 /* DataDriven.swift */,
+				1BD627E924C78F610058ED30 /* JSONLoader.swift */,
+				1BD627ED24C8A4870058ED30 /* Parser.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
+		1BD627E624C771510058ED30 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1BD627E724C771660058ED30 /* sample.json */,
+				1BD627EB24C7AB5B0058ED30 /* test.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		1BFF495C238435EF006DBB0F /* PropertyWrappers */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +509,7 @@
 		8B2C422D235237DD00E8C68E /* Basics */ = {
 			isa = PBXGroup;
 			children = (
+				1BD627E324C7709B0058ED30 /* Decoder */,
 				1B53B0E42426D96400D15C97 /* Utils */,
 				1BB87C3523773C1100D1FABE /* Resources */,
 				8B2C425E23524BC700E8C68E /* View */,
@@ -686,7 +717,9 @@
 				1BB87C3723773C1B00D1FABE /* circle.gif in Resources */,
 				8B2C423B235237DF00E8C68E /* LaunchScreen.storyboard in Resources */,
 				8B2C4238235237DF00E8C68E /* Preview Assets.xcassets in Resources */,
+				1BD627E824C771660058ED30 /* sample.json in Resources */,
 				8B2C4235235237DF00E8C68E /* Assets.xcassets in Resources */,
+				1BD627EC24C7AB5B0058ED30 /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,8 +773,10 @@
 				1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */,
 				1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */,
 				1B476E8424981ED000767E01 /* Arrow.swift in Sources */,
+				1BD627E524C770AF0058ED30 /* DataDriven.swift in Sources */,
 				1BFF71E5236F95CD0024F4B8 /* ScrollHorizontalView.swift in Sources */,
 				1BD260CC24971A4200E37AFC /* CurvedRectangle.swift in Sources */,
+				1BD627EE24C8A4870058ED30 /* Parser.swift in Sources */,
 				8B2C426023524BDD00E8C68E /* TipView.swift in Sources */,
 				1B7E779723BBF836006CF53B /* FlipAnimationView.swift in Sources */,
 				1BFF71DF236E534C0024F4B8 /* NavigationViews.swift in Sources */,
@@ -803,6 +838,7 @@
 				1B269DD7236DE71800B063EA /* VHZstacks.swift in Sources */,
 				1B269DD5236D6E2E00B063EA /* ViewSizesPushOut.swift in Sources */,
 				1BFF4951238240F2006DBB0F /* GeometryView.swift in Sources */,
+				1BD627EA24C78F610058ED30 /* JSONLoader.swift in Sources */,
 				1B29462A236E0A6700E44888 /* Forms.swift in Sources */,
 				1BFF495E23843606006DBB0F /* UpperCasedView.swift in Sources */,
 				1B4CAD81237C70BB00B49B4A /* CombineAsync.swift in Sources */,
