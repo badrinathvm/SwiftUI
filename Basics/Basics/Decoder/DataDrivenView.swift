@@ -24,21 +24,21 @@ struct AssetData: GenericAssetData  {
 
 // MARK: - Asset details
 struct MainViewAsset:Decodable,Hashable {
-    var heading:AssetWrapper
-    var subHeading:AssetWrapper
-    var image:AssetWrapper
+    var heading:AssetWrapper?
+    var subHeading:AssetWrapper?
+    var image:AssetWrapper?
     
     func loadAsset() -> some View {
-        VStack(alignment: .leading, spacing: 20) {
-            self.heading.render()
+        VStack(alignment: .leading) {
+            self.heading?.render()
                 .font(.headline)
-            self.subHeading.render()
+            self.subHeading?.render()
                 .font(.subheadline)
-            self.image.render()
-                .frame(width: 30, height: 30, alignment: .leading)
+            self.image?.render()
         }
     }
 }
+
 
 struct DataDrivenView: View {
     var data = JSONLoader.decode(for: JSONLoader.unbox(for: "sample"))
@@ -48,3 +48,9 @@ struct DataDrivenView: View {
     }
 }
 
+
+struct DataDrivenView_Previews: PreviewProvider {
+    static var previews: some View {
+        DataDrivenView()
+    }
+}

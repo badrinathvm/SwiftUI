@@ -19,7 +19,7 @@ protocol GenericAssetData : Decodable , Hashable {
     func renderView() -> AnyView
 }
 
-// MARK: - Heading
+// MARK: - Asset Wrapper
 struct AssetWrapper: Decodable,Hashable {
     
     static func == (lhs: AssetWrapper, rhs: AssetWrapper) -> Bool {
@@ -56,7 +56,7 @@ struct AssetWrapper: Decodable,Hashable {
         case "image":
             return Image(systemName: self.value)
                     .eraseToAnyView()
-        default: return EmptyView().eraseToAnyView()
+        default: return Color.red.frame(width: 30, height: 30).eraseToAnyView()
         }
     }
 }

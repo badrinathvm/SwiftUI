@@ -44,6 +44,7 @@
 		1B83DC3F242ADEA000A7F3C6 /* HowItWorksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83DC3E242ADEA000A7F3C6 /* HowItWorksView.swift */; };
 		1B83DC44243286FC00A7F3C6 /* CaraouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83DC43243286FC00A7F3C6 /* CaraouselView.swift */; };
 		1B83DC462432DA0400A7F3C6 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83DC452432DA0400A7F3C6 /* ActivityIndicator.swift */; };
+		1B9EDCA92577525900AD284B /* ToolTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EDCA82577525900AD284B /* ToolTipView.swift */; };
 		1B9EECD823C1C15600434EA4 /* DragAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECD723C1C15600434EA4 /* DragAnimationView.swift */; };
 		1B9EECDB23C27C5700434EA4 /* ExerciseAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */; };
 		1B9EECDD23C2896800434EA4 /* RotationGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */; };
@@ -84,7 +85,7 @@
 		1BD260D02497204B00E37AFC /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CF2497204B00E37AFC /* Wave.swift */; };
 		1BD627E024C5273C0058ED30 /* TwitterHeartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627DF24C5273C0058ED30 /* TwitterHeartAnimation.swift */; };
 		1BD627E224C530380058ED30 /* HollowDotsSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627E124C530370058ED30 /* HollowDotsSpinner.swift */; };
-		1BD627E524C770AF0058ED30 /* DataDriven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627E424C770AF0058ED30 /* DataDriven.swift */; };
+		1BD627E524C770AF0058ED30 /* DataDrivenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627E424C770AF0058ED30 /* DataDrivenView.swift */; };
 		1BD627E824C771660058ED30 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BD627E724C771660058ED30 /* sample.json */; };
 		1BD627EA24C78F610058ED30 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627E924C78F610058ED30 /* JSONLoader.swift */; };
 		1BD627EC24C7AB5B0058ED30 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BD627EB24C7AB5B0058ED30 /* test.json */; };
@@ -175,6 +176,7 @@
 		1B83DC3E242ADEA000A7F3C6 /* HowItWorksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorksView.swift; sourceTree = "<group>"; };
 		1B83DC43243286FC00A7F3C6 /* CaraouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaraouselView.swift; sourceTree = "<group>"; };
 		1B83DC452432DA0400A7F3C6 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		1B9EDCA82577525900AD284B /* ToolTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolTipView.swift; sourceTree = "<group>"; };
 		1B9EECD723C1C15600434EA4 /* DragAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAnimationView.swift; sourceTree = "<group>"; };
 		1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAnimationView.swift; sourceTree = "<group>"; };
 		1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureView.swift; sourceTree = "<group>"; };
@@ -214,7 +216,7 @@
 		1BD260CF2497204B00E37AFC /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		1BD627DF24C5273C0058ED30 /* TwitterHeartAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterHeartAnimation.swift; sourceTree = "<group>"; };
 		1BD627E124C530370058ED30 /* HollowDotsSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HollowDotsSpinner.swift; sourceTree = "<group>"; };
-		1BD627E424C770AF0058ED30 /* DataDriven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDriven.swift; sourceTree = "<group>"; };
+		1BD627E424C770AF0058ED30 /* DataDrivenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDrivenView.swift; sourceTree = "<group>"; };
 		1BD627E724C771660058ED30 /* sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 		1BD627E924C78F610058ED30 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		1BD627EB24C7AB5B0058ED30 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				05441A3F249FEAAA00DC0E04 /* WaveShape.swift */,
 				05441A41249FED3A00DC0E04 /* WaveFilled.swift */,
 				1BB5159324BBDCF50058D68A /* ShapeView.swift */,
+				1B9EDCA82577525900AD284B /* ToolTipView.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -462,7 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				1BD627E624C771510058ED30 /* Mocks */,
-				1BD627E424C770AF0058ED30 /* DataDriven.swift */,
+				1BD627E424C770AF0058ED30 /* DataDrivenView.swift */,
 				1BD627E924C78F610058ED30 /* JSONLoader.swift */,
 				1BD627ED24C8A4870058ED30 /* Parser.swift */,
 			);
@@ -773,7 +776,7 @@
 				1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */,
 				1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */,
 				1B476E8424981ED000767E01 /* Arrow.swift in Sources */,
-				1BD627E524C770AF0058ED30 /* DataDriven.swift in Sources */,
+				1BD627E524C770AF0058ED30 /* DataDrivenView.swift in Sources */,
 				1BFF71E5236F95CD0024F4B8 /* ScrollHorizontalView.swift in Sources */,
 				1BD260CC24971A4200E37AFC /* CurvedRectangle.swift in Sources */,
 				1BD627EE24C8A4870058ED30 /* Parser.swift in Sources */,
@@ -808,6 +811,7 @@
 				8B942B9E2353F04C004A7B83 /* GuessView.swift in Sources */,
 				1B83DC44243286FC00A7F3C6 /* CaraouselView.swift in Sources */,
 				1BB4691423C1B07C0041B1D8 /* AppearDisappearAnimationView.swift in Sources */,
+				1B9EDCA92577525900AD284B /* ToolTipView.swift in Sources */,
 				8B2C422F235237DD00E8C68E /* AppDelegate.swift in Sources */,
 				1B294628236DFBD000E44888 /* Buttons.swift in Sources */,
 				1BB87C422377C73900D1FABE /* SheetView.swift in Sources */,
@@ -1011,7 +1015,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "Basics/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "Basics/Preview\\ Content Basics/Decoder/Mocks/sample.json";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Basics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1030,7 +1034,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "Basics/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "Basics/Preview\\ Content Basics/Decoder/Mocks/sample.json";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Basics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

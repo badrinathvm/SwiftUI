@@ -15,18 +15,18 @@ struct TwitterHeartAnimation: View {
         VStack {
             ZStack {
                 Image(systemName: "heart")
-                .frame(width: 26, height: 26)
+                .frame(width: 150, height: 150)
                 .foregroundColor(.pink)
                 
                 Image(systemName: "heart.fill")
-                    .frame(width: 26, height: 26)
+                    .frame(width: 150, height: 150)
                     .foregroundColor(Color.pink)
                     .scaleEffect(showHeart ? 1.1 : 0)
                     .animation(Animation.interactiveSpring().delay(0.2))
                 
                 Image("splash_tilted")
                     .resizable()
-                    .frame(width: 50, height: 50)
+                    .frame(width: 150, height: 150)
                     .scaleEffect(showSplashTilted ? 1.5 : 0)
                     .scaleEffect(1.1)
                     .animation(Animation.easeOut(duration: 0.5).delay(0.1))

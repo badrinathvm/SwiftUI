@@ -22,8 +22,8 @@
             },
             "image": {
                 "id":"image",
-                "type": "image",
-                "value": "person.and.person"
+                "type":"image",
+                "value": "arrow.down.left.video.fill"
             }
         }
     ]

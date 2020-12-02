@@ -42,5 +42,6 @@ struct Arrow_Previews: PreviewProvider {
     static var previews: some View {
         Arrow()
             .frame(width: 400, height: 400)
+            //.rotationEffect(.degrees(90))
     }
 }

@@ -20,6 +20,7 @@ struct Triangle: Shape {
         path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
         path.closeSubpath()
         
+        
         return path
     }
 }
@@ -28,5 +29,6 @@ struct Triangle_Previews: PreviewProvider {
     static var previews: some View {
         Triangle()
             .frame(width: 300, height: 300)
+            //.rotationEffect(.degrees(-180))
     }
 }
