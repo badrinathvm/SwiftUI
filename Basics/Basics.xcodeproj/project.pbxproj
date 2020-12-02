@@ -45,6 +45,7 @@
 		1B83DC44243286FC00A7F3C6 /* CaraouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83DC43243286FC00A7F3C6 /* CaraouselView.swift */; };
 		1B83DC462432DA0400A7F3C6 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83DC452432DA0400A7F3C6 /* ActivityIndicator.swift */; };
 		1B9EDCA92577525900AD284B /* ToolTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EDCA82577525900AD284B /* ToolTipView.swift */; };
+		1B9EDCB42578001E00AD284B /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EDCB32578001E00AD284B /* BarChartView.swift */; };
 		1B9EECD823C1C15600434EA4 /* DragAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECD723C1C15600434EA4 /* DragAnimationView.swift */; };
 		1B9EECDB23C27C5700434EA4 /* ExerciseAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */; };
 		1B9EECDD23C2896800434EA4 /* RotationGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */; };
@@ -177,6 +178,7 @@
 		1B83DC43243286FC00A7F3C6 /* CaraouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaraouselView.swift; sourceTree = "<group>"; };
 		1B83DC452432DA0400A7F3C6 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		1B9EDCA82577525900AD284B /* ToolTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolTipView.swift; sourceTree = "<group>"; };
+		1B9EDCB32578001E00AD284B /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		1B9EECD723C1C15600434EA4 /* DragAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAnimationView.swift; sourceTree = "<group>"; };
 		1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAnimationView.swift; sourceTree = "<group>"; };
 		1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureView.swift; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 				05441A41249FED3A00DC0E04 /* WaveFilled.swift */,
 				1BB5159324BBDCF50058D68A /* ShapeView.swift */,
 				1B9EDCA82577525900AD284B /* ToolTipView.swift */,
+				1B9EDCB32578001E00AD284B /* BarChartView.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -762,6 +765,7 @@
 				1BFF495B2383C6B7006DBB0F /* PublishedView.swift in Sources */,
 				1BFF496023843DB9006DBB0F /* CombineExamples.swift in Sources */,
 				1BFF495523836206006DBB0F /* CardBottomView.swift in Sources */,
+				1B9EDCB42578001E00AD284B /* BarChartView.swift in Sources */,
 				1B83DC3F242ADEA000A7F3C6 /* HowItWorksView.swift in Sources */,
 				1BD260CE24971D0C00E37AFC /* CurvedRectangleView.swift in Sources */,
 				1B7E779923BBFBBF006CF53B /* MultipleAnimationView.swift in Sources */,
