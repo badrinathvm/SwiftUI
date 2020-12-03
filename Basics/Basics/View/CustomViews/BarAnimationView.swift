@@ -51,3 +51,10 @@ struct BarAnimationView: View {
         }
     }
 }
+
+struct BarAnimationView_Previews: PreviewProvider {
+    static var previews: some View {
+        BarView(height: 100, day: "Su")
+        BarView(height: 100, day: "M")
+    }
+}

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ToolTipView : View {
+struct ToolTipView1 : View {
     var body: some View {
 
         Text("$400")
@@ -25,7 +25,7 @@ struct ToolTipView : View {
 struct ToolTip: Shape {
     var radius: CGFloat = 0.0
     
-    var offset:CGFloat = 20
+    var arrowOffsetPosition:CGFloat = 20
 
     func path(in rect: CGRect) -> Path {
         var path = Path()
@@ -51,10 +51,10 @@ struct ToolTip: Shape {
         path.addLine(to: CGPoint(x: rect.midX + 10 , y: rect.maxY))
 
         //bottom triangle slant
-        path.addLine(to: CGPoint(x: rect.midX - offset / 2, y: rect.maxY + offset))
+        path.addLine(to: CGPoint(x: rect.midX - arrowOffsetPosition / 2, y: rect.maxY + arrowOffsetPosition))
 
         //top triangle slant
-        path.addLine(to: CGPoint(x: rect.midX - 25, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.midX - (arrowOffsetPosition + 5), y: rect.maxY))
 
         //arc towards bottom left corner
         path.addArc(center: CGPoint(x: radius, y: height - radius), radius: radius,
@@ -71,6 +71,6 @@ struct ToolTip: Shape {
 
 struct CustomShape_Previews: PreviewProvider {
     static var previews: some View {
-        ToolTipView()
+        ToolTipView1()
     }
 }
