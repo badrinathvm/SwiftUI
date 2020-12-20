@@ -88,3 +88,9 @@ struct AnimationView: View {
         }
     }
 }
+
+struct AnimationView_Previews: PreviewProvider {
+    static var previews: some View {
+        AnimationView()
+    }
+}
