@@ -21,15 +21,14 @@ struct AnchorData: Equatable {
     }
 }
 
-
 //Constants for Colors
 var lightGreen = UIColor(red: 213/255, green: 254/255, blue: 242/255, alpha: 1)
 var lightGray = UIColor(red: 0.70, green: 0.70, blue: 0.70, alpha: 1.00)
 var pink03 = UIColor(red: 0.97, green: 0.47, blue: 0.65, alpha: 1.00)
 let radius: CGFloat = 8.0
-var barWidth:CGFloat = 80.0
+var barWidth:CGFloat = 60
 //TODO:: Below values we will get from service.
-var budgetTarget:CGFloat = 200
+var budgetTarget:CGFloat = 230
 
 struct MainView: View {
     @State private var tipPosition: CGFloat  = 0.0
@@ -41,7 +40,7 @@ struct MainView: View {
         }
         .onPreferenceChange(AnchorPreferenceKey.self) { anchorPosition in
             //log("Anchor Position \(anchorPosition)")
-            self.tipPosition = anchorPosition! / 2
+            self.tipPosition = anchorPosition!
         }
     }
 }
@@ -53,12 +52,13 @@ struct ToolTipView: View {
         VStack {
             Text(text)
                 .foregroundColor(.black)
-                .font(Font.system(size: 28, weight: Font.Weight.bold))
-                .padding(.all,15)
+                .font(Font.system(size: 16, weight: Font.Weight.bold))
+                .padding(.horizontal,15)
+                .padding(.vertical, 15)
                 .background(ToolTip(radius: 8)
                                 .fill(Color.white)
                                 .shadow(color: Color(UIColor.lightGray), radius: 8, x: 0, y: 0))
-                .offset(x: self.tipPosition)
+                .offset(x: self.tipPosition, y: 30)
         }
     }
 }
@@ -74,7 +74,7 @@ struct BarChartView: View {
     var body: some View {
         VStack {
             ScrollView(Axis.Set.horizontal, showsIndicators: false) {
-                HStack(alignment: .bottom, spacing: 15) {
+                HStack(alignment: .bottom, spacing: 12) {
                     ForEach(months, id: \.self) { monthData in
                              VStack {
                                 if monthData.isDashed {
@@ -98,15 +98,16 @@ struct BarChartView: View {
             
             HStack {
                 ForEach(months, id: \.self) { monthData in
-                    Spacer()
                     Text(monthData.monthName)
                         .foregroundColor(Color(lightGray))
                         .font(Font.system(size: 20, weight: .bold))
                         .multilineTextAlignment(.center)
-                    Spacer()
+                        .frame(width:barWidth)
+                        //.border(Color.black)
                 }
-            }.padding(.horizontal, 10)
-            textStack()
+                Spacer()
+            }.padding(.horizontal, 20)
+            //textStack()
         }
     }
 }
@@ -119,10 +120,18 @@ extension BarChartView {
                 .frame(width: barWidth, height: monthData.height)
                 .cornerRadius(radius, corners: [.topLeft, .topRight])
                 .background(Rectangle().foregroundColor(Color(lightGreen)))
-                //passing position data to parent View to anchoe the Tool tip
-                .background(GeometryReader { proxy in
-                    Color.clear.preference(key: AnchorPreferenceKey.self, value: proxy.frame(in: .global).origin.x)
-                })
+                //passing position data to parent view to anchor the Tool tip using preferences and anchors.
+//                .background(GeometryReader { proxy in
+//                    Color.clear.preference(key: AnchorPreferenceKey.self, value: proxy.frame(in: .global).origin.x)
+//                })
+                .anchorPreference(key: BoundsPreferenceKey.self, value: .bounds) { $0 }
+                .overlayPreferenceValue(BoundsPreferenceKey.self) { preferences in
+                    GeometryReader { reader in
+                        preferences.map { anchor in
+                            Color.clear.preference(key: AnchorPreferenceKey.self, value: reader[anchor].midX + barWidth / 2)
+                        }
+                    }
+                }
         }
     }
     
@@ -141,7 +150,6 @@ extension BarChartView {
                             Rectangle()
                                 .foregroundColor(Color(pink03))
                                 .cornerRadius(radius, corners: [.topLeft, .topRight])
-                                //TODO :: need to get the budget position for each rectangle
                                 .frame(width: barWidth, height:  abs(monthData.height - budgetTarget))
                         } else {
                             EmptyView().eraseToAnyView()
@@ -220,11 +228,14 @@ struct BarChartView_Previews: PreviewProvider {
             MainView()
                 .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
                             .previewDisplayName("iPhone 11")
-            
-            MainView()
-                .previewDevice(PreviewDevice(rawValue: "iPhone 8 Plus"))
-                            .previewDisplayName("iPhone 8 Plus")
         }
     }
 }
+
+
+
+
+
+
+
 

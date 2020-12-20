@@ -85,7 +85,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: FlipAnimationView())
             //window.rootViewController = UIHostingController(rootView: MultipleAnimationView())
             //window.rootViewController = UIHostingController(rootView: StepperAnimationView())
-            window.rootViewController = UIHostingController(rootView: MainView())
+            window.rootViewController = UIHostingController(rootView: LightSwitchView())
             self.window = window
             window.makeKeyAndVisible()
         }

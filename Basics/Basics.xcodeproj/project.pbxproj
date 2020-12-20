@@ -25,12 +25,15 @@
 		1B476E8024980E8900767E01 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B476E7F24980E8900767E01 /* Triangle.swift */; };
 		1B476E8224980FFC00767E01 /* Hexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B476E8124980FFC00767E01 /* Hexagon.swift */; };
 		1B476E8424981ED000767E01 /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B476E8324981ED000767E01 /* Arrow.swift */; };
+		1B4ABAFC258AD96F000C12BA /* HeroAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4ABAFB258AD96F000C12BA /* HeroAnimationView.swift */; };
 		1B4CAD7C237BBD7800B49B4A /* BarAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CAD7B237BBD7800B49B4A /* BarAnimationView.swift */; };
 		1B4CAD7F237C70A200B49B4A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CAD7E237C70A200B49B4A /* User.swift */; };
 		1B4CAD81237C70BB00B49B4A /* CombineAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CAD80237C70BB00B49B4A /* CombineAsync.swift */; };
 		1B53B0E72426D98300D15C97 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B53B0E62426D98300D15C97 /* View+Extension.swift */; };
 		1B53B0E92426DE8B00D15C97 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B53B0E82426DE8B00D15C97 /* CartView.swift */; };
 		1B53B0F524297EB600D15C97 /* WidthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B53B0F424297EB500D15C97 /* WidthView.swift */; };
+		1B6307DC25887E3600E6897D /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6307DB25887E3600E6897D /* PieChartView.swift */; };
+		1B6307FB258A81C000E6897D /* LightSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6307FA258A81C000E6897D /* LightSwitchView.swift */; };
 		1B66D13523E62EA500AB7855 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B66D13423E62EA500AB7855 /* PeopleView.swift */; };
 		1B66D13723E62EF200AB7855 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B66D13623E62EF200AB7855 /* PeopleViewModel.swift */; };
 		1B66D17523E74DA300AB7855 /* AddToCartView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B66D17423E74DA200AB7855 /* AddToCartView1.swift */; };
@@ -158,12 +161,15 @@
 		1B476E7F24980E8900767E01 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		1B476E8124980FFC00767E01 /* Hexagon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexagon.swift; sourceTree = "<group>"; };
 		1B476E8324981ED000767E01 /* Arrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
+		1B4ABAFB258AD96F000C12BA /* HeroAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroAnimationView.swift; sourceTree = "<group>"; };
 		1B4CAD7B237BBD7800B49B4A /* BarAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAnimationView.swift; sourceTree = "<group>"; };
 		1B4CAD7E237C70A200B49B4A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1B4CAD80237C70BB00B49B4A /* CombineAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineAsync.swift; sourceTree = "<group>"; };
 		1B53B0E62426D98300D15C97 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		1B53B0E82426DE8B00D15C97 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		1B53B0F424297EB500D15C97 /* WidthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthView.swift; sourceTree = "<group>"; };
+		1B6307DB25887E3600E6897D /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		1B6307FA258A81C000E6897D /* LightSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSwitchView.swift; sourceTree = "<group>"; };
 		1B66D13423E62EA500AB7855 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		1B66D13623E62EF200AB7855 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		1B66D17423E74DA200AB7855 /* AddToCartView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartView1.swift; sourceTree = "<group>"; };
@@ -343,6 +349,7 @@
 				1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */,
 				1BF0B9D224356BD600492C74 /* ProgressBarView.swift */,
 				1BD627E124C530370058ED30 /* HollowDotsSpinner.swift */,
+				1B4ABAFB258AD96F000C12BA /* HeroAnimationView.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -460,6 +467,8 @@
 				1BB5159324BBDCF50058D68A /* ShapeView.swift */,
 				1B9EDCA82577525900AD284B /* ToolTipView.swift */,
 				1B9EDCB32578001E00AD284B /* BarChartView.swift */,
+				1B6307DB25887E3600E6897D /* PieChartView.swift */,
+				1B6307FA258A81C000E6897D /* LightSwitchView.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -675,6 +684,9 @@
 		8B2C4223235237DD00E8C68E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Badarinath Venkatnarayansetty";
@@ -771,6 +783,7 @@
 				1B7E779923BBFBBF006CF53B /* MultipleAnimationView.swift in Sources */,
 				1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */,
 				1B269DCF236D5EAC00B063EA /* BasicTemplate.swift in Sources */,
+				1B6307DC25887E3600E6897D /* PieChartView.swift in Sources */,
 				1B476E7E2497F91D00767E01 /* Arc.swift in Sources */,
 				05441A44249FEEA900DC0E04 /* ColorExtensions.swift in Sources */,
 				1BADE351237AA69E006B4825 /* OperationListView.swift in Sources */,
@@ -808,6 +821,7 @@
 				1BFF4957238383DC006DBB0F /* NotificationPublisher.swift in Sources */,
 				1B29462C236E17F800E44888 /* Lists.swift in Sources */,
 				1B53B0E72426D98300D15C97 /* View+Extension.swift in Sources */,
+				1B6307FB258A81C000E6897D /* LightSwitchView.swift in Sources */,
 				05441A42249FED3A00DC0E04 /* WaveFilled.swift in Sources */,
 				1BADE34023791974006B4825 /* ClippedView.swift in Sources */,
 				1BB5159424BBDCF50058D68A /* ShapeView.swift in Sources */,
@@ -827,6 +841,7 @@
 				1BB87C3B2377B4CF00D1FABE /* AngularGradientView.swift in Sources */,
 				1BB7A6E2237FD2E2000CDD49 /* CreditScoreView.swift in Sources */,
 				1B9EECD823C1C15600434EA4 /* DragAnimationView.swift in Sources */,
+				1B4ABAFC258AD96F000C12BA /* HeroAnimationView.swift in Sources */,
 				1BB87C502378DC5400D1FABE /* RotationalEffectView.swift in Sources */,
 				1BB87C47237887B300D1FABE /* ProgressRowView.swift in Sources */,
 				1BB87C342377376300D1FABE /* CircleTrim.swift in Sources */,

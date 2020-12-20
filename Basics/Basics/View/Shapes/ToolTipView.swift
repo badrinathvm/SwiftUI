@@ -14,8 +14,7 @@ struct ToolTipView1 : View {
         Text("$400")
             .foregroundColor(.black)
             .font(Font.system(size: 32, weight: Font.Weight.bold))
-            .padding(.horizontal,40)
-            .padding(.vertical, 20)
+            .frame(width: 150, height: 100)
             .background(ToolTip(radius: 8).fill(Color.white)
                             .shadow(color: Color(UIColor.lightGray), radius: 8, x: 0, y: 0))
            
@@ -25,13 +24,12 @@ struct ToolTipView1 : View {
 struct ToolTip: Shape {
     var radius: CGFloat = 0.0
     
-    var arrowOffsetPosition:CGFloat = 20
-
     func path(in rect: CGRect) -> Path {
         var path = Path()
 
         let width = rect.maxX
         let height = rect.maxY
+        
 
         // (0,0)
         path.move(to: CGPoint(x: rect.minX, y: rect.minY))
@@ -49,12 +47,14 @@ struct ToolTip: Shape {
         
         // line from bottom right corner to midX + 10
         path.addLine(to: CGPoint(x: rect.midX + 10 , y: rect.maxY))
+        
+        let arrowOffset = rect.maxY / 3
 
         //bottom triangle slant
-        path.addLine(to: CGPoint(x: rect.midX - arrowOffsetPosition / 2, y: rect.maxY + arrowOffsetPosition))
+        path.addLine(to: CGPoint(x: rect.midX - arrowOffset / 3, y: rect.maxY + arrowOffset))
 
         //top triangle slant
-        path.addLine(to: CGPoint(x: rect.midX - (arrowOffsetPosition + 5), y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.midX - arrowOffset , y: rect.maxY))
 
         //arc towards bottom left corner
         path.addArc(center: CGPoint(x: radius, y: height - radius), radius: radius,
