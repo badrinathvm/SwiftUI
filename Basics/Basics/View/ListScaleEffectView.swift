@@ -71,7 +71,7 @@ struct ListScaleEffectView: View {
                                 }
                             }.padding()
                         }
-                        ScaledRectagleView(scalingFactor: $scalingFactor, mainModel: mainModel, scrollProxy: value)
+                        ScaledRectagleView(scalingFactor: $scalingFactor, mainModel: mainModel)
                     }
                 }
             }
@@ -114,7 +114,6 @@ struct ButtonView: View {
 struct ScaledRectagleView: View {
     @Binding var scalingFactor:CGFloat
     @ObservedObject var mainModel: ListData
-    var scrollProxy:ScrollViewProxy
     
     var body: some View {
             ForEach(mainModel.activities.indices, id: \.self) { index in
