@@ -7,10 +7,10 @@
 //
 
 import SwiftUI
-// lastTextBaseline aligns the images to the bottom.
+
 struct ListScaleEffectView: View {
     @State private var scale:Bool = false
-    @State private var scalingFactor: CGFloat = 0
+    @State private var scalingFactor: CGFloat = 1
     
     var images = ["airplane.circle.fill", "bag.circle", "arrowshape.zigzag.forward.fill"]
     
@@ -49,30 +49,35 @@ struct ListScaleEffectView: View {
          .foregroundColor(Color.white)
          .shadow(color: Color.gray, radius: 1, x: 0, y: 0)
          .overlay(listBodyView(images[0]))
-         .scaleEffect(self.scale ? 1.05 : 1)
-         .padding(.horizontal, 20)
-//         .modifier(ReversingScale(to: scalingFactor, onEnded: {
-//                DispatchQueue.main.async {
-//                    self.scalingFactor = 1
-//                }
-//        }))
+         //Approach 1: use scale Effect and reset the animation block with some timer.
+         //.scaleEffect(self.scale ? 1.05 : 1)
+            
+            //Approach 2: Have a modifier to reverse scale the animation.
+            .modifier(ReversingScale(to: scalingFactor) {
+                DispatchQueue.main.async {
+                    withAnimation(Animation.easeInOut(duration: 0.5)) {
+                        self.scalingFactor = 1
+                    }
+                }
+            })
+        .padding(.horizontal, 20)
     }
     
 
     var body: some View {
         VStack(spacing: 30) {
             Button(action: {
-                let animation = Animation.easeInOut(duration: 0.5).repeatCount(1, autoreverses: true)
+                let animation = Animation.easeInOut(duration: 0.5)
                 withAnimation(animation) {
                     self.scalingFactor = 1.05
                     self.scale.toggle()
                 }
-                //reset the animation back.
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    withAnimation(animation) {
-                        self.scale.toggle()
-                    }
-                }
+                //Approach 1: reset the animation back.
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//                    withAnimation(animation) {
+//                        self.scale.toggle()
+//                    }
+//                }
             }) {
                 Text("Scale It")
                     .foregroundColor(.white)
@@ -80,64 +85,14 @@ struct ListScaleEffectView: View {
                     
             }.padding()
             .background(Capsule().foregroundColor(.blue))
-        
+            
             scaledRectangleView()
         }
     }
 }
 
-
-extension VerticalAlignment {
-    private enum MidAlignemnt: AlignmentID {
-        static func defaultValue(in context: ViewDimensions) -> CGFloat {
-            return context[.bottom]
-        }
-    }
-    
-    static let midAlignment = VerticalAlignment(MidAlignemnt.self)
-    
-    private enum Topalignment: AlignmentID {
-        static func defaultValue(in context: ViewDimensions) -> CGFloat {
-            return context[.top]
-        }
-    }
-    
-    static let topAlignment = VerticalAlignment(Topalignment.self)
-}
-
 struct ListScaleEffectView_Previews: PreviewProvider {
     static var previews: some View {
         ListScaleEffectView()
-    }
-}
-
-
-
-struct ReversingScale: AnimatableModifier {
-    var value: CGFloat
-
-    private var target: CGFloat
-    private var onEnded: () -> ()
-
-    init(to value: CGFloat, onEnded: @escaping () -> () = {}) {
-        self.target = value
-        self.value = value
-        self.onEnded = onEnded // << callback
-    }
-
-    var animatableData: CGFloat {
-        get { value }
-        set { value = newValue
-            // newValue here is interpolating by engine, so changing
-            // from previous to initially set, so when they got equal
-            // animation ended
-            if newValue == target {
-                onEnded()
-            }
-        }
-    }
-
-    func body(content: Content) -> some View {
-        content.scaleEffect(value)
     }
 }

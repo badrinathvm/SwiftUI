@@ -18,6 +18,8 @@
 		1B269DD5236D6E2E00B063EA /* ViewSizesPushOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B269DD4236D6E2E00B063EA /* ViewSizesPushOut.swift */; };
 		1B269DD7236DE71800B063EA /* VHZstacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B269DD6236DE71800B063EA /* VHZstacks.swift */; };
 		1B293FFB258FEAB700BA0196 /* ListScaleEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B293FFA258FEAB700BA0196 /* ListScaleEffectView.swift */; };
+		1B2940012590394700BA0196 /* AnimatableModifier+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2940002590394700BA0196 /* AnimatableModifier+Extension.swift */; };
+		1B294009259039A100BA0196 /* Alignment+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294008259039A100BA0196 /* Alignment+Extension.swift */; };
 		1B294626236DF42E00E44888 /* GReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294625236DF42E00E44888 /* GReader.swift */; };
 		1B294628236DFBD000E44888 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294627236DFBD000E44888 /* Buttons.swift */; };
 		1B29462A236E0A6700E44888 /* Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294629236E0A6700E44888 /* Forms.swift */; };
@@ -155,6 +157,8 @@
 		1B269DD4236D6E2E00B063EA /* ViewSizesPushOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSizesPushOut.swift; sourceTree = "<group>"; };
 		1B269DD6236DE71800B063EA /* VHZstacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VHZstacks.swift; sourceTree = "<group>"; };
 		1B293FFA258FEAB700BA0196 /* ListScaleEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScaleEffectView.swift; sourceTree = "<group>"; };
+		1B2940002590394700BA0196 /* AnimatableModifier+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimatableModifier+Extension.swift"; sourceTree = "<group>"; };
+		1B294008259039A100BA0196 /* Alignment+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alignment+Extension.swift"; sourceTree = "<group>"; };
 		1B294625236DF42E00E44888 /* GReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GReader.swift; sourceTree = "<group>"; };
 		1B294627236DFBD000E44888 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		1B294629236E0A6700E44888 /* Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forms.swift; sourceTree = "<group>"; };
@@ -294,6 +298,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B293FFF2590392400BA0196 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1B2940002590394700BA0196 /* AnimatableModifier+Extension.swift */,
+				1B294008259039A100BA0196 /* Alignment+Extension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		1B4CAD7D237C709200B49B4A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,6 +582,7 @@
 		8B2C425E23524BC700E8C68E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1B293FFF2590392400BA0196 /* Utilities */,
 				1BD260CA24971A2900E37AFC /* Shapes */,
 				1BA315D9243CF95C0026C37E /* Stepper */,
 				1B83DC42243278A700A7F3C6 /* PageControl */,
@@ -794,6 +808,7 @@
 				1B83DC462432DA0400A7F3C6 /* ActivityIndicator.swift in Sources */,
 				1B7E779123BAA296006CF53B /* SequenceAnimationView.swift in Sources */,
 				1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */,
+				1B294009259039A100BA0196 /* Alignment+Extension.swift in Sources */,
 				1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */,
 				1B476E8424981ED000767E01 /* Arrow.swift in Sources */,
 				1BD627E524C770AF0058ED30 /* DataDrivenView.swift in Sources */,
@@ -854,6 +869,7 @@
 				1BB87C322377342000D1FABE /* CircleBorder.swift in Sources */,
 				1BADE34C237A880F006B4825 /* CombineEssentialsView.swift in Sources */,
 				1B6E7D8723748B1B00BDF41A /* Pizza.swift in Sources */,
+				1B2940012590394700BA0196 /* AnimatableModifier+Extension.swift in Sources */,
 				1B9EECDB23C27C5700434EA4 /* ExerciseAnimationView.swift in Sources */,
 				1BFF71EB236FAAC40024F4B8 /* TabViews.swift in Sources */,
 				1B476E8224980FFC00767E01 /* Hexagon.swift in Sources */,

@@ -8,18 +8,6 @@
 
 import SwiftUI
 
-struct Shake: AnimatableModifier {
-    var times: CGFloat = 0
-    let amplitude: CGFloat = 10
-    var animatableData: CGFloat {
-        get { times }
-        set { times = newValue }
-    }
-    func body(content: Content) -> some View {
-        return content.offset(x: sin(times * .pi * 2) * amplitude)
-    }
-}
-
 struct CartView: View {
     @State private var taps: Int = 0
     @State private var status: Bool = false
