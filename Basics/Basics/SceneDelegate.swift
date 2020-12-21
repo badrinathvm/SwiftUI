@@ -85,7 +85,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: FlipAnimationView())
             //window.rootViewController = UIHostingController(rootView: MultipleAnimationView())
             //window.rootViewController = UIHostingController(rootView: StepperAnimationView())
-            window.rootViewController = UIHostingController(rootView: ListScaleEffectView())
+            if #available(iOS 14.0, *) {
+                window.rootViewController = UIHostingController(rootView: ListScaleEffectView())
+            } else {
+                // Fallback on earlier versions
+            }
             self.window = window
             window.makeKeyAndVisible()
         }
