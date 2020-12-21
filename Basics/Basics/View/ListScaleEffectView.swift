@@ -61,8 +61,9 @@ struct ListScaleEffectView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
+                // this gets the scroll position
                 ScrollViewReader { value in
-                    VStack {
+                    VStack(spacing: 20) {
                         ScrollView(Axis.Set.horizontal, showsIndicators: false) {
                             HStack(spacing: 10) {
                                 ForEach(mainModel.activities.indices, id: \.self) { index in
@@ -118,7 +119,7 @@ struct ScaledRectagleView: View {
     var body: some View {
             ForEach(mainModel.activities.indices, id: \.self) { index in
                     RoundedRectangle(cornerRadius: 16)
-                        .id(index)
+                        .id(index) // tie id which is required to scroll to particular position.
                         .frame(height: 85)
                         .foregroundColor(Color.white)
                         .shadow(color: Color.gray, radius: 1, x: 0, y: 0)
@@ -198,25 +199,3 @@ func scaledRectangleView(_ model: ListModel) -> some View {
     //.scaleEffect(self.scale ? 1.05 : 1)
 }
 */
-
-@available(iOS 14.0, *)
-struct ContentView2: View {
-    let colors: [Color] = [.red, .green, .blue]
-
-    var body: some View {
-        ScrollView {
-            ScrollViewReader { value in
-                Button("Jump to #8") {
-                    value.scrollTo(8)
-                }
-
-                ForEach(0..<10) { i in
-                    Text("Example \(i)")
-                        .frame(width: 300, height: 300)
-                        .background(colors[i % colors.count])
-                        .id(i)
-                }
-            }
-        }
-    }
-}
