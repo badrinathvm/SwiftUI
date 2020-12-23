@@ -58,7 +58,7 @@
 		1B9EECDD23C2896800434EA4 /* RotationGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */; };
 		1BA315D8243CF93D0026C37E /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = 1BA315D7243CF93D0026C37E /* StepperView */; };
 		1BA315DB243CF9950026C37E /* StepTesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA315DA243CF9950026C37E /* StepTesterView.swift */; };
-		1BACDBE725928FA2006A65C5 /* ExpandableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDBE625928FA2006A65C5 /* ExpandableCardView.swift */; };
+		1BACDBE725928FA2006A65C5 /* ExpandableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDBE625928FA2006A65C5 /* ExpandableListView.swift */; };
 		1BACDBEC2592CABF006A65C5 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDBEB2592CABF006A65C5 /* Color+Extension.swift */; };
 		1BACDBF12592DAAD006A65C5 /* RoundRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDBF02592DAAC006A65C5 /* RoundRectangle.swift */; };
 		1BACDBF62593E886006A65C5 /* Shape+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDBF52593E886006A65C5 /* Shape+Extension.swift */; };
@@ -201,7 +201,7 @@
 		1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAnimationView.swift; sourceTree = "<group>"; };
 		1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureView.swift; sourceTree = "<group>"; };
 		1BA315DA243CF9950026C37E /* StepTesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTesterView.swift; sourceTree = "<group>"; };
-		1BACDBE625928FA2006A65C5 /* ExpandableCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCardView.swift; sourceTree = "<group>"; };
+		1BACDBE625928FA2006A65C5 /* ExpandableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableListView.swift; sourceTree = "<group>"; };
 		1BACDBEB2592CABF006A65C5 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		1BACDBF02592DAAC006A65C5 /* RoundRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRectangle.swift; sourceTree = "<group>"; };
 		1BACDBF52593E886006A65C5 /* Shape+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shape+Extension.swift"; sourceTree = "<group>"; };
@@ -471,6 +471,14 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		1BC01A132593F40D0029FDB1 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				1BACDBE625928FA2006A65C5 /* ExpandableListView.swift */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
 		1BD260CA24971A2900E37AFC /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,6 +595,7 @@
 		8B2C425E23524BC700E8C68E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1BC01A132593F40D0029FDB1 /* Templates */,
 				1B293FFF2590392400BA0196 /* Utilities */,
 				1BD260CA24971A2900E37AFC /* Shapes */,
 				1BA315D9243CF95C0026C37E /* Stepper */,
@@ -638,7 +647,6 @@
 				1BB5159524BBE1D70058D68A /* UIColor+Extension.swift */,
 				1B293FFA258FEAB700BA0196 /* ListScaleEffectView.swift */,
 				1B29400D259096F200BA0196 /* BottomPieceView.swift */,
-				1BACDBE625928FA2006A65C5 /* ExpandableCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -816,7 +824,7 @@
 				1BA315DB243CF9950026C37E /* StepTesterView.swift in Sources */,
 				1B83DC462432DA0400A7F3C6 /* ActivityIndicator.swift in Sources */,
 				1B7E779123BAA296006CF53B /* SequenceAnimationView.swift in Sources */,
-				1BACDBE725928FA2006A65C5 /* ExpandableCardView.swift in Sources */,
+				1BACDBE725928FA2006A65C5 /* ExpandableListView.swift in Sources */,
 				1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */,
 				1B294009259039A100BA0196 /* Alignment+Extension.swift in Sources */,
 				1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */,

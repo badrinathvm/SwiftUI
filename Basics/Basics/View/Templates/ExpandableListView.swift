@@ -146,7 +146,7 @@ struct InnerListView: View {
     }
 }
 
-struct ExpandableCardView_Previews: PreviewProvider {
+struct ExpandableListView_Previews: PreviewProvider {
     static var previews: some View {
         ExpandableListView()
     }
