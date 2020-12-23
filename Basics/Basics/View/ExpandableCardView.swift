@@ -8,32 +8,13 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
 struct ExpandableCardView: View {
     @State private var isExpand:Bool = false
     @State private var opacity: Double = 0
     var body: some View {
-        VStack(spacing: 0) {
+        VStack {
             // top rectangle View
-                Rectangle()
-                    .frame(width: 350, height: 50)
-                    .foregroundColor(Colors.green02)
-                    .cornerRadius(18.0, corners: [.topLeft, .topRight])
-                    .overlay(
-                        HStack {
-                            Text("Cash")
-                                .padding(.leading, 20)
-                            Image(systemName: isExpand ? "chevron.up" : "chevron.down")
-                                .padding()
-                            Spacer()
-                        } .foregroundColor(Colors.green01)
-                        
-                    )
-                    .onTapGesture {
-                        withAnimation(Animation.spring()) {
-                            self.isExpand.toggle()
-                        }
-                    }
+            TopRectangle(isExpand: $isExpand)
                     //.clipShape(RoundRect(radius: 18))
                     .anchorPreference(key: BoundsPreferenceKey.self, value: .bounds) { $0 }
                     .overlayPreferenceValue(BoundsPreferenceKey.self) { preferences in
@@ -42,18 +23,46 @@ struct ExpandableCardView: View {
                                     preferences.map { value in
                                         InsideRectangle(isExpand: $isExpand).eraseToAnyView()
                                         .offset(x: 0 , y: reader[value].maxY )
-                                        .animation(.easeIn)
                                     }
                                 } else {
                                     EmptyView().eraseToAnyView()
                                 }
                             }
-                        }
-        }
+                    }
+            
+            
+            Spacer()
+        }.padding()
     }
 }
 
-@available(iOS 14.0, *)
+struct TopRectangle: View {
+    @Binding var isExpand:Bool
+    var body: some View {
+        Rectangle()
+            //.stroke(style: StrokeStyle(lineWidth: 2.0, lineCap: .round))
+            .frame(width: 350, height: 50)
+            .foregroundColor(Colors.green02)
+            .cornerRadius(18.0, corners: [.topLeft, .topRight])
+            .shadow(color: Color.gray, radius: 1, x: 0, y: 0)
+            .overlay(
+                HStack {
+                    Text("Cash")
+                        .padding(.leading, 20)
+                    Image(systemName: isExpand ? "chevron.up" : "chevron.down")
+                        .padding()
+                    Spacer()
+                } .foregroundColor(Colors.green01)
+                
+            )
+            .onTapGesture {
+                withAnimation(Animation.spring()) {
+                    self.isExpand.toggle()
+                }
+            }
+    }
+}
+
 struct InsideRectangle: View {
     @Binding var isExpand:Bool
     var body: some View {
@@ -61,13 +70,13 @@ struct InsideRectangle: View {
             Rectangle()
                 .frame(width: 350, height: 200)
                 .foregroundColor(Colors.green02)
+                .shadow(color: Color.gray, radius: 0.5, x: 0, y: 0)
                 .opacity(isExpand ? 1: 0)
                 .overlay(InnerListView(isExpand: $isExpand))
             }
         }
 }
 
-@available(iOS 14.0, *)
 struct InnerListView: View {
     @Binding var isExpand:Bool
     var body: some View {
@@ -101,10 +110,6 @@ struct InnerListView: View {
 
 struct ExpandableCardView_Previews: PreviewProvider {
     static var previews: some View {
-        if #available(iOS 14.0, *) {
-            ExpandableCardView()
-        } else {
-            // Fallback on earlier versions
-        }
+        ExpandableCardView()
     }
 }
