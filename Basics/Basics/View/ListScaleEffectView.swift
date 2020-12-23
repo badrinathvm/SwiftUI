@@ -63,7 +63,7 @@ struct ListScaleEffectView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 // this gets the scroll position
                 ScrollViewReader { value in
-                    VStack(spacing: 20) {
+                    VStack(spacing: 30) {
                         ScrollView(Axis.Set.horizontal, showsIndicators: false) {
                             HStack(spacing: 10) {
                                 ForEach(mainModel.activities.indices, id: \.self) { index in
@@ -74,7 +74,7 @@ struct ListScaleEffectView: View {
                         ScaledRectagleView(scalingFactor: $scalingFactor, mainModel: mainModel)
                     }
                 }
-            }
+            }.padding(.top, 20)
             .navigationBarTitle(Text("Bills"))
         }
     }
@@ -115,6 +115,9 @@ struct ScaledRectagleView: View {
     @Binding var scalingFactor:CGFloat
     @ObservedObject var mainModel: ListData
     
+    @State private var isPresented:Bool = false
+    
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
     var body: some View {
             ForEach(mainModel.activities.indices, id: \.self) { index in
                     RoundedRectangle(cornerRadius: 16)
@@ -131,7 +134,21 @@ struct ScaledRectagleView: View {
                                 }
                             }
                         })
+//                        .overlay(index == 0 ? BottomPieceView()
+//                                             .eraseToAnyView()
+//                                    : EmptyView().eraseToAnyView())
                         .padding(.horizontal, 20)
+                        .onTapGesture {
+                            //self.isPresented.toggle()
+                            self.viewControllerHolder?.present(style: .fullScreen) {
+                                            Text("Main") // Or any other view you like
+                                        }
+                        }
+                        // This is to present a Modal View
+//                        .sheet(isPresented: self.$isPresented) {
+//
+//                        }
+                
           }
     }
     
@@ -170,7 +187,6 @@ struct ListScaleEffectView_Previews: PreviewProvider {
     static var previews: some View {
         if #available(iOS 14.0, *) {
             ListScaleEffectView()
-            //ContentView2()
         } else {
             // Fallback on earlier versions
         }
@@ -198,3 +214,36 @@ func scaledRectangleView(_ model: ListModel) -> some View {
     //.scaleEffect(self.scale ? 1.05 : 1)
 }
 */
+
+
+struct ViewControllerHolder {
+    weak var value: UIViewController?
+}
+
+struct ViewControllerKey: EnvironmentKey {
+    static var defaultValue: ViewControllerHolder {
+        return ViewControllerHolder(value: UIApplication.shared.windows.first?.rootViewController)
+
+    }
+}
+
+extension EnvironmentValues {
+    var viewController: UIViewController? {
+        get { return self[ViewControllerKey.self].value }
+        set { self[ViewControllerKey.self].value = newValue }
+    }
+}
+
+//Then you should use implement this extension:
+
+extension UIViewController {
+    func present<Content: View>(style: UIModalPresentationStyle = .automatic, @ViewBuilder builder: () -> Content) {
+        let toPresent = UIHostingController(rootView: AnyView(EmptyView()))
+        toPresent.modalPresentationStyle = style
+        toPresent.rootView = AnyView(
+            builder()
+                .environment(\.viewController, toPresent)
+        )
+        self.present(toPresent, animated: true, completion: nil)
+    }
+}

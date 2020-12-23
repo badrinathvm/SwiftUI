@@ -20,6 +20,7 @@
 		1B293FFB258FEAB700BA0196 /* ListScaleEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B293FFA258FEAB700BA0196 /* ListScaleEffectView.swift */; };
 		1B2940012590394700BA0196 /* AnimatableModifier+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2940002590394700BA0196 /* AnimatableModifier+Extension.swift */; };
 		1B294009259039A100BA0196 /* Alignment+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294008259039A100BA0196 /* Alignment+Extension.swift */; };
+		1B29400E259096F200BA0196 /* BottomPieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29400D259096F200BA0196 /* BottomPieceView.swift */; };
 		1B294626236DF42E00E44888 /* GReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294625236DF42E00E44888 /* GReader.swift */; };
 		1B294628236DFBD000E44888 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294627236DFBD000E44888 /* Buttons.swift */; };
 		1B29462A236E0A6700E44888 /* Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B294629236E0A6700E44888 /* Forms.swift */; };
@@ -57,6 +58,9 @@
 		1B9EECDD23C2896800434EA4 /* RotationGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */; };
 		1BA315D8243CF93D0026C37E /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = 1BA315D7243CF93D0026C37E /* StepperView */; };
 		1BA315DB243CF9950026C37E /* StepTesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA315DA243CF9950026C37E /* StepTesterView.swift */; };
+		1BACDBE725928FA2006A65C5 /* ExpandableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDBE625928FA2006A65C5 /* ExpandableCardView.swift */; };
+		1BACDBEC2592CABF006A65C5 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDBEB2592CABF006A65C5 /* Color+Extension.swift */; };
+		1BACDBF12592DAAD006A65C5 /* RoundRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDBF02592DAAC006A65C5 /* RoundRectangle.swift */; };
 		1BADE33823790B7E006B4825 /* OffsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33723790B7E006B4825 /* OffsetView.swift */; };
 		1BADE33A23790E88006B4825 /* BlendModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33923790E88006B4825 /* BlendModeView.swift */; };
 		1BADE33C237911CB006B4825 /* CustomPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE33B237911CB006B4825 /* CustomPopupView.swift */; };
@@ -159,6 +163,7 @@
 		1B293FFA258FEAB700BA0196 /* ListScaleEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScaleEffectView.swift; sourceTree = "<group>"; };
 		1B2940002590394700BA0196 /* AnimatableModifier+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimatableModifier+Extension.swift"; sourceTree = "<group>"; };
 		1B294008259039A100BA0196 /* Alignment+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alignment+Extension.swift"; sourceTree = "<group>"; };
+		1B29400D259096F200BA0196 /* BottomPieceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPieceView.swift; sourceTree = "<group>"; };
 		1B294625236DF42E00E44888 /* GReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GReader.swift; sourceTree = "<group>"; };
 		1B294627236DFBD000E44888 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		1B294629236E0A6700E44888 /* Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forms.swift; sourceTree = "<group>"; };
@@ -195,6 +200,9 @@
 		1B9EECDA23C27C5700434EA4 /* ExerciseAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAnimationView.swift; sourceTree = "<group>"; };
 		1B9EECDC23C2896800434EA4 /* RotationGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureView.swift; sourceTree = "<group>"; };
 		1BA315DA243CF9950026C37E /* StepTesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTesterView.swift; sourceTree = "<group>"; };
+		1BACDBE625928FA2006A65C5 /* ExpandableCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCardView.swift; sourceTree = "<group>"; };
+		1BACDBEB2592CABF006A65C5 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		1BACDBF02592DAAC006A65C5 /* RoundRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRectangle.swift; sourceTree = "<group>"; };
 		1BADE33723790B7E006B4825 /* OffsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetView.swift; sourceTree = "<group>"; };
 		1BADE33923790E88006B4825 /* BlendModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendModeView.swift; sourceTree = "<group>"; };
 		1BADE33B237911CB006B4825 /* CustomPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupView.swift; sourceTree = "<group>"; };
@@ -303,6 +311,7 @@
 			children = (
 				1B2940002590394700BA0196 /* AnimatableModifier+Extension.swift */,
 				1B294008259039A100BA0196 /* Alignment+Extension.swift */,
+				1BACDBEB2592CABF006A65C5 /* Color+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -484,6 +493,7 @@
 				1B9EDCB32578001E00AD284B /* BarChartView.swift */,
 				1B6307DB25887E3600E6897D /* PieChartView.swift */,
 				1B6307FA258A81C000E6897D /* LightSwitchView.swift */,
+				1BACDBF02592DAAC006A65C5 /* RoundRectangle.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -632,6 +642,8 @@
 				1BEA5F6C24B2B7E5003866D2 /* CheckBox.swift */,
 				1BB5159524BBE1D70058D68A /* UIColor+Extension.swift */,
 				1B293FFA258FEAB700BA0196 /* ListScaleEffectView.swift */,
+				1B29400D259096F200BA0196 /* BottomPieceView.swift */,
+				1BACDBE625928FA2006A65C5 /* ExpandableCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -801,12 +813,14 @@
 				1BFF71DD236E32060024F4B8 /* ListRowBackground.swift in Sources */,
 				1B269DCF236D5EAC00B063EA /* BasicTemplate.swift in Sources */,
 				1B6307DC25887E3600E6897D /* PieChartView.swift in Sources */,
+				1BACDBF12592DAAD006A65C5 /* RoundRectangle.swift in Sources */,
 				1B476E7E2497F91D00767E01 /* Arc.swift in Sources */,
 				05441A44249FEEA900DC0E04 /* ColorExtensions.swift in Sources */,
 				1BADE351237AA69E006B4825 /* OperationListView.swift in Sources */,
 				1BA315DB243CF9950026C37E /* StepTesterView.swift in Sources */,
 				1B83DC462432DA0400A7F3C6 /* ActivityIndicator.swift in Sources */,
 				1B7E779123BAA296006CF53B /* SequenceAnimationView.swift in Sources */,
+				1BACDBE725928FA2006A65C5 /* ExpandableCardView.swift in Sources */,
 				1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */,
 				1B294009259039A100BA0196 /* Alignment+Extension.swift in Sources */,
 				1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */,
@@ -839,9 +853,11 @@
 				1BFF4957238383DC006DBB0F /* NotificationPublisher.swift in Sources */,
 				1B29462C236E17F800E44888 /* Lists.swift in Sources */,
 				1B53B0E72426D98300D15C97 /* View+Extension.swift in Sources */,
+				1BACDBEC2592CABF006A65C5 /* Color+Extension.swift in Sources */,
 				1B6307FB258A81C000E6897D /* LightSwitchView.swift in Sources */,
 				05441A42249FED3A00DC0E04 /* WaveFilled.swift in Sources */,
 				1BADE34023791974006B4825 /* ClippedView.swift in Sources */,
+				1B29400E259096F200BA0196 /* BottomPieceView.swift in Sources */,
 				1BB5159424BBDCF50058D68A /* ShapeView.swift in Sources */,
 				1BEA5F6D24B2B7E5003866D2 /* CheckBox.swift in Sources */,
 				8B942B9E2353F04C004A7B83 /* GuessView.swift in Sources */,
