@@ -86,7 +86,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: MultipleAnimationView())
             //window.rootViewController = UIHostingController(rootView: StepperAnimationView())
             if #available(iOS 14.0, *) {
-                window.rootViewController = UIHostingController(rootView: ExpandableCardView())
+                window.rootViewController = UIHostingController(rootView: ExpandableListView())
             } else {
                 // Fallback on earlier versions
             }

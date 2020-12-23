@@ -175,38 +175,6 @@ extension BarChartView {
 }
 
 
-@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
-struct RoundedCorner: InsettableShape {
-    var insetAmount: CGFloat = 0.0
-    
-    var radius: CGFloat = .infinity
-    var corners: UIRectCorner = .allCorners
-    
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        return Path(path.cgPath)
-    }
-    
-    func inset(by amount: CGFloat) -> some InsettableShape {
-        var roundedCorner: RoundedCorner = self
-        roundedCorner.insetAmount += amount
-        return roundedCorner
-    }
-}
-
-// -- Extensions for View with helper functions.
-extension View {
-    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape( RoundedCorner(radius: radius, corners: corners) )
-    }
-    
-    /// Stores the height for each of column which will be passed as part of onPreferenceChange to parent view.
-    func heightPreference(column: Int? = 0) -> some View {
-        background(GeometryReader { proxy in
-            Color.clear.preference(key: VerticalHeightPreference.self, value: [column!: proxy.size.height])
-        })
-    }
-}
 
 // ---- PreferenceKey struts for calculatin the height and anchor data.
 @available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)

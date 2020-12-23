@@ -27,6 +27,17 @@ extension View {
     func shake(times: Int) -> some View {
          return modifier(Shake(times: CGFloat(times)))
      }
+    
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner(radius: radius, corners: corners) )
+    }
+    
+    /// Stores the height for each of column which will be passed as part of onPreferenceChange to parent view.
+    func heightPreference(column: Int? = 0) -> some View {
+        background(GeometryReader { proxy in
+            Color.clear.preference(key: VerticalHeightPreference.self, value: [column!: proxy.size.height])
+        })
+    }
 }
 
 //MARK:- Creating a Custom Environment Keys this allows to easily pass value to any view by using environment modifier.

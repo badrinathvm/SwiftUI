@@ -12,7 +12,7 @@ struct RoundRectangle: View {
     var body: some View {
     
         RoundRect()
-            //.stroke(Color.blue,lineWidth: 2)
+            .stroke(Color.blue,lineWidth: 2)
             .frame(width: 100, height: 100)
             .foregroundColor(.blue)
             
