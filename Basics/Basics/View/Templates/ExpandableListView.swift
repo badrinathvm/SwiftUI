@@ -9,11 +9,14 @@
 import SwiftUI
 
 struct SectionData: Identifiable, Hashable {
-    var id:UUID =  UUID()
+    var id:UUID
     var image:String
     var title:String
-    var price:String
+    var releaseDate:String
+    var language:String
+    var overview:String
 }
+
 
 struct CategoryData:Identifiable,Hashable {
     var id = UUID()
@@ -26,35 +29,40 @@ struct CategoryData:Identifiable,Hashable {
         hasher.combine(id)
     }
     
-    static func cardData() -> [CategoryData] {
-        return [CategoryData(index: 0, title: "Cars", sections: [
-                             SectionData(image: "car.circle.fill", title: "Lancer", price: "$13,500"),
-                             SectionData(image: "car.circle.fill", title: "Mazda", price: "$26,500")
-                            ]),
-                CategoryData(index: 1, title: "Groceries",sections: [
-                    SectionData(image: "cart.fill", title: "Vegetables", price: "$15.26"),
-                    SectionData(image: "cart.fill", title: "Fruits", price: "$35.12")
-                   ]),
-                CategoryData(index: 1, title: "Devices",sections: [
-                    SectionData(image: "iphone", title: "iPhone", price: "$800"),
-                    SectionData(image: "headphones", title: "Samsung", price: "$750")
-                   ])
-              ]
-    }
+//    static func cardData() -> [CategoryData] {
+//        return [CategoryData(index: 0, title: "Cars", sections: [
+//            SectionData(id: UUID(), image: "car.circle.fill", title: "Lancer", price: "$13,500"),
+//            SectionData(id: UUID(), image: "car.circle.fill", title: "Mazda", price: "$26,500")
+//                            ]),
+//                CategoryData(index: 1, title: "Groceries",sections: [
+//                    SectionData(id: UUID(), image: "cart.fill", title: "Vegetables", price: "$15.26"),
+//                    SectionData(id: UUID(), image: "cart.fill", title: "Fruits", price: "$35.12")
+//                   ]),
+//                CategoryData(index: 2, title: "Devices",sections: [
+//                    SectionData(id: UUID(), image: "iphone", title: "iPhone", price: "$800"),
+//                    SectionData(id: UUID(), image: "headphones", title: "Samsung", price: "$750")
+//                   ])
+//              ]
+//    }
 }
 
+@available(iOS 14.0, *)
 struct ExpandableListView: View {
     @State private var selectedCells: Set<CategoryData> = []
-    var cardData = CategoryData.cardData()
-
+    @State var cardData: [CategoryData] = []
+    @StateObject private var networkData = Network()
+    
     var body: some View {
-        ScrollView {
+        ScrollView(.vertical, showsIndicators: false) {
+            //log("Before :: Selected Cell content is \(self.selectedCells))")
             ForEach(cardData, id: \.self) { data in
+                //log("Data :: \(data.id)")
+                //log("After :: Selected Cell content is \(self.selectedCells) ---> \(self.selectedCells.contains(data))")
                 ExpandableCardView(isExpand: self.selectedCells.contains(data), data: data)
                     .onTapGesture {
                         withAnimation(Animation.spring()) {
                             if self.selectedCells.contains(data) {
-                                self.selectedCells.remove(data)
+                                self.selectedCells.remove(data) // collapsing
                             } else {
                                 self.selectedCells.insert(data)
                             }
@@ -66,11 +74,17 @@ struct ExpandableListView: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 10)
-        .offset(y: 100)
+        .offset(y: 10)
+        .onAppear {
+               //make network call and set the data.
+                self.networkData.fetchDataFromNetwork { results in
+                    self.cardData = networkData.movieData(movies: results)
+                }
+        }
     }
 }
 
-
+@available(iOS 14.0, *)
 struct ExpandableCardView: View {
     var isExpand:Bool
     var data: CategoryData
@@ -100,57 +114,95 @@ struct ExpandableCardView: View {
     }
 }
 
+@available(iOS 14.0, *)
 struct InsideRectangleContent: View {
     var data:CategoryData
     var body: some View {
-        RoundedCorner(radius: 18, corners: [])
-            .strokeBorder(Color.gray, style: StrokeStyle(lineWidth: 1))
-            .background(Rectangle().foregroundColor(Color.gray.opacity(0.1)))
-            .frame(width: 350, height: 130)
-            .padding(.top, -6)
-            .overlay(
-                InnerListView(data: data)
-            )
+//            RoundedCorner(radius: 18, corners: [])
+//                .strokeBorder(Color.gray, style: StrokeStyle(lineWidth: 1))
+//                .background(Rectangle().foregroundColor(Color.gray.opacity(0.1)))
+//                .frame(width: 350)
+//                .frame(maxHeight: .infinity)
+//                .padding(.top, -6)
+//                .overlay(
+//                    InnerListView(data: data, heightValue: $heightValue)
+//                )
+        
+        ForEach(0..<data.sections.count) { index in
+            InnerContentView(data: data, index: index)
+        }
+            
     }
 }
 
-struct InnerListView: View {
+@available(iOS 14.0, *)
+struct InnerContentView: View {
     var data:CategoryData
+    var index: Int
     var body: some View {
-        ForEach(0..<data.sections.count) { index in
-            let sectionEntry = data.sections[index]
-            VStack {
-                HStack {
-                    Image(systemName: sectionEntry.image)
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                        .scaledToFit()
-                        .padding(.leading, 20)
-                    
-                    Text(sectionEntry.title)
-                        .font(.callout)
-                        .padding(.all, 10)
-                    
-                    Spacer()
-                    
-                    Text(sectionEntry.price)
-                        .font(.callout)
-                        .padding(.trailing, 20)
-                }
+        let sectionEntry = data.sections[index]
+        VStack {
+            HStack {
+                Image(systemName: sectionEntry.image)
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .scaledToFit()
+                    .padding(.leading, 20)
                 
-                if index != data.sections.count - 1 {
-                    Divider()
-                }
+                Text(sectionEntry.title)
+                    .font(.callout)
+                    .padding(.all, 10)
+                
+                Spacer()
+                
+                Text(sectionEntry.releaseDate)
+                    .font(.callout)
+                    .padding(.trailing, 20)
+            }
+            Text(sectionEntry.overview)
+                .font(.subheadline)
+                .foregroundColor(.gray)
+                .multilineTextAlignment(.leading)
+                .lineLimit(nil)
+                .padding(.all, 10)
+            
+            if index != data.sections.count - 1 {
+                Divider()
             }
         }
+        .frame(width: 350)
+        .background(
+            RoundedCorner(radius: 18, corners: [])
+                        .strokeBorder(Color.gray, style: StrokeStyle(lineWidth: 1))
+                        .background(Rectangle().foregroundColor(Color.gray.opacity(0.1)))
+                        .padding(.top, -6)
+        )
     }
 }
 
+@available(iOS 14.0, *)
 struct ExpandableListView_Previews: PreviewProvider {
     static var previews: some View {
         ExpandableListView()
     }
 }
+
+
+struct GeometryGetter: View {
+    @Binding var rect: CGRect
+
+    var body: some View {
+        GeometryReader { (g) -> Path in
+            print("width: \(g.size.width), height: \(g.size.height)")
+            DispatchQueue.main.async { // avoids warning: 'Modifying state during view update.' Doesn't look very reliable, but works.
+                self.rect = g.frame(in: .global)
+            }
+            return Path() // could be some other dummy view
+        }
+    }
+}
+
+
 
 
 //struct ExpandableCardView: View {

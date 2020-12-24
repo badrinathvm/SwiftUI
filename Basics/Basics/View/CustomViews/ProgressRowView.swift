@@ -10,8 +10,12 @@ import Foundation
 import SwiftUI
 
 struct CircularRingView: View {
-    let circleProgress = 85
+    let circleProgress = 10
     @State private var show = false
+    @State private var percentage:CGFloat = 0
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+       
+    
     var body: some View {
         let gradient = Gradient(colors: [.purple, .blue])
         let linearGradient = LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom)
@@ -22,27 +26,39 @@ struct CircularRingView: View {
                 .stroke(Color(red: 245/255, green: 245/255, blue: 245/255), lineWidth: 10)
                 .frame(height: 80)
             Circle()
-                .trim(from: show ?  0 : 0.9, to: 0.75)
+                //.trim(from: show ? 0 : 1, to: percentage)
+                .trim(from: 0, to: percentage)
                 .stroke(linearGradient, style: StrokeStyle(lineWidth: 8, lineCap: CGLineCap.round))
                 .shadow(radius: 4)
-                .rotationEffect(.degrees(-70))
-                .rotation3DEffect(Angle.degrees(180), axis: (x: 1, y: 0, z: 0))
+                //.rotationEffect(.degrees(-100))
+                .rotation3DEffect(Angle.degrees(360), axis: (x: 1, y: 0, z: 0))
                 .frame(height: 70)
                 .overlay(
                     HStack(spacing: 2) {
-                        Text("\(circleProgress)")
+                        Text("\(String(format: "%.f", percentage * 100))")
                             .font(.system(size: 16, weight: Font.Weight.bold))
                             .padding(.leading,8)
                         Text("%").foregroundColor(Color.gray)
                             .font(.system(size: 14, weight: Font.Weight.bold))
                 })
               .animation(.easeOut)
-                .onTapGesture {
+              .onTapGesture {
                     self.show.toggle()
+             }
+        }.onReceive(timer) { time in
+            if Int(self.percentage) >= 1 {
+                self.timer.upstream.connect().cancel()
+                print("\(self.percentage)")
+
+              } else {
+                self.percentage += 0.10
+                print("The time is now \(self.percentage)")
             }
         }
     }
 }
+
+
 
 struct ProgressRowView : View {
     var body: some View {
@@ -63,5 +79,11 @@ struct ProgressRowView : View {
                     .foregroundColor(Color.white)
                     .shadow(color:Color(red: 248/255, green: 248/255, blue: 255/255), radius: 4))
         }
+    }
+}
+
+struct ProgressRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProgressRowView()
     }
 }

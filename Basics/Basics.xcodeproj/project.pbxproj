@@ -92,6 +92,7 @@
 		1BB87C4C2378BDCA00D1FABE /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4B2378BDCA00D1FABE /* ShadowView.swift */; };
 		1BB87C4E2378C79800D1FABE /* TransalationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4D2378C79800D1FABE /* TransalationView.swift */; };
 		1BB87C502378DC5400D1FABE /* RotationalEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */; };
+		1BC01A1825941CA50029FDB1 /* NetworkingTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A1725941CA50029FDB1 /* NetworkingTemplate.swift */; };
 		1BD260CC24971A4200E37AFC /* CurvedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */; };
 		1BD260CE24971D0C00E37AFC /* CurvedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */; };
 		1BD260D02497204B00E37AFC /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CF2497204B00E37AFC /* Wave.swift */; };
@@ -235,6 +236,7 @@
 		1BB87C4B2378BDCA00D1FABE /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		1BB87C4D2378C79800D1FABE /* TransalationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransalationView.swift; sourceTree = "<group>"; };
 		1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationalEffectView.swift; sourceTree = "<group>"; };
+		1BC01A1725941CA50029FDB1 /* NetworkingTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTemplate.swift; sourceTree = "<group>"; };
 		1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangle.swift; sourceTree = "<group>"; };
 		1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangleView.swift; sourceTree = "<group>"; };
 		1BD260CF2497204B00E37AFC /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
@@ -475,6 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				1BACDBE625928FA2006A65C5 /* ExpandableListView.swift */,
+				1BC01A1725941CA50029FDB1 /* NetworkingTemplate.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -825,6 +828,7 @@
 				1B83DC462432DA0400A7F3C6 /* ActivityIndicator.swift in Sources */,
 				1B7E779123BAA296006CF53B /* SequenceAnimationView.swift in Sources */,
 				1BACDBE725928FA2006A65C5 /* ExpandableListView.swift in Sources */,
+				1BC01A1825941CA50029FDB1 /* NetworkingTemplate.swift in Sources */,
 				1BB87C442377CB0500D1FABE /* SheetViewIdentifiable.swift in Sources */,
 				1B294009259039A100BA0196 /* Alignment+Extension.swift in Sources */,
 				1BB87C2F23772A0F00D1FABE /* CircularShapes.swift in Sources */,
