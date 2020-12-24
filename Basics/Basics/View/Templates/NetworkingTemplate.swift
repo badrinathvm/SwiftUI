@@ -27,7 +27,7 @@ class Network : ObservableObject {
             .eraseToAnyPublisher()
             .sink(receiveCompletion: { (completion) in
                 switch completion {
-                case .finished : print("Data received fromt he Network")
+                case .finished : print("Data received from the Network")
                 case .failure(let error): print(error.localizedDescription)
                 }
             }) { (data) in

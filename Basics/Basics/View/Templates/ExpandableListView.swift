@@ -137,22 +137,32 @@ struct InsideRectangleContent: View {
 
 @available(iOS 14.0, *)
 struct InnerContentView: View {
+    @State private var showText:Bool = false
     var data:CategoryData
     var index: Int
     var body: some View {
         let sectionEntry = data.sections[index]
         VStack {
             HStack {
-                Image(systemName: sectionEntry.image)
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .scaledToFit()
-                    .padding(.leading, 20)
-                
-                Text(sectionEntry.title)
-                    .font(.callout)
-                    .padding(.all, 10)
-                
+                ZStack {
+                    CircleAnimationTemplateView(showText: $showText).frame(width: 40, height: 40)
+                    Image(systemName: sectionEntry.image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(Colors.green03)
+                }.padding(.leading, 10)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(sectionEntry.title)
+                        .font(.callout)
+                    if !showText {
+                        Text("Updating")
+                            .font(.footnote)
+                            .foregroundColor(.gray)
+                    }
+                }
+
                 Spacer()
                 
                 Text(sectionEntry.releaseDate)
@@ -229,3 +239,6 @@ struct GeometryGetter: View {
 //        }
 //    }
 //}
+
+
+

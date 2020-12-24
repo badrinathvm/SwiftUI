@@ -28,7 +28,7 @@ struct CircularRingView: View {
             Circle()
                 //.trim(from: show ? 0 : 1, to: percentage)
                 .trim(from: 0, to: percentage)
-                .stroke(linearGradient, style: StrokeStyle(lineWidth: 8, lineCap: CGLineCap.round))
+                .stroke(linearGradient, style: StrokeStyle(lineWidth: 1, lineCap: CGLineCap.round))
                 .shadow(radius: 4)
                 //.rotationEffect(.degrees(-100))
                 .rotation3DEffect(Angle.degrees(360), axis: (x: 1, y: 0, z: 0))
