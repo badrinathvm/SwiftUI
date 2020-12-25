@@ -94,6 +94,7 @@
 		1BB87C502378DC5400D1FABE /* RotationalEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */; };
 		1BC01A1825941CA50029FDB1 /* NetworkingTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A1725941CA50029FDB1 /* NetworkingTemplate.swift */; };
 		1BC01A202594503E0029FDB1 /* CircleAnimationTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A1F2594503E0029FDB1 /* CircleAnimationTemplateView.swift */; };
+		1BC01A2525952EB40029FDB1 /* Environment+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A2425952EB40029FDB1 /* Environment+Extension.swift */; };
 		1BD260CC24971A4200E37AFC /* CurvedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */; };
 		1BD260CE24971D0C00E37AFC /* CurvedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */; };
 		1BD260D02497204B00E37AFC /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CF2497204B00E37AFC /* Wave.swift */; };
@@ -239,6 +240,7 @@
 		1BB87C4F2378DC5400D1FABE /* RotationalEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationalEffectView.swift; sourceTree = "<group>"; };
 		1BC01A1725941CA50029FDB1 /* NetworkingTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTemplate.swift; sourceTree = "<group>"; };
 		1BC01A1F2594503E0029FDB1 /* CircleAnimationTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAnimationTemplateView.swift; sourceTree = "<group>"; };
+		1BC01A2425952EB40029FDB1 /* Environment+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+Extension.swift"; sourceTree = "<group>"; };
 		1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangle.swift; sourceTree = "<group>"; };
 		1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangleView.swift; sourceTree = "<group>"; };
 		1BD260CF2497204B00E37AFC /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				1B294008259039A100BA0196 /* Alignment+Extension.swift */,
 				1BACDBEB2592CABF006A65C5 /* Color+Extension.swift */,
 				1BACDBF52593E886006A65C5 /* Shape+Extension.swift */,
+				1BC01A2425952EB40029FDB1 /* Environment+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -817,6 +820,7 @@
 				1BFF495523836206006DBB0F /* CardBottomView.swift in Sources */,
 				1BACDBF62593E886006A65C5 /* Shape+Extension.swift in Sources */,
 				1B9EDCB42578001E00AD284B /* BarChartView.swift in Sources */,
+				1BC01A2525952EB40029FDB1 /* Environment+Extension.swift in Sources */,
 				1B83DC3F242ADEA000A7F3C6 /* HowItWorksView.swift in Sources */,
 				1BD260CE24971D0C00E37AFC /* CurvedRectangleView.swift in Sources */,
 				1B7E779923BBFBBF006CF53B /* MultipleAnimationView.swift in Sources */,

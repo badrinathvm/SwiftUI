@@ -50,42 +50,106 @@ struct CategoryData:Identifiable,Hashable {
 struct ExpandableListView: View {
     @State private var selectedCells: Set<CategoryData> = []
     @State var cardData: [CategoryData] = []
+    @State private var presentOverlay:Bool = false
+    @State private var selectedCategoryData:CategoryData = CategoryData(index: 0, title: "", sections: [])
     @StateObject private var networkData = Network()
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            //log("Before :: Selected Cell content is \(self.selectedCells))")
-            ForEach(cardData, id: \.self) { data in
-                //log("Data :: \(data.id)")
-                //log("After :: Selected Cell content is \(self.selectedCells) ---> \(self.selectedCells.contains(data))")
-                ExpandableCardView(isExpand: self.selectedCells.contains(data), data: data)
-                    .onTapGesture {
-                        withAnimation(Animation.spring()) {
-                            if self.selectedCells.contains(data) {
-                                self.selectedCells.remove(data) // collapsing
-                            } else {
-                                self.selectedCells.insert(data)
+        ZStack {
+            ScrollView(.vertical, showsIndicators: false) {
+                //log("Before :: Selected Cell content is \(self.selectedCells))")
+                ForEach(cardData, id: \.self) { data in
+                    //log("Data :: \(data.id)")
+                    //log("After :: Selected Cell content is \(self.selectedCells) ---> \(self.selectedCells.contains(data))")
+                    ExpandableCardView(presentOverlay: $presentOverlay, selectedIndex: $selectedCategoryData, isExpand: self.selectedCells.contains(data), data: data)
+                        .onTapGesture {
+                            withAnimation(Animation.spring()) {
+                                if self.selectedCells.contains(data) {
+                                    self.selectedCells.remove(data) // collapsing
+                                } else {
+                                    self.selectedCells.insert(data)
+                                }
                             }
                         }
+                        .padding(.bottom, -10)
+                        .animation(Animation.spring())
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, 10)
+            .offset(y: 10)
+            .onAppear {
+                   //make network call and set the data.
+                    self.networkData.fetchDataFromNetwork { results in
+                        self.cardData = networkData.movieData(movies: results)
                     }
-                    .padding(.bottom, -10)
-                    .animation(Animation.spring())
+            }
+//            .onPreferenceChange(OverlayPreferenceKey.self) {
+//                print("Section Data is \($0)")
+//            }
+            
+            //Displays the overlay
+            if self.presentOverlay {
+                OverlayContentView(presentOverlay: $presentOverlay, selectedCategoryData: selectedCategoryData)
             }
         }
-        .frame(maxWidth: .infinity)
-        .padding(.horizontal, 10)
-        .offset(y: 10)
-        .onAppear {
-               //make network call and set the data.
-                self.networkData.fetchDataFromNetwork { results in
-                    self.cardData = networkData.movieData(movies: results)
-                }
+       
+    }
+}
+
+struct OverlayContentView:View {
+    @Binding var presentOverlay:Bool
+    var selectedCategoryData:CategoryData
+    var body: some View {
+        ZStack {
+            Color.black.opacity(0.2)
+                .onTapGesture {
+                   // withAnimation(Animation.default) {
+                        self.presentOverlay.toggle()
+                    //}
+                }.edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
+                    RoundedRectangle(cornerRadius: 18)
+                        .frame(width: 350, height: 400, alignment: .center)
+                        .foregroundColor(Color.white)
+                    RoundedCorner(radius: 18, corners: [])
+                        .frame(width: 350, height: 50, alignment: .top)
+                        .foregroundColor(Color.gray.opacity(0.2))
+                        .frame(width: 350, height: 50)
+                        .cornerRadius(18, corners: [.topLeft, .topRight])
+                    VStack {
+                        HStack {
+                            Image(systemName: "car.circle.fill")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .foregroundColor(Colors.green03)
+                                .padding(.leading, 50)
+                                .offset(y: 20.0)
+                            Spacer()
+                        }
+                        Text(selectedCategoryData.title)
+                            .font(.headline)
+                        
+                        Text(selectedCategoryData.sections[0].overview)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(nil)
+                            .padding(.top, 10)
+                            .padding(.horizontal, 40)
+                    }
+            }
         }
     }
+  }
 }
 
 @available(iOS 14.0, *)
 struct ExpandableCardView: View {
+    @Binding var presentOverlay:Bool
+    @Binding var selectedIndex:CategoryData
     var isExpand:Bool
     var data: CategoryData
     var body: some View {
@@ -105,9 +169,8 @@ struct ExpandableCardView: View {
                                 .padding()
                         }.foregroundColor(Color.black)
                     )
-            
             if isExpand {
-                InsideRectangleContent(data: data)
+                InsideRectangleContent(presentOverlay: $presentOverlay, selectedIndex: $selectedIndex, data: data)
                     .padding(.top, -2)
             }
         }
@@ -116,22 +179,21 @@ struct ExpandableCardView: View {
 
 @available(iOS 14.0, *)
 struct InsideRectangleContent: View {
+    @Binding var presentOverlay:Bool
+    @Binding var selectedIndex:CategoryData
     var data:CategoryData
     var body: some View {
-//            RoundedCorner(radius: 18, corners: [])
-//                .strokeBorder(Color.gray, style: StrokeStyle(lineWidth: 1))
-//                .background(Rectangle().foregroundColor(Color.gray.opacity(0.1)))
-//                .frame(width: 350)
-//                .frame(maxHeight: .infinity)
-//                .padding(.top, -6)
-//                .overlay(
-//                    InnerListView(data: data, heightValue: $heightValue)
-//                )
-        
         ForEach(0..<data.sections.count) { index in
             InnerContentView(data: data, index: index)
+                .onTapGesture {
+                    withAnimation(Animation.spring()) {
+                        //print("Selected Index is \(data)")
+                        self.selectedIndex = data
+                        self.presentOverlay.toggle()
+                    }
+                }
+                //.preference(key: OverlayPreferenceKey.self, value: self.selectedIndex)
         }
-            
     }
 }
 
@@ -142,61 +204,71 @@ struct InnerContentView: View {
     var index: Int
     var body: some View {
         let sectionEntry = data.sections[index]
-        VStack {
-            HStack {
-                ZStack {
-                    CircleAnimationTemplateView(showText: $showText).frame(width: 40, height: 40)
-                    Image(systemName: sectionEntry.image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 30, height: 30)
-                        .foregroundColor(Colors.green03)
-                }.padding(.leading, 10)
+            VStack {
+                HStack {
+                    ZStack {
+                        CircleAnimationTemplateView(showText: $showText).frame(width: 40, height: 40)
+                        Image(systemName: sectionEntry.image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(Colors.green03)
+                        
+                    }.padding(.leading, 10)
 
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(sectionEntry.title)
-                        .font(.callout)
-                    if !showText {
-                        Text("Updating")
-                            .font(.footnote)
-                            .foregroundColor(.gray)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(sectionEntry.title)
+                            .font(.callout)
+                        if !showText {
+                            Text("Updating")
+                                .font(.footnote)
+                                .foregroundColor(.gray)
+                        }
                     }
-                }
 
-                Spacer()
+                    Spacer()
+                    
+                    Text(sectionEntry.releaseDate)
+                        .font(.callout)
+                        .padding(.trailing, 20)
+                }
+                Text(sectionEntry.overview)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(nil)
+                    .padding(.all, 10)
                 
-                Text(sectionEntry.releaseDate)
-                    .font(.callout)
-                    .padding(.trailing, 20)
+                if index != data.sections.count - 1 {
+                    Divider()
+                }
             }
-            Text(sectionEntry.overview)
-                .font(.subheadline)
-                .foregroundColor(.gray)
-                .multilineTextAlignment(.leading)
-                .lineLimit(nil)
-                .padding(.all, 10)
-            
-            if index != data.sections.count - 1 {
-                Divider()
-            }
-        }
-        .frame(width: 350)
-        .background(
-            RoundedCorner(radius: 18, corners: [])
-                        .strokeBorder(Color.gray, style: StrokeStyle(lineWidth: 1))
-                        .background(Rectangle().foregroundColor(Color.gray.opacity(0.1)))
-                        .padding(.top, -6)
-        )
+            .frame(width: 350)
+            .background(
+                RoundedCorner(radius: 18, corners: [])
+                            .strokeBorder(Color.gray, style: StrokeStyle(lineWidth: 1))
+                            .background(Rectangle().foregroundColor(Color.gray.opacity(0.1)))
+                            .padding(.top, -6)
+            )
+            //.preference(key: OverlayPreferenceKey.self, value: self.alert)
+            //.environment(\EnvironmentValues.showOverlay, (self.alert?.showAlert ?? false) ? true: false)
     }
 }
 
 @available(iOS 14.0, *)
-struct ExpandableListView_Previews: PreviewProvider {
+struct OverlayContentView_Previews: PreviewProvider {
+    @State static var presentOverlay:Bool = false
     static var previews: some View {
-        ExpandableListView()
+        //ExpandableListView()
+        //OverlayContentView(presentOverlay: $presentOverlay, selectedCategoryData: CategoryData(index: 0, title: "Darkest Minds", sections: []))
+        
+        //OverlayContentView(presentOverlay: $presentOverlay, selectedCategoryData: CategoryData(index: 0, title: "Darkest Minds", sections: []))
+        
+        
+        OverlayContentView(presentOverlay: Binding.constant(false), selectedCategoryData: CategoryData(index: 0, title: "Darkest Minds", sections: []))
+            //.previewLayout(.sizeThatFits)
     }
 }
-
 
 struct GeometryGetter: View {
     @Binding var rect: CGRect
@@ -211,9 +283,6 @@ struct GeometryGetter: View {
         }
     }
 }
-
-
-
 
 //struct ExpandableCardView: View {
 //    var isExpand:Bool
@@ -240,5 +309,32 @@ struct GeometryGetter: View {
 //    }
 //}
 
+//            RoundedCorner(radius: 18, corners: [])
+//                .strokeBorder(Color.gray, style: StrokeStyle(lineWidth: 1))
+//                .background(Rectangle().foregroundColor(Color.gray.opacity(0.1)))
+//                .frame(width: 350)
+//                .frame(maxHeight: .infinity)
+//                .padding(.top, -6)
+//                .overlay(
+//                    InnerListView(data: data, heightValue: $heightValue)
+//                )
+        
 
 
+struct PresentableAlert: Equatable, Identifiable {
+    let id = UUID()
+    let showAlert: Bool
+    
+    static func == (lhs: PresentableAlert, rhs: PresentableAlert) -> Bool {
+        lhs.id == rhs.id
+    }
+}
+
+
+struct OverlayPreferenceKey: PreferenceKey {
+    static var defaultValue: CategoryData?
+
+    static func reduce(value: inout CategoryData?, nextValue: () -> CategoryData?) {
+        value = nextValue()
+    }
+}
