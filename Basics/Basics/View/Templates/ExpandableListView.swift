@@ -50,10 +50,9 @@ struct CategoryData:Identifiable,Hashable {
 struct ExpandableListView: View {
     @State private var selectedCells: Set<CategoryData> = []
     @State var cardData: [CategoryData] = []
-    @State private var presentOverlay:Bool = false
     @State private var selectedCategoryData:CategoryData = CategoryData(index: 0, title: "", sections: [])
     @StateObject private var networkData = Network()
-    
+
     var body: some View {
         ZStack {
             ScrollView(.vertical, showsIndicators: false) {
@@ -61,7 +60,7 @@ struct ExpandableListView: View {
                 ForEach(cardData, id: \.self) { data in
                     //log("Data :: \(data.id)")
                     //log("After :: Selected Cell content is \(self.selectedCells) ---> \(self.selectedCells.contains(data))")
-                    ExpandableCardView(presentOverlay: $presentOverlay, selectedIndex: $selectedCategoryData, isExpand: self.selectedCells.contains(data), data: data)
+                    ExpandableCardView(selectedIndex: $selectedCategoryData, isExpand: self.selectedCells.contains(data), data: data)
                         .onTapGesture {
                             withAnimation(Animation.spring()) {
                                 if self.selectedCells.contains(data) {
@@ -77,6 +76,7 @@ struct ExpandableListView: View {
             }
             .frame(maxWidth: .infinity)
             .padding(.horizontal, 10)
+            .padding(.bottom, 20)
             .offset(y: 10)
             .onAppear {
                    //make network call and set the data.
@@ -87,60 +87,44 @@ struct ExpandableListView: View {
 //            .onPreferenceChange(OverlayPreferenceKey.self) {
 //                print("Section Data is \($0)")
 //            }
-            
-            //Displays the overlay
-            if self.presentOverlay {
-                OverlayContentView(presentOverlay: $presentOverlay, selectedCategoryData: selectedCategoryData)
-            }
         }
-       
     }
 }
 
 struct OverlayContentView:View {
-    @Binding var presentOverlay:Bool
     var selectedCategoryData:CategoryData
     var body: some View {
-        ZStack {
-            Color.black.opacity(0.2)
-                .onTapGesture {
-                   // withAnimation(Animation.default) {
-                        self.presentOverlay.toggle()
-                    //}
-                }.edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
-                    RoundedRectangle(cornerRadius: 18)
-                        .frame(width: 350, height: 400, alignment: .center)
-                        .foregroundColor(Color.white)
-                    RoundedCorner(radius: 18, corners: [])
-                        .frame(width: 350, height: 50, alignment: .top)
-                        .foregroundColor(Color.gray.opacity(0.2))
-                        .frame(width: 350, height: 50)
-                        .cornerRadius(18, corners: [.topLeft, .topRight])
-                    VStack {
-                        HStack {
-                            Image(systemName: "car.circle.fill")
-                                .resizable()
-                                .frame(width: 50, height: 50)
-                                .foregroundColor(Colors.green03)
-                                .padding(.leading, 50)
-                                .offset(y: 20.0)
-                            Spacer()
-                        }
-                        Text(selectedCategoryData.title)
-                            .font(.headline)
-                        
-                        Text(selectedCategoryData.sections[0].overview)
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(nil)
-                            .padding(.top, 10)
-                            .padding(.horizontal, 40)
+        VStack {
+            ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
+                RoundedRectangle(cornerRadius: 18)
+                    .frame(width: 350, height: 400, alignment: .center)
+                    .foregroundColor(Color.white)
+                RoundedCorner(radius: 18, corners: [])
+                    .frame(width: 350, height: 50, alignment: .top)
+                    .foregroundColor(Color.gray.opacity(0.2))
+                    .frame(width: 350, height: 50)
+                    .cornerRadius(18, corners: [.topLeft, .topRight])
+                VStack {
+                    HStack {
+                        Image(systemName: "car.circle.fill")
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                            .foregroundColor(Colors.green03)
+                            .padding(.leading, 50)
+                            .offset(y: 20.0)
+                        Spacer()
                     }
-            }
+                    Text(selectedCategoryData.title)
+                        .font(.headline)
+                    
+                    Text(selectedCategoryData.sections[0].overview)
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(nil)
+                        .padding(.top, 10)
+                        .padding(.horizontal, 40)
+                }
         }
     }
   }
@@ -148,7 +132,6 @@ struct OverlayContentView:View {
 
 @available(iOS 14.0, *)
 struct ExpandableCardView: View {
-    @Binding var presentOverlay:Bool
     @Binding var selectedIndex:CategoryData
     var isExpand:Bool
     var data: CategoryData
@@ -170,7 +153,7 @@ struct ExpandableCardView: View {
                         }.foregroundColor(Color.black)
                     )
             if isExpand {
-                InsideRectangleContent(presentOverlay: $presentOverlay, selectedIndex: $selectedIndex, data: data)
+                InsideRectangleContent(data: data)
                     .padding(.top, -2)
             }
         }
@@ -179,8 +162,7 @@ struct ExpandableCardView: View {
 
 @available(iOS 14.0, *)
 struct InsideRectangleContent: View {
-    @Binding var presentOverlay:Bool
-    @Binding var selectedIndex:CategoryData
+    @EnvironmentObject var overlay:Overlay
     var data:CategoryData
     var body: some View {
         ForEach(0..<data.sections.count) { index in
@@ -188,8 +170,8 @@ struct InsideRectangleContent: View {
                 .onTapGesture {
                     withAnimation(Animation.spring()) {
                         //print("Selected Index is \(data)")
-                        self.selectedIndex = data
-                        self.presentOverlay.toggle()
+                        overlay.show.toggle()
+                        overlay.overlayContent = data
                     }
                 }
                 //.preference(key: OverlayPreferenceKey.self, value: self.selectedIndex)
@@ -265,7 +247,7 @@ struct OverlayContentView_Previews: PreviewProvider {
         //OverlayContentView(presentOverlay: $presentOverlay, selectedCategoryData: CategoryData(index: 0, title: "Darkest Minds", sections: []))
         
         
-        OverlayContentView(presentOverlay: Binding.constant(false), selectedCategoryData: CategoryData(index: 0, title: "Darkest Minds", sections: []))
+        OverlayContentView(selectedCategoryData: CategoryData(index: 0, title: "Darkest Minds", sections: []))
             //.previewLayout(.sizeThatFits)
     }
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import Combine
+import UIKit
 
 class Network : ObservableObject {
     @Published var movies: Movies = Movies(results: [])
@@ -16,8 +17,10 @@ class Network : ObservableObject {
     
     var cancellables = Set<AnyCancellable>()
     
+    let urlString = "https://gist.githubusercontent.com/badrinathvm/b1ca7949af2f4b9198ea057c167f6d35/raw/3085cff9daec460913142dd08445834cd1a70fb1/movie.json"
+    
     func fetchDataFromNetwork(completion: @escaping (Movies) -> Void) {
-        let url = URL(string:"https://gist.githubusercontent.com/badrinathvm/b1ca7949af2f4b9198ea057c167f6d35/raw/8ff20ccc49b3f76d9ebedc8cb33c75d667faf85f/movie.json")!
+        let url = URL(string:urlString)!
         
         cancellable = URLSession.shared.dataTaskPublisher(for: url)
             .map { $0.data }
@@ -108,5 +111,21 @@ struct Result: Codable {
 
 enum OriginalLanguage: String, Codable {
     case en = "en"
+}
+
+class ImageNetwork:  ObservableObject {
+    @Published var imageFromNetwork: UIImage?
+    
+    var cancellable:AnyCancellable?
+    
+    func fetchImageFromNetwork(url: String) {
+        let url = URL(string: url)!
+        cancellable = URLSession.shared.dataTaskPublisher(for: url)
+            .map { UIImage(data: $0.data) }
+            .replaceError(with: nil)
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.imageFromNetwork, on: self)
+    }
+    
 }
 

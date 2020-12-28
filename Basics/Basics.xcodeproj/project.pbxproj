@@ -95,6 +95,10 @@
 		1BC01A1825941CA50029FDB1 /* NetworkingTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A1725941CA50029FDB1 /* NetworkingTemplate.swift */; };
 		1BC01A202594503E0029FDB1 /* CircleAnimationTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A1F2594503E0029FDB1 /* CircleAnimationTemplateView.swift */; };
 		1BC01A2525952EB40029FDB1 /* Environment+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A2425952EB40029FDB1 /* Environment+Extension.swift */; };
+		1BC01A2C2596716A0029FDB1 /* TabViewTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A2B259671690029FDB1 /* TabViewTemplateView.swift */; };
+		1BC01A37259681780029FDB1 /* TopBarTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A36259681780029FDB1 /* TopBarTemplateView.swift */; };
+		1BC01A3C25969FB20029FDB1 /* HorizontalCarouselTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A3B25969FB20029FDB1 /* HorizontalCarouselTemplateView.swift */; };
+		1BC01A4125983FF30029FDB1 /* PreferenceKey+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A4025983FF30029FDB1 /* PreferenceKey+Extension.swift */; };
 		1BD260CC24971A4200E37AFC /* CurvedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */; };
 		1BD260CE24971D0C00E37AFC /* CurvedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */; };
 		1BD260D02497204B00E37AFC /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CF2497204B00E37AFC /* Wave.swift */; };
@@ -241,6 +245,10 @@
 		1BC01A1725941CA50029FDB1 /* NetworkingTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTemplate.swift; sourceTree = "<group>"; };
 		1BC01A1F2594503E0029FDB1 /* CircleAnimationTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAnimationTemplateView.swift; sourceTree = "<group>"; };
 		1BC01A2425952EB40029FDB1 /* Environment+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+Extension.swift"; sourceTree = "<group>"; };
+		1BC01A2B259671690029FDB1 /* TabViewTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewTemplateView.swift; sourceTree = "<group>"; };
+		1BC01A36259681780029FDB1 /* TopBarTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarTemplateView.swift; sourceTree = "<group>"; };
+		1BC01A3B25969FB20029FDB1 /* HorizontalCarouselTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCarouselTemplateView.swift; sourceTree = "<group>"; };
+		1BC01A4025983FF30029FDB1 /* PreferenceKey+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreferenceKey+Extension.swift"; sourceTree = "<group>"; };
 		1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangle.swift; sourceTree = "<group>"; };
 		1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangleView.swift; sourceTree = "<group>"; };
 		1BD260CF2497204B00E37AFC /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
@@ -323,6 +331,7 @@
 				1BACDBEB2592CABF006A65C5 /* Color+Extension.swift */,
 				1BACDBF52593E886006A65C5 /* Shape+Extension.swift */,
 				1BC01A2425952EB40029FDB1 /* Environment+Extension.swift */,
+				1BC01A4025983FF30029FDB1 /* PreferenceKey+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -484,6 +493,9 @@
 				1BACDBE625928FA2006A65C5 /* ExpandableListView.swift */,
 				1BC01A1725941CA50029FDB1 /* NetworkingTemplate.swift */,
 				1BC01A1F2594503E0029FDB1 /* CircleAnimationTemplateView.swift */,
+				1BC01A2B259671690029FDB1 /* TabViewTemplateView.swift */,
+				1BC01A36259681780029FDB1 /* TopBarTemplateView.swift */,
+				1BC01A3B25969FB20029FDB1 /* HorizontalCarouselTemplateView.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -869,6 +881,7 @@
 				1BFF4957238383DC006DBB0F /* NotificationPublisher.swift in Sources */,
 				1B29462C236E17F800E44888 /* Lists.swift in Sources */,
 				1B53B0E72426D98300D15C97 /* View+Extension.swift in Sources */,
+				1BC01A37259681780029FDB1 /* TopBarTemplateView.swift in Sources */,
 				1BACDBEC2592CABF006A65C5 /* Color+Extension.swift in Sources */,
 				1B6307FB258A81C000E6897D /* LightSwitchView.swift in Sources */,
 				05441A42249FED3A00DC0E04 /* WaveFilled.swift in Sources */,
@@ -877,6 +890,8 @@
 				1BB5159424BBDCF50058D68A /* ShapeView.swift in Sources */,
 				1BEA5F6D24B2B7E5003866D2 /* CheckBox.swift in Sources */,
 				8B942B9E2353F04C004A7B83 /* GuessView.swift in Sources */,
+				1BC01A2C2596716A0029FDB1 /* TabViewTemplateView.swift in Sources */,
+				1BC01A4125983FF30029FDB1 /* PreferenceKey+Extension.swift in Sources */,
 				1B83DC44243286FC00A7F3C6 /* CaraouselView.swift in Sources */,
 				1BB4691423C1B07C0041B1D8 /* AppearDisappearAnimationView.swift in Sources */,
 				1B9EDCA92577525900AD284B /* ToolTipView.swift in Sources */,
@@ -895,6 +910,7 @@
 				1B4ABAFC258AD96F000C12BA /* HeroAnimationView.swift in Sources */,
 				1BB87C502378DC5400D1FABE /* RotationalEffectView.swift in Sources */,
 				1BB87C47237887B300D1FABE /* ProgressRowView.swift in Sources */,
+				1BC01A3C25969FB20029FDB1 /* HorizontalCarouselTemplateView.swift in Sources */,
 				1BB87C342377376300D1FABE /* CircleTrim.swift in Sources */,
 				1BB4691223C1A9350041B1D8 /* StepperAnimationView.swift in Sources */,
 				1BFF71E9236FA0EA0024F4B8 /* SliderStepperViews.swift in Sources */,

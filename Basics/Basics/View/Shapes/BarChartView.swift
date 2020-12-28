@@ -55,9 +55,9 @@ struct ToolTipView: View {
                 .font(Font.system(size: 16, weight: Font.Weight.bold))
                 .padding(.horizontal,15)
                 .padding(.vertical, 15)
-                .background(ToolTip(radius: 8)
-                                .fill(Color.white)
-                                .shadow(color: Color(UIColor.lightGray), radius: 8, x: 0, y: 0))
+//                .background(ToolTip(radius: 8)
+//                                .fill(Color.white)
+//                                .shadow(color: Color(UIColor.lightGray), radius: 8, x: 0, y: 0))
                 .offset(x: self.tipPosition, y: 30)
         }
     }
@@ -176,26 +176,6 @@ extension BarChartView {
 
 
 
-// ---- PreferenceKey struts for calculatin the height and anchor data.
-@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
-struct VerticalHeightPreference: PreferenceKey {
-    typealias Value = [Int:CGFloat]
-    /// provide a default value for custom dependency
-    static let defaultValue: Value = [:]
-    
-    static func reduce(value: inout Value, nextValue: () -> Value) {
-        value.merge(nextValue(), uniquingKeysWith: max)
-    }
-}
-
-
-struct AnchorPreferenceKey: PreferenceKey {
-    static var defaultValue: CGFloat?
-
-    static func reduce(value: inout CGFloat?, nextValue: () -> CGFloat?) {
-        value = value ?? nextValue()
-    }
-}
 
 // Preview
 
