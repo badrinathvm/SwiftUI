@@ -34,41 +34,64 @@ struct HorizontalCarouselTemplateView: View {
     @StateObject var network = Network()
     @State var movieData: [Caraousel] = []
     @Namespace var animation
-    
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
     @State var vStackSize: CGFloat?
     
     var body: some View {
         ZStack {
-            Color.primary.opacity(0.06)
+            Color.primary
                 .edgesIgnoringSafeArea(.all)
             VStack {
+                Button(action: {
+                    self.viewControllerHolder?.dismissView({
+                        // final clean up if any ..
+                    })
+                }) {
+                    Text("Close")
+                        .fontWeight(.semibold)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .foregroundColor(Color.blue)
+                        .padding()
+                }
                 Spacer()
-                GeometryReader { reader in
-                    ScrollView(Axis.Set.horizontal, showsIndicators: false) {
-                        HStack(spacing: 25) {
-                            ForEach(0..<carouselData.carousel.count, id: \.self) { index in
-                                let carouselEntry = carouselData.carousel[index]
-                                if carouselEntry.status {
-                                    VStack {
-                                        MovieContentView(movieData: carouselEntry, index: index, carouselData: carouselData, vStackHeight: $vStackSize)
-                                            .transition(carouselData.carousel[index].status ? .identity : .slide)
-                                            .background(RoundedCorner(radius: 18, corners: [])
-                                                            .cornerRadius(18, corners: [.topLeft, .topRight, .bottomLeft, .bottomRight])
-                                                            .foregroundColor(Color.white))
-                                            .frame(width: 350, height: self.vStackSize)
+                
+                if !self.carouselData.carousel.isEmpty {
+                    GeometryReader { reader in
+                        ScrollView(Axis.Set.horizontal, showsIndicators: false) {
+                            HStack(spacing: 25) {
+                                ForEach(0..<carouselData.carousel.count, id: \.self) { index in
+                                    let carouselEntry = carouselData.carousel[index]
+                                    if carouselEntry.status {
+                                        VStack {
+                                            MovieContentView(movieData: carouselEntry, index: index, carouselData: carouselData, vStackHeight: $vStackSize)
+                                                .transition(carouselData.carousel[index].status ? .identity : .slide)
+                                                .background(RoundedCorner(radius: 18, corners: [])
+                                                                .cornerRadius(18, corners: [.topLeft, .topRight, .bottomLeft, .bottomRight])
+                                                                .foregroundColor(Color.white))
+                                                .frame(width: 350, height: self.vStackSize)
+                                        }
                                     }
                                 }
-                            }
-                        }.padding()
-                    }
-               }
+                            }.padding()
+                        }
+                   }
+                }
+                
+                // place to put loader
+                Text("Loading Data ....")
+                    .fontWeight(.semibold)
+                    .foregroundColor(.blue)
+                    .opacity(!self.carouselData.carousel.isEmpty ? 0 : 1)
             }
-        }.onAppear {
+        }
+        .onAppear {
             self.network.fetchDataFromNetwork { (movies) in
                 for movie in movies.results {
                     movieData.append(Caraousel(id: UUID(), title: movie.title, overview: movie.overview, imageLink: movie.backdropPath, status: true))
                 }
-                self.carouselData.carousel = movieData
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.carouselData.carousel = movieData
+                }
             }
         }
     }
@@ -164,7 +187,7 @@ struct MovieContentView: View {
 @available(iOS 14.0, *)
 struct HorizontalCarouselTemplateView_Previews: PreviewProvider {
     static var previews: some View {
-       HorizontalCarouselTemplateView()
+        HorizontalCarouselTemplateView()
     }
 }
 

@@ -140,9 +140,13 @@ struct ScaledRectagleView: View {
                         .padding(.horizontal, 20)
                         .onTapGesture {
                             //self.isPresented.toggle()
-                            self.viewControllerHolder?.present(style: .fullScreen) {
-                                            Text("Main") // Or any other view you like
-                                        }
+                            
+                            self.viewControllerHolder?.present(style: .fullScreen, transitionStyle: .crossDissolve) {
+                                            //Text("Main") // Or any other view you like
+                                VStack {
+                                    HorizontalCarouselTemplateView()
+                                }
+                            }
                         }
                         // This is to present a Modal View
 //                        .sheet(isPresented: self.$isPresented) {
@@ -216,34 +220,4 @@ func scaledRectangleView(_ model: ListModel) -> some View {
 */
 
 
-struct ViewControllerHolder {
-    weak var value: UIViewController?
-}
 
-struct ViewControllerKey: EnvironmentKey {
-    static var defaultValue: ViewControllerHolder {
-        return ViewControllerHolder(value: UIApplication.shared.windows.first?.rootViewController)
-
-    }
-}
-
-extension EnvironmentValues {
-    var viewController: UIViewController? {
-        get { return self[ViewControllerKey.self].value }
-        set { self[ViewControllerKey.self].value = newValue }
-    }
-}
-
-//Then you should use implement this extension:
-
-extension UIViewController {
-    func present<Content: View>(style: UIModalPresentationStyle = .automatic, @ViewBuilder builder: () -> Content) {
-        let toPresent = UIHostingController(rootView: AnyView(EmptyView()))
-        toPresent.modalPresentationStyle = style
-        toPresent.rootView = AnyView(
-            builder()
-                .environment(\.viewController, toPresent)
-        )
-        self.present(toPresent, animated: true, completion: nil)
-    }
-}

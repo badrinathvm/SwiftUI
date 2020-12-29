@@ -99,6 +99,8 @@
 		1BC01A37259681780029FDB1 /* TopBarTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A36259681780029FDB1 /* TopBarTemplateView.swift */; };
 		1BC01A3C25969FB20029FDB1 /* HorizontalCarouselTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A3B25969FB20029FDB1 /* HorizontalCarouselTemplateView.swift */; };
 		1BC01A4125983FF30029FDB1 /* PreferenceKey+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A4025983FF30029FDB1 /* PreferenceKey+Extension.swift */; };
+		1BC01A46259A879F0029FDB1 /* CarouselSliderTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A45259A879E0029FDB1 /* CarouselSliderTemplateView.swift */; };
+		1BC01A4F259BC2840029FDB1 /* EnvironmentKey+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC01A4E259BC2840029FDB1 /* EnvironmentKey+Extension.swift */; };
 		1BD260CC24971A4200E37AFC /* CurvedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */; };
 		1BD260CE24971D0C00E37AFC /* CurvedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */; };
 		1BD260D02497204B00E37AFC /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD260CF2497204B00E37AFC /* Wave.swift */; };
@@ -249,6 +251,8 @@
 		1BC01A36259681780029FDB1 /* TopBarTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarTemplateView.swift; sourceTree = "<group>"; };
 		1BC01A3B25969FB20029FDB1 /* HorizontalCarouselTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCarouselTemplateView.swift; sourceTree = "<group>"; };
 		1BC01A4025983FF30029FDB1 /* PreferenceKey+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreferenceKey+Extension.swift"; sourceTree = "<group>"; };
+		1BC01A45259A879E0029FDB1 /* CarouselSliderTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselSliderTemplateView.swift; sourceTree = "<group>"; };
+		1BC01A4E259BC2840029FDB1 /* EnvironmentKey+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentKey+Extension.swift"; sourceTree = "<group>"; };
 		1BD260CB24971A4200E37AFC /* CurvedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangle.swift; sourceTree = "<group>"; };
 		1BD260CD24971D0C00E37AFC /* CurvedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectangleView.swift; sourceTree = "<group>"; };
 		1BD260CF2497204B00E37AFC /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
@@ -332,6 +336,7 @@
 				1BACDBF52593E886006A65C5 /* Shape+Extension.swift */,
 				1BC01A2425952EB40029FDB1 /* Environment+Extension.swift */,
 				1BC01A4025983FF30029FDB1 /* PreferenceKey+Extension.swift */,
+				1BC01A4E259BC2840029FDB1 /* EnvironmentKey+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -496,6 +501,7 @@
 				1BC01A2B259671690029FDB1 /* TabViewTemplateView.swift */,
 				1BC01A36259681780029FDB1 /* TopBarTemplateView.swift */,
 				1BC01A3B25969FB20029FDB1 /* HorizontalCarouselTemplateView.swift */,
+				1BC01A45259A879E0029FDB1 /* CarouselSliderTemplateView.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -822,6 +828,7 @@
 				1BFF71E1236E93760024F4B8 /* ScrollVerticalView.swift in Sources */,
 				1BD627E224C530380058ED30 /* HollowDotsSpinner.swift in Sources */,
 				1BFF71E7236F9B650024F4B8 /* SegmentControlView.swift in Sources */,
+				1BC01A4F259BC2840029FDB1 /* EnvironmentKey+Extension.swift in Sources */,
 				1BD260D02497204B00E37AFC /* Wave.swift in Sources */,
 				1BF0B9D324356BD600492C74 /* ProgressBarView.swift in Sources */,
 				1BADE33A23790E88006B4825 /* BlendModeView.swift in Sources */,
@@ -862,6 +869,7 @@
 				1BFF71DF236E534C0024F4B8 /* NavigationViews.swift in Sources */,
 				1B7E779323BAB4B2006CF53B /* RepeatAnimationView.swift in Sources */,
 				1BADE33E23791766006B4825 /* EdgesIgnoringSafeAreaView.swift in Sources */,
+				1BC01A46259A879F0029FDB1 /* CarouselSliderTemplateView.swift in Sources */,
 				1B66D13523E62EA500AB7855 /* PeopleView.swift in Sources */,
 				1BB87C4C2378BDCA00D1FABE /* ShadowView.swift in Sources */,
 				1B53B0E92426DE8B00D15C97 /* CartView.swift in Sources */,
