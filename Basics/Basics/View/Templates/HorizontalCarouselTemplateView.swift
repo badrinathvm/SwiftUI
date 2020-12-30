@@ -32,10 +32,13 @@ class CaraouselData: ObservableObject {
 struct HorizontalCarouselTemplateView: View {
     @StateObject var carouselData = CaraouselData()
     @StateObject var network = Network()
-    @State var movieData: [Caraousel] = []
+    @State private var movieData: [Caraousel] = []
     @Namespace var animation
     @Environment(\.viewController) private var viewControllerHolder: UIViewController?
-    @State var vStackSize: CGFloat?
+    @State private var vStackSize: CGFloat?
+    @State private var percentage:CGFloat = 0
+    @State private var showLoader:Bool = false
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         ZStack {
@@ -55,7 +58,7 @@ struct HorizontalCarouselTemplateView: View {
                 }
                 Spacer()
                 
-                if !self.carouselData.carousel.isEmpty {
+                if showLoader {
                     GeometryReader { reader in
                         ScrollView(Axis.Set.horizontal, showsIndicators: false) {
                             HStack(spacing: 25) {
@@ -76,24 +79,57 @@ struct HorizontalCarouselTemplateView: View {
                         }
                    }
                 }
-                
-                // place to put loader
-                Text("Loading Data ....")
-                    .fontWeight(.semibold)
-                    .foregroundColor(.blue)
-                    .opacity(!self.carouselData.carousel.isEmpty ? 0 : 1)
             }
+            
+            // place to put loader
+            LoaderView(percentage: $percentage)
+                .opacity(showLoader ? 0 : 1)
+                .onReceive(timer) { timer in
+                    if !self.carouselData.carousel.isEmpty {
+                        self.timer.upstream.connect().cancel()
+                        withAnimation(.spring()) {
+                            showLoader.toggle()
+                        }
+                    }
+                    self.percentage += 0.10
+                }
         }
         .onAppear {
             self.network.fetchDataFromNetwork { (movies) in
                 for movie in movies.results {
                     movieData.append(Caraousel(id: UUID(), title: movie.title, overview: movie.overview, imageLink: movie.backdropPath, status: true))
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
                     self.carouselData.carousel = movieData
                 }
             }
         }
+    }
+}
+
+struct LoaderView: View {
+    @Binding var percentage:CGFloat
+    var body: some View {
+        ZStack {
+//           Circle()
+//               .trim(from: 0, to: 1)
+//               .stroke(Color(red: 245/255, green: 245/255, blue: 245/255), lineWidth: 10)
+//               .frame(height: 80)
+           Circle()
+               .trim(from: 0, to: percentage)
+               .stroke(Colors.green03, style: StrokeStyle(lineWidth: 10, lineCap: CGLineCap.round))
+               .shadow(radius: 4)
+               .rotation3DEffect(Angle.degrees(360), axis: (x: 1, y: 0, z: 0))
+               .frame(height: 70)
+               .animation(.easeOut)
+        }
+        
+        
+        
+        //.opacity(!self.carouselData.carousel.isEmpty ? 0 : 1)
+            //.fontWeight(.semibold)
+            //.foregroundColor(.blue)
+            
     }
 }
 

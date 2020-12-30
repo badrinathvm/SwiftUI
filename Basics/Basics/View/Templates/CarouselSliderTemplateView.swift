@@ -20,10 +20,10 @@ struct Card: Identifiable, Hashable {
 
 class CardViewModel: ObservableObject {
     @Published var cards: [Card] = [
-        Card(id: UUID(), color: Color.red,  title: "Title1"),
-        Card(id: UUID(), color: Color.green, title: "Title2"),
-        Card(id: UUID(), color: Color.yellow, title: "Title3"),
-        Card(id: UUID(), color: Color.blue, title: "Title4")
+        Card(id: UUID(), color: Color.red,  title: "Divergent"),
+        Card(id: UUID(), color: Color.green, title: "Hunger Games"),
+        Card(id: UUID(), color: Color.yellow, title: "Walk"),
+        Card(id: UUID(), color: Color.blue, title: "Avengers")
     ]
     
     var height:CGFloat  = 400
