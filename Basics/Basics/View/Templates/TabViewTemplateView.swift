@@ -36,6 +36,14 @@ struct TabViewTemplateView: View {
                             Text("List")
                         }
                     }
+                
+                VerticalCarouselTemplateView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "airplane")
+                            Text("Movies")
+                        }
+                    }
             }
             
             if overlay.show {
