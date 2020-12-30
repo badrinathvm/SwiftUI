@@ -26,6 +26,10 @@ class MovieviewModel: ObservableObject {
 struct MovieView: View {
     var card: MovieCard
     @StateObject var imageLoader: ImageNetwork = ImageNetwork()
+    @EnvironmentObject var movieViewModel: MovieviewModel
+    var imageHeight:CGFloat
+    var index:Int
+    @State private var rotationToggle:Bool = false
     var body: some View {
         VStack {
             Text(card.title)
@@ -38,16 +42,19 @@ struct MovieView: View {
                 Image(uiImage: imageLoader.imageFromNetwork! )
                     .resizable()
                     .frame(maxWidth: .infinity)
-                    .frame(height: 150)
+                    .frame(height: imageHeight)
                     .aspectRatio(contentMode: .fit)
             }
             
             Spacer()
             
-            Button(action: {}){
+            Button(action: {
+                movieViewModel.movies[index].offset = width
+                movieViewModel.swipedCard += 1
+            }){
                 Text("Mark as Viewed")
                     .fontWeight(.bold)
-                    .foregroundColor(Color.gray)
+                    .foregroundColor(Color.blue)
                     .padding()
             }
         }
@@ -61,6 +68,7 @@ struct MovieView: View {
         .onAppear {
             self.imageLoader.fetchImageFromNetwork(url: card.imageLink)
         }
+        //.rotationEffect(rotationToggle ? .init(degrees: 50) : .init())
     }
 }
 
@@ -76,9 +84,9 @@ struct VerticalCarouselTemplateView: View {
                     ForEach(Array(movieViewModel.movies.indices.prefix(5)), id: \.self) { index in
                         let cardEntry = movieViewModel.movies[index]
                         VStack {
-                            MovieView(card: cardEntry)
+                            MovieView(card: cardEntry, imageHeight: 125, index: index)
                                 .cornerRadius(25)
-                                .frame(width: getWidth(for: index), height: 200)
+                                .frame(width: getWidth(for: index), height: getHeight(for: index))
                                 .offset(y: getCardOffset(for: index))
                                 .rotationEffect(.init(degrees: getRotation(for: index)))
                         }
@@ -117,6 +125,16 @@ struct VerticalCarouselTemplateView: View {
                 }
             }
         }
+        .environmentObject(movieViewModel)
+    }
+    
+    func getImageHeight(for index: Int) -> CGFloat {
+        return  CGFloat(150 - ( (index + movieViewModel.swipedCard) * 10))
+    }
+    
+    func getHeight(for index: Int) -> CGFloat {
+        var height = 200
+        return CGFloat(height - index * 10 )
     }
     
     func getWidth(for index: Int) -> CGFloat {
