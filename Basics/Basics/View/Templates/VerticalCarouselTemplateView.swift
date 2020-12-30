@@ -71,24 +71,42 @@ struct VerticalCarouselTemplateView: View {
     @StateObject var network = Network()
     var body: some View {
         ZStack {
-            ForEach(Array(movieViewModel.movies.indices.prefix(5)), id: \.self) { index in
-                let cardEntry = movieViewModel.movies[index]
-                VStack {
-                    MovieView(card: cardEntry)
-                        .cornerRadius(25)
-                        .frame(width: getWidth(for: index), height: 200)
-                        .offset(y: getCardOffset(for: index))
-                        .rotationEffect(.init(degrees: getRotation(for: index)))
+            VStack {
+                ZStack {
+                    ForEach(Array(movieViewModel.movies.indices.prefix(5)), id: \.self) { index in
+                        let cardEntry = movieViewModel.movies[index]
+                        VStack {
+                            MovieView(card: cardEntry)
+                                .cornerRadius(25)
+                                .frame(width: getWidth(for: index), height: 200)
+                                .offset(y: getCardOffset(for: index))
+                                .rotationEffect(.init(degrees: getRotation(for: index)))
+                        }
+                        .offset(x: cardEntry.offset)
+                        .gesture(DragGesture(minimumDistance: 0)
+                                    .onChanged({ (value) in
+                                        onChanged(value: value, index: index)
+                                    })
+                                    .onEnded({ (value) in
+                                        onEnded(value: value, index: index)
+                                    })
+                        )
+                    }
                 }
-                .offset(x: cardEntry.offset)
-                .gesture(DragGesture(minimumDistance: 0)
-                            .onChanged({ (value) in
-                                onChanged(value: value, index: index)
-                            })
-                            .onEnded({ (value) in
-                                onEnded(value: value, index: index)
-                            })
-                )
+               
+                Button(action: {
+                    for index in movieViewModel.movies.indices {
+                        movieViewModel.movies[index].offset = 0
+                    }
+                } ) {
+                    Image(systemName: "arrow.left")
+                        .foregroundColor(.blue)
+                        .font(.system(size: 20, weight: .semibold))
+                        .padding()
+                        .background(Color.white)
+                        .clipShape(Circle())
+                        .shadow(radius: 3)
+                }.padding(.top, 35)
             }
         }
         .padding()
@@ -110,7 +128,7 @@ struct VerticalCarouselTemplateView: View {
     
     func getCardOffset(for index: Int) -> CGFloat {
         //cardViewModel.swipeCard is required to offset next set of the cards to visible position
-        return index + movieViewModel.swipedCard >= 1 ? -CGFloat(index  * 20) : -20
+        return index + movieViewModel.swipedCard >= 1 ? -CGFloat(index  * 10) : -10
     }
     
     func getRotation(for index: Int) -> Double {
