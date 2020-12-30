@@ -86,9 +86,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //window.rootViewController = UIHostingController(rootView: MultipleAnimationView())
             //window.rootViewController = UIHostingController(rootView: StepperAnimationView())
             if #available(iOS 14.0, *) {
-                window.rootViewController = UIHostingController(rootView:   BottomSheetTemplateView(isOpen: Binding.constant(true), maxHeight: 400) {
-                    Rectangle().fill(Color.blue)
-                }.edgesIgnoringSafeArea(.all))
+                window.rootViewController = UIHostingController(rootView:   BottomSheetTemplateView())
             } else {
                 // Fallback on earlier versions
             }

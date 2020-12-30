@@ -16,7 +16,24 @@ fileprivate enum Constants {
     static let minHeightRatio: CGFloat = 0.3
 }
 
-struct BottomSheetTemplateView<Content:View>: View {
+
+struct BottomSheetTemplateView: View {
+    @State private var bottomSheetShown = false
+
+    var body: some View {
+        GeometryReader { geometry in
+            Color.secondary.opacity(0.2)
+            BottomSheetTemplate(
+                isOpen: self.$bottomSheetShown,
+                maxHeight: geometry.size.height * 0.7
+            ) {
+                Color.blue
+            }
+        }.edgesIgnoringSafeArea(.all)
+    }
+}
+
+struct BottomSheetTemplate<Content:View>: View {
     @Binding var isOpen:Bool
     
     let maxHeight:CGFloat
@@ -74,9 +91,7 @@ struct BottomSheetTemplateView<Content:View>: View {
 
 struct BottomSheetTemplateView_Previews: PreviewProvider {
     static var previews: some View {
-        BottomSheetTemplateView(isOpen: Binding.constant(true), maxHeight: 400) {
-            Rectangle().fill(Color.blue)
-        }.edgesIgnoringSafeArea(.all)
+        BottomSheetTemplateView()
     }
 }
 
