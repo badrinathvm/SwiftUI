@@ -73,6 +73,7 @@
 		1BADE34C237A880F006B4825 /* CombineEssentialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE34B237A880F006B4825 /* CombineEssentialsView.swift */; };
 		1BADE34F237A9096006B4825 /* CombineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE34E237A9096006B4825 /* CombineView.swift */; };
 		1BADE351237AA69E006B4825 /* OperationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADE350237AA69E006B4825 /* OperationListView.swift */; };
+		1BB346D025C262DE0065DB6A /* ScaledHorizontalScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB346CF25C262DE0065DB6A /* ScaledHorizontalScrollableView.swift */; };
 		1BB4691223C1A9350041B1D8 /* StepperAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4691123C1A9350041B1D8 /* StepperAnimationView.swift */; };
 		1BB4691423C1B07C0041B1D8 /* AppearDisappearAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4691323C1B07C0041B1D8 /* AppearDisappearAnimationView.swift */; };
 		1BB5159424BBDCF50058D68A /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5159324BBDCF50058D68A /* ShapeView.swift */; };
@@ -114,6 +115,7 @@
 		1BD627EA24C78F610058ED30 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627E924C78F610058ED30 /* JSONLoader.swift */; };
 		1BD627EC24C7AB5B0058ED30 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BD627EB24C7AB5B0058ED30 /* test.json */; };
 		1BD627EE24C8A4870058ED30 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD627ED24C8A4870058ED30 /* Parser.swift */; };
+		1BDA0BB625A279D4000960C1 /* HidingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDA0BB525A279D3000960C1 /* HidingTabBar.swift */; };
 		1BEA5F6D24B2B7E5003866D2 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA5F6C24B2B7E5003866D2 /* CheckBox.swift */; };
 		1BF0B9D324356BD600492C74 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0B9D224356BD600492C74 /* ProgressBarView.swift */; };
 		1BFF4951238240F2006DBB0F /* GeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4950238240F2006DBB0F /* GeometryView.swift */; };
@@ -228,6 +230,7 @@
 		1BADE34B237A880F006B4825 /* CombineEssentialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineEssentialsView.swift; sourceTree = "<group>"; };
 		1BADE34E237A9096006B4825 /* CombineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineView.swift; sourceTree = "<group>"; };
 		1BADE350237AA69E006B4825 /* OperationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationListView.swift; sourceTree = "<group>"; };
+		1BB346CF25C262DE0065DB6A /* ScaledHorizontalScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledHorizontalScrollableView.swift; sourceTree = "<group>"; };
 		1BB4691123C1A9350041B1D8 /* StepperAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperAnimationView.swift; sourceTree = "<group>"; };
 		1BB4691323C1B07C0041B1D8 /* AppearDisappearAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearDisappearAnimationView.swift; sourceTree = "<group>"; };
 		1BB5159324BBDCF50058D68A /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
@@ -269,6 +272,7 @@
 		1BD627E924C78F610058ED30 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		1BD627EB24C7AB5B0058ED30 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		1BD627ED24C8A4870058ED30 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		1BDA0BB525A279D3000960C1 /* HidingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HidingTabBar.swift; sourceTree = "<group>"; };
 		1BEA5F6C24B2B7E5003866D2 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		1BF0B9D224356BD600492C74 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		1BFF4950238240F2006DBB0F /* GeometryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryView.swift; sourceTree = "<group>"; };
@@ -511,6 +515,8 @@
 				1BC01A53259BDE0A0029FDB1 /* VerticalCarouselTemplateView.swift */,
 				1BC01A58259CEC350029FDB1 /* CategoryTemplateView.swift */,
 				1BC01A5D259D14D60029FDB1 /* BottomSheetTemplateView.swift */,
+				1BDA0BB525A279D3000960C1 /* HidingTabBar.swift */,
+				1BB346CF25C262DE0065DB6A /* ScaledHorizontalScrollableView.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -909,6 +915,7 @@
 				1BEA5F6D24B2B7E5003866D2 /* CheckBox.swift in Sources */,
 				8B942B9E2353F04C004A7B83 /* GuessView.swift in Sources */,
 				1BC01A2C2596716A0029FDB1 /* TabViewTemplateView.swift in Sources */,
+				1BB346D025C262DE0065DB6A /* ScaledHorizontalScrollableView.swift in Sources */,
 				1BC01A54259BDE0A0029FDB1 /* VerticalCarouselTemplateView.swift in Sources */,
 				1BC01A4125983FF30029FDB1 /* PreferenceKey+Extension.swift in Sources */,
 				1B83DC44243286FC00A7F3C6 /* CaraouselView.swift in Sources */,
@@ -938,6 +945,7 @@
 				1B6E7D8723748B1B00BDF41A /* Pizza.swift in Sources */,
 				1B2940012590394700BA0196 /* AnimatableModifier+Extension.swift in Sources */,
 				1B9EECDB23C27C5700434EA4 /* ExerciseAnimationView.swift in Sources */,
+				1BDA0BB625A279D4000960C1 /* HidingTabBar.swift in Sources */,
 				1BFF71EB236FAAC40024F4B8 /* TabViews.swift in Sources */,
 				1B476E8224980FFC00767E01 /* Hexagon.swift in Sources */,
 				8B2C4231235237DD00E8C68E /* SceneDelegate.swift in Sources */,
